@@ -181,7 +181,7 @@ public class Stacks {
     }
 
     public String removeReduntantbraces(String s) {
-
+	System.out.println("Adding logger");
         StringBuffer sb = new StringBuffer();
         Stack<StackNode> st = new Stack<>();
         List<Integer> index = new ArrayList<>();
@@ -215,6 +215,7 @@ public class Stacks {
                     if (isOperator(ch)) {
                         precedenceWithin = getMinPrecedence(precedenceWithin, pMap.get(ch));
                     }
+
                 }
                 StackNode leftBrace = st.pop();
 
