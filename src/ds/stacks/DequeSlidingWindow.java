@@ -87,10 +87,10 @@ public class DequeSlidingWindow {
 
     public static void main(String args[]) {
 
-        int a[] = new int[]{3,2,5,6,1,4,4};
-        DequeSlidingWindow.largestRectangleArea(a);
-       /* List<Integer> list = DequeSlidingWindow.findMaxWindow(a, 3);
+        int a[] = new int[]{1,3,-1,-3,5,3,6,7};
+        //DequeSlidingWindow.largestRectangleArea(a);
+        List<Integer> list = DequeSlidingWindow.findMaxWindow(a, 3);
         for(Integer i : list)
-            System.out.println(i);*/
+            System.out.println(" " + i);
     }
 }
