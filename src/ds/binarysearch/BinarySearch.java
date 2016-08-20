@@ -327,33 +327,6 @@ public class BinarySearch {
         return best;
     }
 
-    public static int pow1(int x, int n, int d) {
-        // if(x==0){
-        //     return 0;
-        // }
-        // int temp=(x+d)%d;
-        // for(int i =0;i <n-1;i++){
-        //     temp = temp-(x-1);
-        //     temp = (temp +d)%d;
-        // }
-        // return temp;
-
-        int temp;
-        if(x==0){
-            return 0;
-        }
-        if(n==0){
-            return 1;
-        }
-        temp  = pow1 (x , n/2, d);
-        if(n%2==0){
-            return (((temp+d)%d)*((temp+d)%d)+d)%d;
-        }
-        else{
-            return (x+d)%d*((temp+d)%d)*((temp+d)%d);
-        }
-    }
-
     public static int pow2(int x, int n, int d) {
         long result = 1;
         long x1 = x;
