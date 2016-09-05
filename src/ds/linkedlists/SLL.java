@@ -12,6 +12,10 @@ class ListNode {
     ListNode(int val) {
         this.val = val;
     }
+
+    public ListNode() {
+
+    }
 }
 
 public class SLL {

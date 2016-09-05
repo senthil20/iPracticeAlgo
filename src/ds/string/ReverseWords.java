@@ -66,6 +66,6 @@ public class ReverseWords {
 
     public static void main(String a[]) {
         ReverseWords rw = new ReverseWords();
-        System.out.println(rw.reverseWords1("the    sky is blue  "));
+        System.out.println(rw.reverseWords1(" "));
     }
 }
