@@ -34,6 +34,7 @@ public class ShuffleArray {
         s.splitArray(a, 0, a.length-1);
         for(int val : a) System.out.print(val + " ");
         s.splitArray(a, 0, a.length-1);
+        System.out.println();
         for(int val : a) System.out.print(val + " ");
     }
 }
