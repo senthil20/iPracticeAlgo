@@ -1,9 +1,5 @@
 package ds.arrays;
 
-import ds.Misc.Solution;
-
-import java.util.*;
-
 /**
  * Created by senthil on 12/8/16.
  */

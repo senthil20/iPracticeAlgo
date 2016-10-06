@@ -22,6 +22,7 @@ public class PathSum {
     return true, as there exist a root-to-leaf path 5->4->11->2 which sum is 22.
     **/
 
+    //simply check whether it's has the sum or not
     public boolean pathSum1(TreeNode root, int sum) {
         if (root == null) return false;
 
@@ -51,6 +52,7 @@ public class PathSum {
         [5,8,4,5]
      ]
      **/
+    //Collecting the paths too if it's sum equals key
     public List<List<Integer>> pathSum2(TreeNode root, int sum) {
 
         List<List<Integer>> result = new ArrayList<>();
@@ -82,7 +84,7 @@ public class PathSum {
         }
     }
 
-    //similar to above. nothing more.
+    //similar to above. nothing more. Substracting root value before starting recursion
     public List<List<Integer>> pathSum21(TreeNode root, int sum) {
 
         List<List<Integer>> result = new ArrayList<>();

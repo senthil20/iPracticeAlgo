@@ -1,4 +1,4 @@
-package ds.Misc;
+package ds.MiscJava;
 
 /**
  * Created by senthil on 12/8/16.

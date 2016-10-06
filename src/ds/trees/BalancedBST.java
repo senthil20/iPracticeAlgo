@@ -9,7 +9,6 @@ public class BalancedBST {
     //worst case for skew binary tree o(n^2)
     //if -2 return false else true
     public int isHeightBalancedBST(TreeNode root) {
-
         if (root == null) return -1;
 
         int l = isHeightBalancedBST(root.left);
@@ -21,6 +20,33 @@ public class BalancedBST {
             return -2;
         }
         return Math.max(l, r) + 1;
+    }
+
+    int count = 0;
+
+    public int kthsmallest(TreeNode root, int k) {
+
+        if (root == null) return 0;
+
+        return kthsmallestRecursive(root, k, -1);
+
+    }
+
+    public int kthsmallestRecursive(TreeNode root, int k, int value) {
+
+        if (root == null) return value;
+
+        if (count < k) value = kthsmallestRecursive(root.left, k, value);
+
+        count++;
+
+        if(k == count) {
+            return root.val;
+        }
+
+        if (count < k) value = kthsmallestRecursive(root.right, k, value);
+
+        return value;
     }
 
     public static void main(String a[]) {
@@ -38,7 +64,8 @@ public class BalancedBST {
                                             new TreeNode(11,
                                                     new TreeNode(8, null, null),
                                                     new TreeNode(12, null, null))));
-        bst.isHeightBalancedBST(root);
+        //bst.isHeightBalancedBST(root);
+        System.out.println(bst.kthsmallest(root, 9));
     }
 
 }
