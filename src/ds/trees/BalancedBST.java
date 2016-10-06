@@ -1,8 +1,19 @@
 package ds.trees;
 
 /**
- * Created by senthil on 24/9/16.
+ *
+ * Tree
+        5
+      /   \
+     4     7
+    /     / \
+   2     6  11
+  / \      /  \
+ 1  3     8  12
+
+ output = true
  */
+
 public class BalancedBST {
 
     //tc: o(n)
@@ -64,8 +75,8 @@ public class BalancedBST {
                                             new TreeNode(11,
                                                     new TreeNode(8, null, null),
                                                     new TreeNode(12, null, null))));
-        //bst.isHeightBalancedBST(root);
-        System.out.println(bst.kthsmallest(root, 9));
+        System.out.println(bst.isHeightBalancedBST(root));
+        //System.out.println(bst.kthsmallest(root, 9));
     }
 
 }

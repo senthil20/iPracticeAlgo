@@ -3,25 +3,34 @@ package ds.trees;
 import java.util.LinkedList;
 import java.util.Queue;
 
-/**
- * Created by senthil on 26/9/16.
+/** Tree
+        5
+      /   \
+     4     7
+    / \   / \
+   2  4  6  11
+  / \      /  \
+ 1  3     8  12
+
+ output = 2
  */
 public class MinDepthOfBinaryTree {
 
     //Brute force not advisable, think if there is one node in left and thousands in right.
-    public int minDepthOfBinaryTree(TreeNode root) {
+    public int minDepth(TreeNode root) {
 
-        if (root == null) return 0;
+        if (root == null) return -1;
 
-        if (root.left == null && root.right == null) return 1;
+        int leftDepth = minDepth(root.left);
+        int rightDepth = minDepth(root.right);
 
-        if (root.left == null)
-            return minDepthOfBinaryTree(root.right);
+        if (root.left == null) {
+            return 1 + rightDepth;
+        } else if (root.right == null) {
+            return 1 + leftDepth;
+        }
 
-        if (root.right == null)
-            return minDepthOfBinaryTree(root.left);
-
-        return Math.min(minDepthOfBinaryTree(root.left), minDepthOfBinaryTree(root.right)) + 1;
+        return 1 + Math.min(leftDepth, rightDepth);
     }
 
     //We can solve this using level order
@@ -61,24 +70,27 @@ public class MinDepthOfBinaryTree {
 
         MinDepthOfBinaryTree md = new MinDepthOfBinaryTree();
 
-        /*TreeNode root = new TreeNode(5,
+        TreeNode root = new TreeNode(5,
                 new TreeNode(4,
-                        null,
-                        new TreeNode(2, null, null)),
+                        new TreeNode(2,
+                                new TreeNode(1, null, null),
+                                new TreeNode(3, null, null)),
+                        new TreeNode(4, null, null)),
                 new TreeNode(7,
                         new TreeNode(6, null, null),
                         new TreeNode(11,
                                 new TreeNode(8, null, null),
-                                new TreeNode(12, null, null))));*/
-        TreeNode root = new TreeNode(5,
+                                new TreeNode(12, null, null))));
+
+        /*TreeNode root = new TreeNode(5,
                 new TreeNode(4,
                         null,
                         null),
                 new TreeNode(7,
                         new TreeNode(8, null, null),
-                        new TreeNode(10, null, null)));
+                        new TreeNode(10, null, null)));*/
 
         //System.out.println(md.minDepthOfBinaryTree(root));
-        System.out.println(md.minDepthOfBinaryTree1(root));
+        System.out.println(md.minDepth(root));
     }
 }

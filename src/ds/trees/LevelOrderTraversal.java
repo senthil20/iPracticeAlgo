@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Queue;
 
 /*
- Given binary tree {3,9,20,#,#,15,7},
+ Given binary tree,
 
             5
           /   \
