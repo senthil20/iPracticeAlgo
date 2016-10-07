@@ -5,7 +5,16 @@ import java.util.List;
 import java.util.Stack;
 
 /**
- * Created by senthil on 24/9/16.
+ Tree
+         5
+      /    \
+     4      9
+    /     /  \
+   2     7   11
+  / \  /  \  / \
+ 1  3 6   8 10 12
+
+ output = true
  */
 public class PreOrderTraversalBST {
 

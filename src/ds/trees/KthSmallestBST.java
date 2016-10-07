@@ -1,21 +1,34 @@
 package ds.trees;
 
+/**
+ * Tree
+         5
+       /   \
+      4     7
+     /     / \
+    2     6  11
+   / \      /  \
+  1  3     8   12
+
+ if k = 3 o/p = 3
+ if k = 9 o/p = 11
+ */
 public class KthSmallestBST {
     int count = 0;
-    boolean found = false;
 
-    public int kthSmallest(TreeNode root, int k, int value) {
+    public int kthSmallest(TreeNode root, int k, int val) {
 
-        if (root == null) return value;
+        if (root == null) return val;
 
-        value =  kthSmallest(root.left, k, value);
+        if (count <= k) val =  kthSmallest(root.left, k, val);
+
         count++;
-        if (k == count) {
-            found = true;
-            return root.val;
-        }
-        value = kthSmallest(root.right, k, value);
-        return value;
+
+        if (k == count) return root.val;
+
+        if (count <= k) val = kthSmallest(root.right, k, val);
+
+        return val;
     }
 
     public static void main(String a[]) {
