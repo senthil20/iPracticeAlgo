@@ -87,7 +87,7 @@ public class PassByValueDemo {
         System.out.println(A);
 
         //set A to null.what happens? will list becomes null/empty :-) Nope 'A' job is done and it finds it's way.
-        //It can't do another with list. But if you do A.setX("") it will reflect over list.
+        //It can't do anything with the list. But if you do A.setX("") it will reflect over list.
         A = null;
         System.out.println(list);
 

@@ -1,8 +1,7 @@
 package ds.trees;
 
 /**
- *
- * Tree
+Tree
         5
       /   \
      4     7
@@ -11,8 +10,8 @@ package ds.trees;
   / \      /  \
  1  3     8  12
 
- output = true
- */
+output = true
+*/
 
 public class BalancedBST {
 
