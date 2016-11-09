@@ -17,9 +17,9 @@ public class LongestSeqUnSortedArray {
         int maxLength = 0;
         for (int i : values) {
             // If it is not the leftmost value in the sequence, don't bother
-            if (values.contains(i - 1)) {
+           /* if (values.contains(i - 1)) {
                 continue;
-            }
+            }*/
             int length = 0;
 
             // Iterate through sequence
@@ -59,6 +59,7 @@ public class LongestSeqUnSortedArray {
     public static void main(String a[]) {
         LongestSeqUnSortedArray la = new LongestSeqUnSortedArray();
         System.out.println(la.consecutive(new int[]{4, 2, 1, 6, 5}));
-        System.out.println(la.longestSequence(new int[]{1, 1001, 1002}));
+        //System.out.println(la.consecutive(new int[]{4, 2, 1, 3, 3}));
+        //System.out.println(la.consecutive(new int[]{1, 1001, 1002}));
     }
 }

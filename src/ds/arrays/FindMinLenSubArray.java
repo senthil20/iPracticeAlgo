@@ -2,11 +2,10 @@ package ds.arrays;
 
 import java.util.*;
 
-/**
- * Created by senthil on 1/10/16.
- */
 public class FindMinLenSubArray {
 
+    // WRONG!!! Have to re-work
+    // Problem from Quora
     public int findRangeAndLength(int[] a) {
 
         if (a == null || a.length == 0) return -1;

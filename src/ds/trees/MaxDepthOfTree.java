@@ -1,8 +1,6 @@
 package ds.trees;
 
-/**
- * Created by senthil on 24/9/16.
- */
+
 public class MaxDepthOfTree {
 
     public int maxDepthOfTree(TreeNode root) {
