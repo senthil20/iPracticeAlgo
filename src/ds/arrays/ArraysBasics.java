@@ -1,13 +1,12 @@
 package ds.arrays;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
 
 /**
  * Created by senthil on 10/8/16.
  */
-public class Arrays {
+public class ArraysBasics {
 
     public ArrayList<Integer> maxset(ArrayList<Integer> a) {
 
@@ -187,7 +186,7 @@ public class Arrays {
     }
 
     public static void main(String args[]) {
-        Arrays a = new Arrays();
+        ArraysBasics a = new ArraysBasics();
         ArrayList<Integer> a1 = new ArrayList<>(0);
         /*ArrayList<Integer> a1 = new ArrayList<>();
         ArrayList<Integer> a2 = new ArrayList<>();
@@ -209,7 +208,7 @@ public class Arrays {
         //0, 0, 4, 4, 6, 0, 9, 6, 5, 1
         //a.plusOne(a1);
         /*int a1[] = new int[]{1,2,3};
-        a1 = java.util.Arrays.copyOf(a1, a1.length+1);
+        a1 = java.util.ArraysBasics.copyOf(a1, a1.length+1);
         System.out.println(a1);
         System.arraycopy(a1, 0, a1, 1, a1.length-1);*/
         //a.maxContiguousArray(new int[]{-2,-5,6,-2,-3,1,5,-6});

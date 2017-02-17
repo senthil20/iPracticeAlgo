@@ -1,5 +1,6 @@
 package ds.linkedlists;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class SortList {
@@ -17,11 +18,20 @@ public class SortList {
 
         ListNode p = new ListNode(-1);
         ListNode tail = p;
+
+        //p.next = new ListNode(100);
+
+        System.out.println(tail);
+
         for (int val : a) {
             tail.next = new ListNode(val);
             tail = tail.next;
         }
         root = p.next;
+
+        System.out.println(p);
+        System.out.println(tail);
+        System.out.println(root);
     }
 
     public int sizeOf(ListNode root) {
@@ -97,8 +107,22 @@ public class SortList {
     public static void main(String a[]) {
 
         int ar[] = new int[]{5, 3, 1, 4, 6, 9};
-        SortList sl = new SortList(ar);
-        ListNode result = sl.sortList(sl.root);
-        System.out.println(result);
+        //SortList sl = new SortList(ar);
+        //ListNode result = sl.sortList(sl.root);
+        //System.out.println(result);
+
+        //see this example too
+        ArrayList<String> list1 = new ArrayList<String>();
+        ArrayList<String> list2 = list1;
+
+        list1 = null;
+        System.out.println(list2);
+
+        list1.add("IB");
+        list1.add("LC");
+        list2.add("GFG");
+
+        System.out.println(list1);
+        System.out.println(list2);
     }
 }

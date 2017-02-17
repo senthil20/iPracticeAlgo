@@ -67,8 +67,8 @@ public class FindMissingPositive {
 
     public static void main(String a[]) {
         FindMissingPositive fm = new FindMissingPositive();
-        fm.findFirstMissing(new int[]{0,1,2,3,4,5,6,7,9,10}, 0, 9);
-        //fm.missingInteger1(new int[]{10, 7, 4, 3, 2, 1, 6, 8, 5});
+        //fm.findFirstMissing(new int[]{0,1,2,3,4,5,6,7,9,10}, 0, 9);
+        fm.missingInteger1(new int[]{-1, 7, 4, 3, 2, 1, 7, 8, 5});
         //fm.missingInteger1(new int[]{0, -2, 2, 3, 5});
         //fm.missingInteger1(new int[]{2,3,4,5,8,-1,-10,15});
         /*fm.missingInteger(new int[]{417, 929, 845, 462, 675, 175, 73, 1, 2, 867,

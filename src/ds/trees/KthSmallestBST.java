@@ -1,5 +1,12 @@
 package ds.trees;
 
+import sun.reflect.generics.tree.Tree;
+
+import java.util.Deque;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
+
 /**
  * Tree
          5
@@ -31,6 +38,53 @@ public class KthSmallestBST {
         return val;
     }
 
+    public void addAllRightNodes(Stack<TreeNode> st, TreeNode node) {
+        while (node != null) {
+            st.push(node);
+            node = node.right;
+        }
+    }
+
+    public TreeNode findKthLargest1(TreeNode root, int k) {
+        if (root == null) return null;
+        int count = 0;
+
+        Stack<TreeNode> st = new Stack<>();
+        addAllRightNodes(st, root);
+
+        TreeNode curr = null;
+
+        while (!st.isEmpty()) {
+            curr = st.pop();
+            count++;
+            if (count == k) {
+                return curr;
+            }
+            if (curr.left != null) {
+                addAllRightNodes(st, curr.left);
+            }
+        }
+        return null;
+    }
+
+    public TreeNode findKthLargest(TreeNode root, int k) {
+
+        if (root == null) return null;
+        TreeNode temp = null;
+
+        return recursiveCall(root, temp, k);
+    }
+
+    public TreeNode recursiveCall(TreeNode root, TreeNode result, int k) {
+        if (root == null) return result;
+        result = recursiveCall(root.right, result, k);
+        if (++count == k) {
+           return root;
+        }
+        result = recursiveCall(root.left, result, k);
+        return result;
+    }
+
     public static void main(String a[]) {
         KthSmallestBST kth = new KthSmallestBST();
         TreeNode root = new TreeNode(5,
@@ -44,6 +98,16 @@ public class KthSmallestBST {
                         new TreeNode(11,
                                 new TreeNode(8, null, null),
                                 new TreeNode(12, null, null))));
-        System.out.println(kth.kthSmallest(root, 9, -1));
+
+        root = new TreeNode(4,
+                new TreeNode(2, null, null),
+                new TreeNode(8,
+                        new TreeNode(5, null, null),
+                        new TreeNode(10, null, null)));
+
+        //System.out.println(kth.kthSmallest(root, 9, -1));
+       // System.out.println(kth.findKthLargest1(root, 9));
+        TreeNode result = kth.findKthLargest1(root, 3);
+        System.out.println(result != null ? result.val : result);
     }
 }
