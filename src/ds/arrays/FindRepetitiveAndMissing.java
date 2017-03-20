@@ -10,8 +10,8 @@ public class FindRepetitiveAndMissing {
         int e = a.length;
 
         while(s < e) {
-            if(a[Math.abs(a[s])-1] > 0) {
-                a[Math.abs(a[s])-1] = -a[Math.abs(a[s])-1];
+            if(a[Math.abs(a[s]) - 1] > 0) {
+                a[Math.abs(a[s]) - 1] = -a[Math.abs(a[s]) - 1];
             }
             else {
                 System.out.println("Repeating element is " + Math.abs(a[s]));
@@ -21,7 +21,7 @@ public class FindRepetitiveAndMissing {
         s = 0;
         while(s < e) {
             if(a[s] > 0) {
-                System.out.println("Missing element is " + (s+1));
+                System.out.println("Missing element is " + (s + 1));
                 break;
             }
             s++;

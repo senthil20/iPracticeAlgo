@@ -146,10 +146,31 @@ public class TimeComplexity {
      expected worst-case space complexity is O(N), beyond input storage (not counting the storage required for input arguments).
      Elements of input arrays can be modified.
      */
+    public int equalParts(int[] A) {
+        if (A == null || A.length == 0) return 0;
+        int total = sum(A);
+        int left = A[0];
+        int right = total - left;
+        int min = Math.abs(right - left);
+        for (int i = 1; i < A.length - 1; i++) {
+            left += A[i];
+            right -= A[i];
+            min = Math.min(min, Math.abs(right - left));
+        }
+        return min;
+    }
+
+    public int sum(int[] A) {
+        int sum = 0;
+        for (int val : A) sum += val;
+        return sum;
+    }
+
     public static void main(String a[]) {
         TimeComplexity tc = new TimeComplexity();
-        System.out.println(tc.frogJump(10, 50, 30));
-        System.out.println(tc.missingElem(new int[]{2, 3, 1, 5}));
-        System.out.println(tc.missingElemXOR(new int[]{2, 3, 1, 5}));
+        //System.out.println(tc.frogJump(10, 50, 30));
+        //System.out.println(tc.missingElem(new int[]{2, 3, 1, 5}));
+        //System.out.println(tc.missingElemXOR(new int[]{2, 3, 1, 5}));
+        tc.equalParts(new int[]{3, 1, 2, 4, 3});
     }
 }

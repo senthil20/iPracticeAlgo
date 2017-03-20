@@ -50,6 +50,15 @@ public class Arrays {
         return A[A.length - 1];
     }
 
+    public int oddOccurencesInArray1(int[] A) {
+        if (A == null || A.length == 0) return 0;
+        int xor = A[0];
+        for (int i = 1; i < A.length; i++) {
+            xor ^= A[i];
+        }
+        return xor;
+    }
+
 //Problem 2
     /**
      * A zero-indexed array A consisting of N integers is given. Rotation of the array means that each element is shifted right by one index,
@@ -117,8 +126,8 @@ public class Arrays {
 
     public static void main(String a[]) {
         Arrays gap = new Arrays();
-        System.out.println(gap.oddOccurencesInArray(new int[]{9, 3, 9, 3, 9, 7, 9}));
-        System.out.println(gap.cyclicRotation(new int[]{3, 8, 9, 7, 6}, 7));
-        System.out.println(gap.solutionMin(new int[]{3, 1, 2, 4, 3}));
+        System.out.println(gap.oddOccurencesInArray1(new int[]{9, 3, 9, 3, 9, 7, 9}));
+        //System.out.println(gap.cyclicRotation(new int[]{3, 8, 9, 7, 6}, 7));
+        //System.out.println(gap.solutionMin(new int[]{3, 1, 2, 4, 3}));
     }
 }

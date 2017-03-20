@@ -1,20 +1,20 @@
 package ds.tries;
 
-class TrieNode {
+class TNode {
 
-    TrieNode parent;
-    TrieNode[] children;
+    TNode parent;
+    TNode[] children;
     boolean isLeaf;
     boolean isWord;
     char chr;
 
-    TrieNode(){
-        children = new TrieNode[26];
+    TNode(){
+        children = new TNode[26];
         isLeaf = true;
         isWord = false;
     }
 
-    TrieNode(char c){
+    TNode(char c){
         this();
         this.chr = c;
     }
@@ -24,7 +24,7 @@ class TrieNode {
         if (s == null || s.length() == 0) return;
         int c = s.charAt(0) - 'a';
         if (children[c] == null) {
-            children[c] = new TrieNode(s.charAt(0));
+            children[c] = new TNode(s.charAt(0));
             children[c].parent = this;
         }
         if (s.length() > 1) {
@@ -35,7 +35,7 @@ class TrieNode {
         }
     }
 
-    public boolean isWordAvailable(String s, TrieNode[] nextNode) {
+    public boolean isWordAvailable(String s, TNode[] nextNode) {
         int c = s.charAt(0) - 'a';
         if (children[c] == null) return false;
         //if (s.length() > 1) isWordAvailable(s.substring(1), children[c].children[0]);
@@ -44,18 +44,17 @@ class TrieNode {
 }
 
 public class TriesBasicOperation {
-    private static TrieNode tn = new TrieNode();
+    private static TNode tn = new TNode();
 
     public static void main(String a[]) {
         String firstName = null;
         firstName = firstName == null ? "" : firstName.trim().toUpperCase();
         System.out.println(firstName);
-        /*TriesBasicOperation tb = new TriesBasicOperation();
         tn.addWords("senthil");
         tn.addWords("kumar");
         //tn.addWords("kandasamy");
         tn.addWords("kumarkumar");
-        System.out.println(tn.isWordAvailable("senthil", tn));*/
+        System.out.println(tn.isWordAvailable("senthil", tn.children));
         //System.out.println(tn);
     }
 }

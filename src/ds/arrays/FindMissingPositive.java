@@ -2,6 +2,50 @@ package ds.arrays;
 
 public class FindMissingPositive {
 
+    int missingNumber2(int[] arr) {
+        int xor = 0, i = 0;
+        for (i = 0; i < arr.length; i++) {
+            xor = xor ^ i ^ arr[i];
+        }
+
+        return xor ^ i;
+    }
+
+    int missingNumber1(int[] arr) {
+        int[] a = new int[arr.length + 1];
+        for (int i = 0; i < arr.length; i++) {
+            a[arr[i]] = arr[i];
+        }
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] != i) return i;
+        }
+        return 0;
+    }
+
+    int missingNumber(int[] arr) {
+        if (arr == null || arr.length == 0) return 0;
+        int sum = 0;
+        for (int val : arr) sum += val;
+        int n = arr.length;
+        int total = n * (n + 1) / 2;
+        return total - sum;
+    }
+
+    int missingNumberUsingXOR(int[] arr) {
+        if (arr == null || arr.length == 0) return 0;
+        int x1 = arr[0];
+        int x2 = 0;
+
+        for (int i = 1; i < arr.length; i++) {
+            x1 ^= arr[i];
+        }
+        for (int i = 1; i <= arr.length; i++) {
+            x2 ^= i;
+        }
+        int result = x1 ^ x2;
+        return result;
+    }
+
     public static void missingInteger(int[] a) {
 
         if(a == null || a.length == 0) return;
@@ -67,8 +111,10 @@ public class FindMissingPositive {
 
     public static void main(String a[]) {
         FindMissingPositive fm = new FindMissingPositive();
+        fm.missingNumber1(new int[]{1, 3, 4, 5, 2, 0, 7});
+        //fm.missingNumberUsingXOR(new int[]{0, 3, 5, 8, 4, 6, 1, 9, 7});
         //fm.findFirstMissing(new int[]{0,1,2,3,4,5,6,7,9,10}, 0, 9);
-        fm.missingInteger1(new int[]{-1, 7, 4, 3, 2, 1, 7, 8, 5});
+        //fm.missingInteger1(new int[]{-1, 7, 4, 3, 2, 1, 7, 8, 5});
         //fm.missingInteger1(new int[]{0, -2, 2, 3, 5});
         //fm.missingInteger1(new int[]{2,3,4,5,8,-1,-10,15});
         /*fm.missingInteger(new int[]{417, 929, 845, 462, 675, 175, 73, 1, 2, 867,

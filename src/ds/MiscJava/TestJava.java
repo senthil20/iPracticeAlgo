@@ -1,8 +1,5 @@
-package ds;
+package ds.MiscJava;
 
-/**
- * Created by sydgsk9 on 12/15/2016.
- */
 public class TestJava {
 
     public void testA() {
