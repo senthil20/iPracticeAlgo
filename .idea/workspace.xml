@@ -5,30 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="63e8680d-d549-43c9-8ce3-994e5d60288b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ds/arrays/MaximumSumSubArray.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ds/arrays/PrintTriangle.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ds/tries/Trie.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/iPracticeAlgo/ds/TestJava.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/iPracticeAlgo/ds/arrays/FindMissingPositive.class" afterPath="$PROJECT_DIR$/out/production/iPracticeAlgo/ds/arrays/FindMissingPositive.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/iPracticeAlgo/ds/codility/Arrays.class" afterPath="$PROJECT_DIR$/out/production/iPracticeAlgo/ds/codility/Arrays.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/iPracticeAlgo/ds/codility/TimeComplexity.class" afterPath="$PROJECT_DIR$/out/production/iPracticeAlgo/ds/codility/TimeComplexity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/iPracticeAlgo/ds/trees/FlattenTree.class" afterPath="$PROJECT_DIR$/out/production/iPracticeAlgo/ds/trees/FlattenTree.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/iPracticeAlgo/ds/tries/TrieNode.class" afterPath="$PROJECT_DIR$/out/production/iPracticeAlgo/ds/tries/TrieNode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/iPracticeAlgo/ds/tries/TriesBasicOperation.class" afterPath="$PROJECT_DIR$/out/production/iPracticeAlgo/ds/tries/TriesBasicOperation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ds/MiscJava/NumericSystemOp.java" afterPath="$PROJECT_DIR$/src/ds/MiscJava/NumericSystemOp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ds/MiscJava/StringConverter.java" afterPath="$PROJECT_DIR$/src/ds/MiscJava/StringConverter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ds/MiscJava/StringPermutation.java" afterPath="$PROJECT_DIR$/src/ds/MiscJava/StringPermutation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ds/MiscJava/TestJava.java" afterPath="$PROJECT_DIR$/src/ds/MiscJava/TestJava.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ds/arrays/FindMissingPositive.java" afterPath="$PROJECT_DIR$/src/ds/arrays/FindMissingPositive.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ds/arrays/FindRepetitiveAndMissing.java" afterPath="$PROJECT_DIR$/src/ds/arrays/FindRepetitiveAndMissing.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ds/arrays/MergeSort.java" afterPath="$PROJECT_DIR$/src/ds/arrays/MergeSort.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ds/codility/Arrays.java" afterPath="$PROJECT_DIR$/src/ds/codility/Arrays.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ds/codility/CountingElements.java" afterPath="$PROJECT_DIR$/src/ds/codility/CountingElements.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ds/codility/TimeComplexity.java" afterPath="$PROJECT_DIR$/src/ds/codility/TimeComplexity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ds/cw/EqualSidesOfAnArray.java" afterPath="$PROJECT_DIR$/src/ds/cw/EqualSidesOfAnArray.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ds/trees/FlattenTree.java" afterPath="$PROJECT_DIR$/src/ds/trees/FlattenTree.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ds/tries/TriesBasicOperation.java" afterPath="$PROJECT_DIR$/src/ds/tries/TriesBasicOperation.java" />
     </list>
     <ignored path="iPracticeAlgo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,9 +50,11 @@
       <file leaf-file-name="CountingElements.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ds/codility/CountingElements.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="257" column="8" selection-start-line="257" selection-start-column="8" selection-end-line="257" selection-end-column="8" />
-              <folding />
+            <state relative-caret-position="173">
+              <caret line="256" column="0" selection-start-line="256" selection-start-column="0" selection-end-line="256" selection-end-column="0" />
+              <folding>
+                <element signature="e#7886#7887#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -2556,9 +2535,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ds/codility/CountingElements.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="257" column="8" selection-start-line="257" selection-start-column="8" selection-end-line="257" selection-end-column="8" />
-          <folding />
+        <state relative-caret-position="173">
+          <caret line="256" column="0" selection-start-line="256" selection-start-column="0" selection-end-line="256" selection-end-column="0" />
+          <folding>
+            <element signature="e#7886#7887#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

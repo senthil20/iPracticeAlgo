@@ -254,8 +254,6 @@ public class CountingElements {
     */
 
     public int maxCounters(int[] A) {
-
-        
         return 0;
     }
 
