@@ -37,59 +37,40 @@ public class FindLargest {
         return result;
     }
 
-    public int findLargest(int a[]) {
+    /**
+     Given a list of non negative integers, arrange them such that they form the largest number.
+     For example:
+     Given [3, 30, 34, 5, 9], the largest formed number is 9534330.
+     Note: The result may be very large, so you need to return a string instead of an integer.
+     */
 
-        if(a == null || a.length == 0) return 0;
-        String[] s = new String[a.length];
+    public String largestNumber(final List<Integer> a) {
+        if (a == null || a.size() == 0) return "";
+        String[] str = new String[a.size()];
         StringBuffer sb = new StringBuffer();
-        for(int i=0; i < a.length; i++) {
-            s[i] = String.valueOf(a[i]);
+        for (int i = 0; i < a.size(); i++) {
+            str[i]  = String.valueOf(a.get(i));
         }
-
-        Arrays.sort(s, new Comparator<String>(){
+        Arrays.sort(str, new Comparator<String>() {
             public int compare(String s1, String s2) {
-                System.out.println("S1 is " + s1 + "..." + " S2 is" + s2);
-                return (s2+s1).compareTo(s1+s2);
+                System.out.println("s1 is: " + s1 + "  " + "s2 is: " + s2);
+                return (s2 + s1).compareTo(s1 + s2);
             }
         });
 
-        for(String str : s) {
-            sb.append(str);
-        }
+        Arrays.binarySearch(new int[]{2,4,1,10}, 10);
 
-        while(sb.charAt(0) =='0' && sb.length() > 1)
-            sb.deleteCharAt(0);
+        for (String s : str) sb.append(s);
 
-        return Integer.parseInt(sb.toString());
-    }
-
-    private static String getOnDemandFromDate(int monthOffSet) {
-        try {
-            GregorianCalendar cal = new GregorianCalendar();
-            if (monthOffSet > 0){
-                cal.add(Calendar.MONTH,-monthOffSet);
-            } else {
-                cal.add(Calendar.MONTH,-24);
-            }
-            SimpleDateFormat dateFormatter = new SimpleDateFormat("MM/dd/yy");
-            String onDemandDefaultFromDate = dateFormatter.format(cal.getTime());
-            return onDemandDefaultFromDate;
-
-        } catch (Exception e) {
-
-        }
-        return "";
+        while (sb.charAt(0) == '0' && sb.length() > 1) sb.deleteCharAt(0);
+        return sb.toString();
     }
 
     public static void main(String a[]) {
-
-        SimpleDateFormat dateFormatter = new SimpleDateFormat("MM/dd/yy");
-        String onDemandToDate = dateFormatter.format(new java.util.Date());
-
-
-        System.out.println(FindLargest.getOnDemandFromDate(24));
         FindLargest fl = new FindLargest();
-        //fl.findLargest(new int[]{3, 30, 34, 5, 9});
+        List<Integer> llist = new ArrayList<>();
+        llist.add(5);llist.add(7);llist.add(6);llist.add(2);llist.add(9);llist.add(1);
+        System.out.print(fl.largestNumber(llist));
         List<String> list = new ArrayList<>();
         list.add("Hi");
         //list.add("Hi");

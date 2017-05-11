@@ -262,6 +262,6 @@ public class CountingElements {
         CountingElements ce = new CountingElements();
         //System.out.println(ce.permCheck(new int[]{4, 1, 2, 3}));
         //System.out.println(ce.frogRiverOne(5, new int[]{1, 3, 5, 4, 2, 3, 5, 4}));
-        //System.out.println(ce.missingInteger(new int[]{1, 3, 6, 4, 1, 2}));
+        System.out.println(ce.missingInteger(new int[]{1, 3, 6, 4, 1, 2}));
     }
 }

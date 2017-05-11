@@ -110,6 +110,18 @@ public class BSTBasicOperations {
     //build from sorted array
     //tc: o(n) fetching mid can be constant but total complexity is o(n) as each element is visited to build the tree
     //T(n) = 2T(n/2) + C, C --> finding mid
+
+    //1, 2, 3, 4, 5, 6, 7, 8, 11, 12
+    /*
+                     5
+                  /     \
+                 2        8
+               / \       / \
+              1   3     6   11
+                   \    \    \
+                    4    7   12
+
+    */
     public TreeNode buildTreeSortedArray(TreeNode root, int[] a, int s, int e) {
 
         if (s > e) return null;
@@ -205,9 +217,10 @@ public class BSTBasicOperations {
         int[] ar = new int[]{1, 3, 5, 7, 8, 9, 11, 12, 13, 14, 15, 17, 18, 20};
         ar = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 11, 12};
         bst.root = bst.buildTreeSortedArray(bst.root, ar, 0, ar.length - 1);
+        System.out.println(bst.root);
         //System.out.println(bst.searchElement(bst.root, 25));
         //System.out.println(bst.findNode(bst.root, 20));
-        bst.printRange(bst.root, 4, 11);
-        System.out.println(rangeList);
+        //bst.printRange(bst.root, 4, 11);
+       // System.out.println(rangeList);
     }
 }
