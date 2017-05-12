@@ -15,33 +15,6 @@ package ds.trees;
  getNodeDistance(2,5) => 3
  */
 
-class TreeNode {
-    int val;
-    String value;
-    char c;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode() {
-    }
-
-    TreeNode(int val) {
-        this.val = val;
-    }
-
-    TreeNode(int val, TreeNode left, TreeNode right) {
-        this.val = val;
-        this.left = left;
-        this.right = right;
-    }
-
-    TreeNode(char val, TreeNode left, TreeNode right) {
-        this.c = val;
-        this.left = left;
-        this.right = right;
-    }
-}
-
 public class DistanceBetweenNodesinBT {
     /**
      Tree

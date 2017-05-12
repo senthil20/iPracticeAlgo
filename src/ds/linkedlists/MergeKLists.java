@@ -1,7 +1,9 @@
 package ds.linkedlists;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.PriorityQueue;
 
 public class MergeKLists {
 
@@ -10,13 +12,18 @@ public class MergeKLists {
     }
 
     public ListNode mergeRecursion(List<ListNode> lists, int start, int end) {
-        if (start < end) {
+        if (start >= end) return lists.get(start);
+        int mid = (start + end) / 2;
+        ListNode left = mergeRecursion(lists, start, mid);
+        ListNode right = mergeRecursion(lists, mid + 1, end);
+        return mergeLists(left, right);
+        /*if (start < end) {
             int mid = (start + end) / 2;
             ListNode left = mergeRecursion(lists, start, mid);
             ListNode right = mergeRecursion(lists, mid + 1, end);
             return mergeLists(left, right);
         }
-        return lists.get(start);
+        return lists.get(start);*/
     }
 
     public ListNode mergeLists(ListNode l1, ListNode l2) {
@@ -42,6 +49,34 @@ public class MergeKLists {
         return head.next;
     }
 
+    public ListNode mergeKListsUsingPQ(List<ListNode> lists) {
+        if(lists==null||lists.size() == 0)
+            return null;
+
+        PriorityQueue<ListNode> queue = new PriorityQueue<ListNode>(new Comparator<ListNode>(){
+            public int compare(ListNode l1, ListNode l2){
+                return l1.val - l2.val;
+            }
+        });
+
+        ListNode head = new ListNode(0);
+        ListNode p = head;
+
+        for(ListNode list: lists){
+            if(list!=null)
+                queue.offer(list);
+        }
+
+        while(!queue.isEmpty()){
+            ListNode n = queue.poll();
+            p.next = n;
+            p=p.next;
+
+            if(n.next!=null)
+                queue.offer(n.next);
+        }
+        return head.next;
+    }
 
     public ListNode buildLinkedList(int a[], ListNode l) {
         if(a.length == 0) return null;
@@ -68,6 +103,7 @@ public class MergeKLists {
         list.add(l3);
         list.add(l4);
         ListNode result = mergeKLists.mergeKLists(list);
+        //ListNode result = mergeKLists.mergeKListsUsingPQ(list);
         System.out.println(result);
     }
 }

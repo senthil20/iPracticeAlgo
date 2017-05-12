@@ -5,7 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="63e8680d-d549-43c9-8ce3-994e5d60288b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ds/codility/CountingElements.java" afterPath="$PROJECT_DIR$/src/ds/codility/CountingElements.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ds/arrays/MergeKSortedArrays.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/iPracticeAlgo/ds/arrays/BasicSorting.class" afterPath="$PROJECT_DIR$/out/production/iPracticeAlgo/ds/arrays/BasicSorting.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/iPracticeAlgo/ds/arrays/FindLargest$2.class" afterPath="$PROJECT_DIR$/out/production/iPracticeAlgo/ds/arrays/FindLargest$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/iPracticeAlgo/ds/arrays/FindLargest.class" afterPath="$PROJECT_DIR$/out/production/iPracticeAlgo/ds/arrays/FindLargest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/iPracticeAlgo/ds/arrays/FindMissingPositive.class" afterPath="$PROJECT_DIR$/out/production/iPracticeAlgo/ds/arrays/FindMissingPositive.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/iPracticeAlgo/ds/arrays/FindRepetitiveAndMissing.class" afterPath="$PROJECT_DIR$/out/production/iPracticeAlgo/ds/arrays/FindRepetitiveAndMissing.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/iPracticeAlgo/ds/arrays/Interval.class" afterPath="$PROJECT_DIR$/out/production/iPracticeAlgo/ds/arrays/Interval.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/iPracticeAlgo/ds/arrays/MergeIntervals$1.class" afterPath="$PROJECT_DIR$/out/production/iPracticeAlgo/ds/arrays/MergeIntervals$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/iPracticeAlgo/ds/arrays/MergeIntervals.class" afterPath="$PROJECT_DIR$/out/production/iPracticeAlgo/ds/arrays/MergeIntervals.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/iPracticeAlgo/ds/codility/CountingElements.class" afterPath="$PROJECT_DIR$/out/production/iPracticeAlgo/ds/codility/CountingElements.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/iPracticeAlgo/ds/trees/BSTBasicOperations.class" afterPath="$PROJECT_DIR$/out/production/iPracticeAlgo/ds/trees/BSTBasicOperations.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/iPracticeAlgo/ds/trees/LCATree.class" afterPath="$PROJECT_DIR$/out/production/iPracticeAlgo/ds/trees/LCATree.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ds/arrays/BasicSorting.java" afterPath="$PROJECT_DIR$/src/ds/arrays/BasicSorting.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ds/linkedlists/MergeKLists.java" afterPath="$PROJECT_DIR$/src/ds/linkedlists/MergeKLists.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ds/trees/DistanceBetweenNodesinBT.java" afterPath="$PROJECT_DIR$/src/ds/trees/DistanceBetweenNodesinBT.java" />
     </list>
     <ignored path="iPracticeAlgo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,23 +62,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CountingElements.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ds/codility/CountingElements.java">
+      <file leaf-file-name="MergeKSortedArrays.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ds/arrays/MergeKSortedArrays.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="256" column="0" selection-start-line="256" selection-start-column="0" selection-end-line="256" selection-end-column="0" />
+            <state relative-caret-position="680">
+              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
               <folding>
-                <element signature="e#7886#7887#0" expanded="true" />
+                <element signature="e#490#491#0" expanded="true" />
+                <element signature="e#556#557#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TimeComplexity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ds/codility/TimeComplexity.java">
+      <file leaf-file-name="BasicSorting.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ds/arrays/BasicSorting.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-408">
-              <caret line="82" column="9" selection-start-line="82" selection-start-column="9" selection-end-line="82" selection-end-column="9" />
+            <state relative-caret-position="175">
+              <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -89,35 +105,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/prmp/FourSum.java" />
-        <option value="$PROJECT_DIR$/src/ds/trees/ZigZagTraversalBT.java" />
-        <option value="$PROJECT_DIR$/src/ds/TestJava.java" />
-        <option value="$PROJECT_DIR$/src/ds/hashing/Anagrams.java" />
-        <option value="$PROJECT_DIR$/src/ds/arrays/FindLargest.java" />
-        <option value="C:/Program Files/Java/jdk1.8.0_91/jre/lib/rt.jar!/sun/misc/URLClassPath.class" />
-        <option value="$PROJECT_DIR$/src/ds/trees/KthSmallestBST.java" />
-        <option value="$PROJECT_DIR$/src/ds/linkedlists/SLL.java" />
-        <option value="$PROJECT_DIR$/src/ds/arrays/FindMaxRepeating.java" />
-        <option value="$PROJECT_DIR$/src/ds/trees/MirrorTree.java" />
-        <option value="$PROJECT_DIR$/src/ds/trees/IsBTreeBST.java" />
-        <option value="$PROJECT_DIR$/src/ds/string/InsertStars.java" />
-        <option value="$PROJECT_DIR$/src/ds/trees/BalancedBST.java" />
-        <option value="$PROJECT_DIR$/src/ds/trees/BSTBasicOperations.java" />
-        <option value="$PROJECT_DIR$/src/ds/string/CombParenthesis.java" />
-        <option value="$PROJECT_DIR$/src/ds/string/StringCompression.java" />
-        <option value="$PROJECT_DIR$/src/ds/trees/MaximumSumPath.java" />
-        <option value="$PROJECT_DIR$/src/ds/arrays/MaxProfit.java" />
-        <option value="$PROJECT_DIR$/src/ds/trees/FillAncestorsinBTree.java" />
-        <option value="$PROJECT_DIR$/src/ds/trees/SerializeBinaryTree.java" />
-        <option value="$PROJECT_DIR$/src/ds/arrays/ArraysBasics.java" />
-        <option value="$PROJECT_DIR$/src/ds/arrays/PrintAllPathIn2DArray.java" />
-        <option value="$PROJECT_DIR$/src/ds/arrays/PrintPaths.java" />
-        <option value="$PROJECT_DIR$/src/ds/string/ConvertStringToDate.java" />
-        <option value="$PROJECT_DIR$/src/ds/arrays/BinaryGap.java" />
-        <option value="$PROJECT_DIR$/src/ds/arrays/BinaryGap_Codility.java" />
-        <option value="$PROJECT_DIR$/src/ds/arrays/Arrays_Codility.java" />
-        <option value="$PROJECT_DIR$/src/ds/arrays/Codility_Arrays.java" />
-        <option value="$PROJECT_DIR$/src/ds/codility/Codility_Arrays.java" />
         <option value="$PROJECT_DIR$/src/ds/codility/Iterations.java" />
         <option value="$PROJECT_DIR$/src/ds/arrays/Test.java" />
         <option value="$PROJECT_DIR$/src/ds/codility/Test.java" />
@@ -130,8 +117,6 @@
         <option value="$PROJECT_DIR$/src/ds/MiscJava/NumericSystemOp.java" />
         <option value="$PROJECT_DIR$/src/ds/MiscJava/Test.java" />
         <option value="$PROJECT_DIR$/src/ds/MiscJava/TestThread.java" />
-        <option value="$PROJECT_DIR$/src/ds/arrays/FindRepetitiveAndMissing.java" />
-        <option value="$PROJECT_DIR$/src/ds/arrays/FindMissingPositive.java" />
         <option value="$PROJECT_DIR$/src/ds/arrays/MaximumSumSubArray.java" />
         <option value="$PROJECT_DIR$/src/ds/arrays/PrintTriangle.java" />
         <option value="$PROJECT_DIR$/src/ds/tries/TriesBasicOperation.java" />
@@ -139,7 +124,38 @@
         <option value="$PROJECT_DIR$/src/ds/codility/Arrays.java" />
         <option value="$PROJECT_DIR$/src/ds/codility/TimeComplexity.java" />
         <option value="$PROJECT_DIR$/src/ds/arrays/MergeSort.java" />
+        <option value="$PROJECT_DIR$/src/ds/codility/Sorting.java" />
+        <option value="$PROJECT_DIR$/src/ds/codility/PrefixSums.java" />
+        <option value="$PROJECT_DIR$/src/ds/codility/MarchMarathon.java" />
+        <option value="$PROJECT_DIR$/src/ds/codility/solve_today.java" />
+        <option value="$PROJECT_DIR$/src/ds/arrays/MaximumAbsDifference.java" />
+        <option value="$PROJECT_DIR$/src/ds/codility/ToptalTest.java" />
         <option value="$PROJECT_DIR$/src/ds/codility/CountingElements.java" />
+        <option value="$PROJECT_DIR$/src/ds/arrays/FindRepetitiveAndMissing.java" />
+        <option value="$PROJECT_DIR$/src/ds/arrays/Flip.java" />
+        <option value="$PROJECT_DIR$/src/ds/arrays/MaxSer.java" />
+        <option value="$PROJECT_DIR$/src/ds/arrays/CountOccurence.java" />
+        <option value="$PROJECT_DIR$/src/ds/arrays/CountOccurence1.java" />
+        <option value="$PROJECT_DIR$/src/ds/arrays/MaxSet.java" />
+        <option value="$PROJECT_DIR$/src/ds/arrays/MaxNonNegativeSubArray.java" />
+        <option value="$PROJECT_DIR$/src/ds/arrays/MergeIntervals.java" />
+        <option value="$PROJECT_DIR$/src/ds/arrays/WaveArray.java" />
+        <option value="$PROJECT_DIR$/src/ds/arrays/MissingInteger.java" />
+        <option value="$PROJECT_DIR$/src/ds/arrays/FindMissingPositive.java" />
+        <option value="$PROJECT_DIR$/src/ds/arrays/FindLargest.java" />
+        <option value="$PROJECT_DIR$/src/ds/trees/LCATree.java" />
+        <option value="$PROJECT_DIR$/src/ds/trees/LCATreeTest.java" />
+        <option value="$PROJECT_DIR$/src/ds/firecode/level4/DistanceBetweenNodesinBT.java" />
+        <option value="$PROJECT_DIR$/src/ds/trees/BSTBasicOperations.java" />
+        <option value="C:/Program Files/Java/jdk1.8.0_91/jre/lib/rt.jar!/com/sun/xml/internal/org/jvnet/mimepull/MIMEMessage.class" />
+        <option value="$PROJECT_DIR$/src/ds/linkedlists/MergeTwoLists.java" />
+        <option value="$PROJECT_DIR$/src/ds/firecode/level4/MinSumPathInTriangle.java" />
+        <option value="$PROJECT_DIR$/src/ds/arrays/MinSumPathInTriangle.java" />
+        <option value="$PROJECT_DIR$/src/ds/trees/DistanceBetweenNodesinBT.java" />
+        <option value="$PROJECT_DIR$/src/ds/arrays/BasicSorting.java" />
+        <option value="$PROJECT_DIR$/src/ds/linkedlists/MergeKLists.java" />
+        <option value="$PROJECT_DIR$/src/ds/arrays/MergeKSortedArraysTest.java" />
+        <option value="$PROJECT_DIR$/src/ds/arrays/MergeKSortedArrays.java" />
       </list>
     </option>
   </component>
@@ -151,9 +167,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="62" />
-    <option name="width" value="1378" />
-    <option name="height" value="900" />
+    <option name="x" value="58" />
+    <option name="y" value="-4" />
+    <option name="width" value="1386" />
+    <option name="height" value="908" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -180,6 +197,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -215,6 +235,10 @@
               <option name="myItemId" value="ds" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twopointers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -237,8 +261,92 @@
               <option name="myItemId" value="tries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="TriesBasicOperation.java" />
+              <option name="myItemId" value="iPracticeAlgo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iPracticeAlgo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ds" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trees" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iPracticeAlgo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iPracticeAlgo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ds" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iPracticeAlgo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iPracticeAlgo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ds" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stacks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iPracticeAlgo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iPracticeAlgo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ds" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stacks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SlidingWindow.java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -260,11 +368,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tries" />
+              <option name="myItemId" value="stacks" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Trie.java" />
+              <option name="myItemId" value="DequeSlidingWindow.java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -286,15 +394,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="codility" />
+              <option name="myItemId" value="arrays" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -305,64 +410,26 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="pali&#9;FILE&#9;file://C:/Intellij_Workspace/iPracticeAlgo/src/ds/string/Palindrome.java&#10;trie&#9;FILE&#9;file://C:/Intellij_Workspace/iPracticeAlgo/src/ds/tries/TriesBasicOperation.java&#10;palin&#9;PSI&#9;JAVA://ds.string.Palindrome&#10;tria&#9;FILE&#9;file://C:/Intellij_Workspace/iPracticeAlgo/src/ds/arrays/PrintTriangle.java&#10;PrintS&#9;PSI&#9;JAVA://ds.arrays.PrintSpiral&#10;max&#9;FILE&#9;file://C:/Intellij_Workspace/iPracticeAlgo/src/ds/arrays/MaxProfit.java&#10;miss&#9;PSI&#9;JAVA://ds.arrays.FindMissingPositive&#10;test&#9;PSI&#9;JAVA://ds.arrays.Test&#10;pow&#9;FILE&#9;file://C:/Intellij_Workspace/iPracticeAlgo/src/ds/bitmanipulation/PowerOf2.java&#10;ana&#9;FILE&#9;file://C:/Intellij_Workspace/iPracticeAlgo/src/ds/hashing/Anagrams.java&#10;level&#9;FILE&#9;file://C:/Intellij_Workspace/iPracticeAlgo/src/ds/trees/LevelOrderTraversal.java&#10;iden&#9;FILE&#9;file://C:/Intellij_Workspace/iPracticeAlgo/src/ds/trees/IdenticalTrees.java&#10;powe&#9;FILE&#9;file://C:/Intellij_Workspace/iPracticeAlgo/src/ds/binarysearch/PowerFn.java&#10;po&#9;FILE&#9;file://C:/Intellij_Workspace/iPracticeAlgo/src/ds/binarysearch/PowerFn.java&#10;le&#9;PSI&#9;JAVA://ds.trees.LevelOrderTraversal&#10;In&#9;PSI&#9;JAVA://ds.trees.InOrderTraversalBST&#10;bst&#9;FILE&#9;file://C:/Intellij_Workspace/iPracticeAlgo/src/ds/trees/BSTBasicOperations.java&#10;Mi&#9;PSI&#9;JAVA://ds.trees.MirrorTree&#10;four&#9;FILE&#9;file://C:/Intellij_Workspace/iPracticeAlgo/src/ds/twopointers/FourSum.java&#10;SLL&#9;FILE&#9;file://C:/Intellij_Workspace/iPracticeAlgo/src/ds/linkedlists/SLL.java&#10;BST&#9;FILE&#9;file://C:/Intellij_Workspace/iPracticeAlgo/src/ds/trees/BSTBasicOperations.java&#10;HashSet&#9;PSI&#9;JAVA://java.util.HashSet&#10;Array&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/util/ArrayList.java&#10;Object&#9;PSI&#9;JAVA://java.lang.Object&#10;sll&#9;FILE&#9;file://C:/Intellij_Workspace/iPracticeAlgo/src/ds/linkedlists/SLL.java&#10;anagr&#9;FILE&#9;file://C:/Intellij_Workspace/iPracticeAlgo/src/ds/hashing/Anagrams.java&#10;linke&#9;PSI&#9;JAVA://ds.linkedlists.SLL#buildLinkedList&#10;fo&#9;FILE&#9;file://C:/Intellij_Workspace/iPracticeAlgo/src/ds/twopointers/FourSum.java&#10;long&#9;PSI&#9;JAVA://ds.arrays.LongestSeqUnSortedArray#longestSequence&#10;MaxLenZe&#9;RUN_CONFIGURATION&#9;MaxLengthZeroSumSubArray&#10;FindMinl&#9;PSI&#9;JAVA://ds.arrays.FindMinLenSubArray&#10;mirro&#9;FILE&#9;file:///media/senthil/New Volume/iPracticeAlgo/src/ds/trees/MirrorTree.java&#10;lar&#9;FILE&#9;file:///media/senthil/New Volume/iPracticeAlgo/src/ds/arrays/FindLargest.java&#10;atoi&#9;FILE&#9;file:///media/senthil/New Volume/iPracticeAlgo/src/ds/string/Atoi.java&#10;mis&#9;PSI&#9;JAVA://ds.arrays.FindDuplicate#missingInteger" />
+    <property name="SearchEverywhereHistoryKey" value="mer&#9;FILE&#9;file://C:/Intellij_Workspace/iPracticeAlgo/src/ds/arrays/MergeSort.java&#10;powe&#9;PSI&#9;JAVA://ds.binarysearch.PowerFn&#10;mergein&#9;PSI&#9;JAVA://ds.arrays.MergeIntervals&#10;toptal&#9;RUN_CONFIGURATION&#9;ToptalTest&#10;pali&#9;FILE&#9;file://C:/Intellij_Workspace/iPracticeAlgo/src/ds/string/Palindrome.java&#10;trie&#9;FILE&#9;file://C:/Intellij_Workspace/iPracticeAlgo/src/ds/tries/TriesBasicOperation.java&#10;palin&#9;PSI&#9;JAVA://ds.string.Palindrome&#10;tria&#9;FILE&#9;file://C:/Intellij_Workspace/iPracticeAlgo/src/ds/arrays/PrintTriangle.java&#10;PrintS&#9;PSI&#9;JAVA://ds.arrays.PrintSpiral&#10;max&#9;FILE&#9;file://C:/Intellij_Workspace/iPracticeAlgo/src/ds/arrays/MaxProfit.java&#10;miss&#9;PSI&#9;JAVA://ds.arrays.FindMissingPositive&#10;test&#9;PSI&#9;JAVA://ds.arrays.Test&#10;pow&#9;FILE&#9;file://C:/Intellij_Workspace/iPracticeAlgo/src/ds/bitmanipulation/PowerOf2.java&#10;ana&#9;FILE&#9;file://C:/Intellij_Workspace/iPracticeAlgo/src/ds/hashing/Anagrams.java&#10;level&#9;FILE&#9;file://C:/Intellij_Workspace/iPracticeAlgo/src/ds/trees/LevelOrderTraversal.java&#10;iden&#9;FILE&#9;file://C:/Intellij_Workspace/iPracticeAlgo/src/ds/trees/IdenticalTrees.java&#10;po&#9;FILE&#9;file://C:/Intellij_Workspace/iPracticeAlgo/src/ds/binarysearch/PowerFn.java&#10;le&#9;PSI&#9;JAVA://ds.trees.LevelOrderTraversal&#10;In&#9;PSI&#9;JAVA://ds.trees.InOrderTraversalBST&#10;bst&#9;FILE&#9;file://C:/Intellij_Workspace/iPracticeAlgo/src/ds/trees/BSTBasicOperations.java&#10;Mi&#9;PSI&#9;JAVA://ds.trees.MirrorTree&#10;four&#9;FILE&#9;file://C:/Intellij_Workspace/iPracticeAlgo/src/ds/twopointers/FourSum.java&#10;SLL&#9;FILE&#9;file://C:/Intellij_Workspace/iPracticeAlgo/src/ds/linkedlists/SLL.java&#10;BST&#9;FILE&#9;file://C:/Intellij_Workspace/iPracticeAlgo/src/ds/trees/BSTBasicOperations.java&#10;HashSet&#9;PSI&#9;JAVA://java.util.HashSet&#10;Array&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/util/ArrayList.java&#10;Object&#9;PSI&#9;JAVA://java.lang.Object&#10;sll&#9;FILE&#9;file://C:/Intellij_Workspace/iPracticeAlgo/src/ds/linkedlists/SLL.java&#10;anagr&#9;FILE&#9;file://C:/Intellij_Workspace/iPracticeAlgo/src/ds/hashing/Anagrams.java&#10;linke&#9;PSI&#9;JAVA://ds.linkedlists.SLL#buildLinkedList&#10;fo&#9;FILE&#9;file://C:/Intellij_Workspace/iPracticeAlgo/src/ds/twopointers/FourSum.java&#10;long&#9;PSI&#9;JAVA://ds.arrays.LongestSeqUnSortedArray#longestSequence&#10;MaxLenZe&#9;RUN_CONFIGURATION&#9;MaxLengthZeroSumSubArray&#10;FindMinl&#9;PSI&#9;JAVA://ds.arrays.FindMinLenSubArray&#10;mirro&#9;FILE&#9;file:///media/senthil/New Volume/iPracticeAlgo/src/ds/trees/MirrorTree.java&#10;lar&#9;FILE&#9;file:///media/senthil/New Volume/iPracticeAlgo/src/ds/arrays/FindLargest.java&#10;atoi&#9;FILE&#9;file:///media/senthil/New Volume/iPracticeAlgo/src/ds/string/Atoi.java&#10;mis&#9;PSI&#9;JAVA://ds.arrays.FindDuplicate#missingInteger" />
     <property name="full.screen.before.presentation.mode" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="ds.trees" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ds.arrays" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Intellij_Workspace\iPracticeAlgo\src\ds\codility" />
       <recent name="$PROJECT_DIR$/src/ds/stacks" />
       <recent name="$PROJECT_DIR$/src/ds/twopointers" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CountingElements">
-    <configuration default="false" name="Trie" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.MergeKSortedArrays">
+    <configuration default="false" name="MergeTwoLists" type="Application" factoryName="Application" singleton="true" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="ds.tries.Trie" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="iPracticeAlgo" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="Arrays" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="ds.codility.Arrays" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="iPracticeAlgo" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="TimeComplexity" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="ds.codility.TimeComplexity" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="iPracticeAlgo" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="MergeSort" type="Application" factoryName="Application" singleton="true" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="ds.arrays.MergeSort" />
+      <option name="MAIN_CLASS_NAME" value="ds.linkedlists.MergeTwoLists" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
@@ -375,9 +442,54 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="CountingElements" type="Application" factoryName="Application" singleton="true" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="BSTBasicOperations" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="ds.codility.CountingElements" />
+      <option name="MAIN_CLASS_NAME" value="ds.trees.BSTBasicOperations" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="iPracticeAlgo" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="MergeKLists" type="Application" factoryName="Application" singleton="true" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="ds.linkedlists.MergeKLists" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="iPracticeAlgo" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="MergeKSortedArrays" type="Application" factoryName="Application" singleton="true" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="ds.arrays.MergeKSortedArrays" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="iPracticeAlgo" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="MergeKSortedArrays" type="Application" factoryName="Application" singleton="true" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="ds.arrays.MergeKSortedArrays" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
@@ -469,19 +581,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Application.PathSum" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Trie" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Arrays" />
-      <item index="3" class="java.lang.String" itemvalue="Application.TimeComplexity" />
-      <item index="4" class="java.lang.String" itemvalue="Application.MergeSort" />
-      <item index="5" class="java.lang.String" itemvalue="Application.CountingElements" />
+      <item index="1" class="java.lang.String" itemvalue="Application.MergeTwoLists" />
+      <item index="2" class="java.lang.String" itemvalue="Application.BSTBasicOperations" />
+      <item index="3" class="java.lang.String" itemvalue="Application.MergeKLists" />
+      <item index="4" class="java.lang.String" itemvalue="Application.MergeKSortedArrays" />
+      <item index="5" class="java.lang.String" itemvalue="Application.MergeKSortedArrays" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.CountingElements" />
-        <item index="1" class="java.lang.String" itemvalue="Application.MergeSort" />
-        <item index="2" class="java.lang.String" itemvalue="Application.TimeComplexity" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Arrays" />
-        <item index="4" class="java.lang.String" itemvalue="Application.Trie" />
+        <item index="0" class="java.lang.String" itemvalue="Application.MergeKSortedArrays" />
+        <item index="1" class="java.lang.String" itemvalue="Application.MergeKSortedArrays" />
+        <item index="2" class="java.lang.String" itemvalue="Application.MergeKLists" />
+        <item index="3" class="java.lang.String" itemvalue="Application.MergeTwoLists" />
+        <item index="4" class="java.lang.String" itemvalue="Application.BSTBasicOperations" />
       </list>
     </recent_temporary>
   </component>
@@ -502,23 +614,23 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="62" y="0" width="1378" height="900" extended-state="0" />
+    <frame x="58" y="-4" width="1386" height="908" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32019705" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31896552" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3548896" sideWeight="0.5026495" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37931034" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37561578" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19124088" sideWeight="0.4947839" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19085631" sideWeight="0.4947839" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21120363" sideWeight="0.5052161" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38557214" sideWeight="0.49735048" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31527093" sideWeight="0.49735048" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1244,12 +1356,6 @@
           <option name="timeStamp" value="465" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ds/arrays/BasicSorting.java</url>
-          <line>22</line>
-          <properties />
-          <option name="timeStamp" value="466" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ds/arrays/FindMinLenSubArray.java</url>
           <line>47</line>
           <properties />
@@ -1561,12 +1667,6 @@
           <option name="timeStamp" value="621" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ds/trees/BSTBasicOperations.java</url>
-          <line>127</line>
-          <properties />
-          <option name="timeStamp" value="622" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ds/linkedlists/SLL.java</url>
           <line>103</line>
           <properties />
@@ -1643,18 +1743,6 @@
           <line>11</line>
           <properties />
           <option name="timeStamp" value="645" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ds/arrays/FindLargest.java</url>
-          <line>67</line>
-          <properties />
-          <option name="timeStamp" value="647" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ds/arrays/FindLargest.java</url>
-          <line>85</line>
-          <properties />
-          <option name="timeStamp" value="648" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ds/linkedlists/SLL.java</url>
@@ -1837,12 +1925,6 @@
           <option name="timeStamp" value="724" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ds/trees/BSTBasicOperations.java</url>
-          <line>210</line>
-          <properties />
-          <option name="timeStamp" value="728" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ds/trees/FillAncestorsinBTree.java</url>
           <line>60</line>
           <properties />
@@ -2018,21 +2100,15 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ds/arrays/FindMissingPositive.java</url>
-          <line>34</line>
+          <line>8</line>
           <properties />
           <option name="timeStamp" value="845" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ds/arrays/FindMissingPositive.java</url>
-          <line>44</line>
+          <line>18</line>
           <properties />
           <option name="timeStamp" value="846" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ds/arrays/FindMissingPositive.java</url>
-          <line>14</line>
-          <properties />
-          <option name="timeStamp" value="847" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ds/arrays/MaximumSumSubArray.java</url>
@@ -2112,8 +2188,230 @@
           <properties />
           <option name="timeStamp" value="879" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ds/codility/Sorting.java</url>
+          <line>31</line>
+          <properties />
+          <option name="timeStamp" value="890" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ds/codility/Sorting.java</url>
+          <line>87</line>
+          <properties />
+          <option name="timeStamp" value="892" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ds/codility/Sorting.java</url>
+          <line>138</line>
+          <properties />
+          <option name="timeStamp" value="895" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ds/arrays/MaximumAbsDifference.java</url>
+          <line>23</line>
+          <properties />
+          <option name="timeStamp" value="899" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ds/codility/CountingElements.java</url>
+          <line>179</line>
+          <properties />
+          <option name="timeStamp" value="902" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ds/arrays/FindRepetitiveAndMissing.java</url>
+          <line>89</line>
+          <properties />
+          <option name="timeStamp" value="906" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ds/arrays/FindRepetitiveAndMissing.java</url>
+          <line>52</line>
+          <properties />
+          <option name="timeStamp" value="907" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ds/arrays/Flip.java</url>
+          <line>47</line>
+          <properties />
+          <option name="timeStamp" value="915" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ds/arrays/Flip.java</url>
+          <line>28</line>
+          <properties />
+          <option name="timeStamp" value="916" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ds/arrays/Flip.java</url>
+          <line>83</line>
+          <properties />
+          <option name="timeStamp" value="917" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ds/arrays/MaxNonNegativeSubArray.java</url>
+          <line>22</line>
+          <properties />
+          <option name="timeStamp" value="918" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ds/arrays/MaxNonNegativeSubArray.java</url>
+          <line>42</line>
+          <properties />
+          <option name="timeStamp" value="919" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ds/arrays/MaxNonNegativeSubArray.java</url>
+          <line>27</line>
+          <properties />
+          <option name="timeStamp" value="920" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ds/arrays/WaveArray.java</url>
+          <line>21</line>
+          <properties />
+          <option name="timeStamp" value="945" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ds/arrays/WaveArray.java</url>
+          <line>30</line>
+          <properties />
+          <option name="timeStamp" value="946" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ds/arrays/FindMissingPositive.java</url>
+          <line>46</line>
+          <properties />
+          <option name="timeStamp" value="948" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/util/Arrays.java</url>
+          <line>1431</line>
+          <properties />
+          <option name="timeStamp" value="952" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/util/TimSort.java</url>
+          <line>211</line>
+          <properties />
+          <option name="timeStamp" value="953" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/util/TimSort.java</url>
+          <line>278</line>
+          <properties />
+          <option name="timeStamp" value="954" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/util/TimSort.java</url>
+          <line>220</line>
+          <properties />
+          <option name="timeStamp" value="955" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/util/TimSort.java</url>
+          <line>229</line>
+          <properties />
+          <option name="timeStamp" value="956" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/util/TimSort.java</url>
+          <line>219</line>
+          <properties />
+          <option name="timeStamp" value="957" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ds/arrays/FindLargest.java</url>
+          <line>53</line>
+          <properties />
+          <option name="timeStamp" value="959" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ds/trees/BSTBasicOperations.java</url>
+          <line>219</line>
+          <properties />
+          <option name="timeStamp" value="962" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ds/arrays/MinSumPathInTriangle.java</url>
+          <line>15</line>
+          <properties />
+          <option name="timeStamp" value="968" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ds/arrays/BasicSorting.java</url>
+          <line>33</line>
+          <properties />
+          <option name="timeStamp" value="970" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ds/trees/LCATree.java</url>
+          <line>67</line>
+          <properties />
+          <option name="timeStamp" value="974" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ds/trees/LCATree.java</url>
+          <line>72</line>
+          <properties />
+          <option name="timeStamp" value="975" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ds/trees/LCATree.java</url>
+          <line>64</line>
+          <properties />
+          <option name="timeStamp" value="976" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ds/trees/LCATree.java</url>
+          <line>28</line>
+          <properties />
+          <option name="timeStamp" value="977" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ds/trees/DistanceBetweenNodesinBT.java</url>
+          <line>59</line>
+          <properties />
+          <option name="timeStamp" value="984" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ds/linkedlists/MergeTwoLists.java</url>
+          <line>20</line>
+          <properties />
+          <option name="timeStamp" value="996" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ds/linkedlists/MergeKLists.java</url>
+          <line>106</line>
+          <properties />
+          <option name="timeStamp" value="1001" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ds/linkedlists/MergeKLists.java</url>
+          <line>52</line>
+          <properties />
+          <option name="timeStamp" value="1002" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ds/linkedlists/MergeKLists.java</url>
+          <line>57</line>
+          <properties />
+          <option name="timeStamp" value="1003" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/util/TimSort.java</url>
+          <line>357</line>
+          <properties />
+          <option name="timeStamp" value="1016" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ds/arrays/MergeKSortedArrays.java</url>
+          <line>55</line>
+          <properties />
+          <option name="timeStamp" value="1026" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="885" />
+      <option name="time" value="1027" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -2130,363 +2428,220 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ds/trees/BSTBasicOperations.java">
+    <entry file="file://$PROJECT_DIR$/src/ds/codility/PrefixSums.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="210" column="38" selection-start-line="210" selection-start-column="38" selection-end-line="210" selection-end-column="38" />
-          <folding>
-            <element signature="e#4873#4882#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="1445">
+          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ds/string/LongestPalindromeSubstring.java">
+    <entry file="file://$PROJECT_DIR$/src/ds/codility/MarchMarathon.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="29">
+          <caret line="89" column="42" selection-start-line="89" selection-start-column="42" selection-end-line="89" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ds/trees/LevelOrderTraversal.java">
+    <entry file="file://$PROJECT_DIR$/src/ds/codility/Sorting.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="42" column="36" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ds/trees/PathSum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="121" column="8" selection-start-line="121" selection-start-column="8" selection-end-line="131" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ds/trees/MaximumSumPath.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ds/trees/FillAncestorsinBTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="20" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ds/trees/BuildTreeFromInAndPreOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ds/trees/BuildTreeFromInAndPostOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="2420" column="20" selection-start-line="2420" selection-start-column="20" selection-end-line="2420" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ds/hashing/Anagrams.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-253">
-          <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ds/trees/SerializeBinaryTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+        <state relative-caret-position="136">
+          <caret line="138" column="0" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/lang/Object.java">
+    <entry file="file://$PROJECT_DIR$/src/ds/arrays/MaximumAbsDifference.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="234" column="18" selection-start-line="234" selection-start-column="18" selection-end-line="234" selection-end-column="18" />
+        <state relative-caret-position="340">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ds/arrays/ArraysBasics.java">
+    <entry file="file://$PROJECT_DIR$/src/ds/codility/ToptalTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="284">
+          <caret line="26" column="56" selection-start-line="26" selection-start-column="56" selection-end-line="26" selection-end-column="56" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ds/arrays/PrintAllPathIn2DArray.java">
+    <entry file="file://$PROJECT_DIR$/src/ds/arrays/FindMaxRepeating.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        <state relative-caret-position="-158">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ds/bitmanipulation/PowerOf2.java">
+    <entry file="file://$PROJECT_DIR$/src/ds/codility/Arrays.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+        <state relative-caret-position="2244">
+          <caret line="132" column="1" selection-start-line="132" selection-start-column="1" selection-end-line="132" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ds/codility/CountingElements.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="187" column="7" selection-start-line="187" selection-start-column="7" selection-end-line="187" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ds/binarysearch/BinarySearch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="-697">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ds/arrays/PrintPaths.java">
+    <entry file="file://$PROJECT_DIR$/src/ds/arrays/FindRepetitiveAndMissing.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="24" column="60" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ds/arrays/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="57" column="31" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ds/string/ConvertStringToDate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-85">
-          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ds/string/StringCompression.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/lang/Math.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="1251" column="0" selection-start-line="1251" selection-start-column="0" selection-end-line="1251" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/lang/Integer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="310" column="0" selection-start-line="310" selection-start-column="0" selection-end-line="310" selection-end-column="0" />
-          <folding>
-            <element signature="e#7967#7968#0" expanded="false" />
-            <element signature="e#8013#8014#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ds/linkedlists/PartitionList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding>
-            <element signature="e#191#192#0" expanded="false" />
-            <element signature="e#225#226#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ds/linkedlists/SLL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="18" selection-end-column="1" />
-          <folding>
-            <element signature="e#141#142#0" expanded="false" />
-            <element signature="e#171#172#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ds/trees/BalancedBST.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1377">
-          <caret line="81" column="15" selection-start-line="75" selection-start-column="8" selection-end-line="81" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ds/trees/FlattenTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-180">
-          <caret line="50" column="30" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ds/cw/EqualSidesOfAnArray.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="48" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ds/MiscJava/StringPermutation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ds/MiscJava/StringConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+        <state relative-caret-position="1003">
+          <caret line="60" column="22" selection-start-line="45" selection-start-column="7" selection-end-line="60" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ds/MiscJava/TestJava.java">
+    <entry file="file://$PROJECT_DIR$/src/ds/arrays/FlipGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/lang/Character.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="5163" column="25" selection-start-line="5163" selection-start-column="25" selection-end-line="5163" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ds/MiscJava/NumericSystemOp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1870">
-          <caret line="111" column="33" selection-start-line="111" selection-start-column="33" selection-end-line="111" selection-end-column="33" />
+        <state relative-caret-position="340">
+          <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ds/MiscJava/Test.java" />
-    <entry file="file://$PROJECT_DIR$/src/ds/MiscJava/TestThread.java">
+    <entry file="file://$PROJECT_DIR$/src/ds/arrays/Flip.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="301">
+          <caret line="54" column="26" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ds/arrays/FindRepetitiveAndMissing.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/util/LinkedList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="31" />
+        <state relative-caret-position="16">
+          <caret line="404" column="19" selection-start-line="404" selection-start-column="19" selection-end-line="404" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/util/Comparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="149" column="8" selection-start-line="149" selection-start-column="8" selection-end-line="149" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/util/ComparableTimSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="316" column="21" selection-start-line="316" selection-start-column="21" selection-end-line="316" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/lang/Integer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="1234" column="5" selection-start-line="1234" selection-start-column="5" selection-end-line="1234" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ds/arrays/MaxNonNegativeSubArray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="59" column="1" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
+          <folding>
+            <element signature="e#1689#1690#0" expanded="false" />
+            <element signature="e#1738#1739#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ds/arrays/MergeIntervals.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="73" column="48" selection-start-line="73" selection-start-column="48" selection-end-line="73" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ds/arrays/MissingInteger.java" />
+    <entry file="file://$PROJECT_DIR$/src/ds/arrays/WaveArray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ds/arrays/FindMissingPositive.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ds/arrays/MaximumSumSubArray.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ds/arrays/PrintTriangle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ds/arrays/MaxGap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-493">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ds/arrays/PrintSpiral.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="55" column="27" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ds/arrays/MaxProfit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ds/string/Palindrome.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ds/tries/TriesBasicOperation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" column="1" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ds/tries/Trie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="44" column="5" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+        <state relative-caret-position="894">
+          <caret line="108" column="61" selection-start-line="108" selection-start-column="61" selection-end-line="108" selection-end-column="61" />
           <folding>
-            <element signature="e#227#228#0" expanded="true" />
-            <element signature="e#253#254#0" expanded="true" />
-            <element signature="e#1144#1145#0" expanded="true" />
-            <element signature="e#1202#1203#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ds/arrays/MergeArrays.java">
+    <entry file="file://$PROJECT_DIR$/src/ds/binarysearch/PowerFn.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="148">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ds/arrays/FindLargest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="43" column="36" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ds/trees/BalancedBST.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="81" column="15" selection-start-line="75" selection-start-column="0" selection-end-line="81" selection-end-column="15" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ds/trees/LCATreeTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/ds/trees/LCATree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="74" column="9" selection-start-line="74" selection-start-column="9" selection-end-line="74" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ds/trees/BSTBasicOperations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1271">
+          <caret line="115" column="22" selection-start-line="115" selection-start-column="22" selection-end-line="115" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/jre/lib/rt.jar!/com/sun/xml/internal/org/jvnet/mimepull/MIMEMessage.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="68" selection-start-line="11" selection-start-column="68" selection-end-line="11" selection-end-column="68" />
         </state>
       </provider>
     </entry>
@@ -2498,48 +2653,202 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ds/codility/Iterations.java">
+    <entry file="file://$PROJECT_DIR$/src/ds/linkedlists/MergeTwoLists.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="734">
-          <caret line="52" column="37" selection-start-line="52" selection-start-column="37" selection-end-line="52" selection-end-column="37" />
+        <state relative-caret-position="306">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ds/arrays/CountOccurence1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ds/stacks/DequeSlidingWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="67" column="30" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ds/linkedlists/SLL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2686">
+          <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
           <folding>
-            <element signature="e#1739#1740#0" expanded="true" />
-            <element signature="e#1800#1801#0" expanded="true" />
+            <element signature="e#141#142#0" expanded="true" />
+            <element signature="e#171#172#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ds/codility/Test.java">
+    <entry file="file://$PROJECT_DIR$/src/ds/stacks/SlidingWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ds/arrays/MinSumPathInTriangle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ds/arrays/CountOccurence.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ds/trees/DistanceBetweenNodesinBT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-680">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ds/arrays/MergeArrays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-193">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ds/linkedlists/MergeKLists.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+          <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#220#221#0" expanded="true" />
+            <element signature="e#285#286#0" expanded="true" />
+            <element signature="e#1657#1667#0" expanded="true" />
+            <element signature="e#1752#1753#0" expanded="true" />
+            <element signature="e#1806#1807#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/lang/Math.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="1335" column="0" selection-start-line="1335" selection-start-column="0" selection-end-line="1335" selection-end-column="0" />
+          <folding>
+            <element signature="e#52271#52272#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="1162" column="0" selection-start-line="1162" selection-start-column="0" selection-end-line="1162" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ds/codility/Arrays.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/util/TimSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="376" column="13" selection-start-line="376" selection-start-column="13" selection-end-line="378" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/util/Arrays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="1511" column="0" selection-start-line="1511" selection-start-column="0" selection-end-line="1511" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="1453" column="0" selection-start-line="1453" selection-start-column="0" selection-end-line="1453" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="475" column="17" selection-start-line="475" selection-start-column="17" selection-end-line="475" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/util/Collections.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="174" column="0" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
+          <folding>
+            <element signature="e#7312#7313#0" expanded="false" />
+            <element signature="e#45674#45704#0" expanded="false" />
+            <element signature="e#45674#45704#0" expanded="false" />
+            <element signature="e#45839#45869#0" expanded="false" />
+            <element signature="e#45839#45869#0" expanded="false" />
+            <element signature="e#45984#46014#0" expanded="false" />
+            <element signature="e#45984#46014#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/util/PriorityQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="650" column="17" selection-start-line="650" selection-start-column="17" selection-end-line="650" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ds/arrays/MergeKSortedArrays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="63" column="48" selection-start-line="63" selection-start-column="48" selection-end-line="63" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ds/arrays/MergeKSortedArraysTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="132" column="1" selection-start-line="132" selection-start-column="1" selection-end-line="132" selection-end-column="1" />
+          <caret line="50" column="24" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ds/codility/TimeComplexity.java">
+    <entry file="file://$PROJECT_DIR$/src/ds/arrays/MergeKSortedArrays.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-408">
-          <caret line="82" column="9" selection-start-line="82" selection-start-column="9" selection-end-line="82" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ds/codility/CountingElements.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="256" column="0" selection-start-line="256" selection-start-column="0" selection-end-line="256" selection-end-column="0" />
+        <state relative-caret-position="680">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding>
-            <element signature="e#7886#7887#0" expanded="true" />
+            <element signature="e#490#491#0" expanded="true" />
+            <element signature="e#556#557#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ds/arrays/BasicSorting.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

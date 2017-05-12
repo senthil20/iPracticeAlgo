@@ -51,16 +51,6 @@ public class BasicSorting {
         return recursiveSum(n/10, sum);
     }
 
-    public void sortTest(List<Pair> list) {
-        Collections.sort(list, new Comparator<Pair>() {
-            @Override
-            public int compare(Pair o1, Pair o2) {
-                return Integer.compare(o1.key, o2.key);
-            }
-        });
-        System.out.print(list);
-    }
-
     public static void main(String[] args) {
         BasicSorting bs = new BasicSorting();
         bs.selectionSort(new int[]{5, 6, 7, 8, 1, 3, 9});
