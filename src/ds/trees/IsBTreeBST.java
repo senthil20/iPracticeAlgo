@@ -98,7 +98,7 @@ public class IsBTreeBST {
 
      output ==> false
      */
-    public boolean validateBSTItr(TreeNode root) {
+    public boolean isBSTIterative(TreeNode root) {
         if (root == null || (root.left == null && root.right == null)) return true;
         int min = Integer.MIN_VALUE;
         int max = Integer.MAX_VALUE;
@@ -148,7 +148,7 @@ public class IsBTreeBST {
                         new TreeNode(14, null, null),
                         new TreeNode(18, null, null)),
                 new TreeNode(30, null, null));
-        System.out.println(bst.validateBSTItr(root));
+        System.out.println(bst.isBSTIterative(root));
         //System.out.println(bst.isBST(root, Integer.MIN_VALUE, Integer.MAX_VALUE));
         //System.out.println(bst.isBSTInOrder(root));
         //System.out.println(bst.numberOfLeaves(root));

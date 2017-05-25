@@ -36,7 +36,6 @@ public class SLL {
         return l.next;
     }
 
-
     public int length(ListNode a) {
         int counter = 0;
         while(a != null) {

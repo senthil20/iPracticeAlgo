@@ -17,13 +17,6 @@ public class MergeKLists {
         ListNode left = mergeRecursion(lists, start, mid);
         ListNode right = mergeRecursion(lists, mid + 1, end);
         return mergeLists(left, right);
-        /*if (start < end) {
-            int mid = (start + end) / 2;
-            ListNode left = mergeRecursion(lists, start, mid);
-            ListNode right = mergeRecursion(lists, mid + 1, end);
-            return mergeLists(left, right);
-        }
-        return lists.get(start);*/
     }
 
     public ListNode mergeLists(ListNode l1, ListNode l2) {

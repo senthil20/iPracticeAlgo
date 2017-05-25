@@ -11,14 +11,18 @@ package ds.string;
 public class InsertStars {
 
     public static String insertPairStar(String s) {
-        if ("".equals(s)) return s;
-        if (s.length() > 1 && s.charAt(0) == s.charAt(1)) {
+        if (s == null || s.length() < 2) return s;
+        if (s.charAt(0) == s.charAt(1))
             s = s.charAt(0) + "*" + insertPairStar(s.substring(1));
-        }
-        else {
+        else
             s = s.charAt(0) + insertPairStar(s.substring(1));
-        }
         return s;
+    }
+
+    //from firecode
+    public static String insertPairStar1(String s) {
+        if (s == null || s.length() < 2) return s;
+        return s.charAt(0) + (s.charAt(0)==s.charAt(1) ? "*" : "") + insertPairStar(s.substring(1));
     }
 
     public static void main(String a[]) {
