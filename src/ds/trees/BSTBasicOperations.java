@@ -2,9 +2,13 @@ package ds.trees;
 
 import ds.binarysearch.BinarySearch;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.security.Key;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
+import java.util.StringTokenizer;
 
 class TreeNode {
     int val;
@@ -56,28 +60,6 @@ class TreeLinkNode {
 public class BSTBasicOperations {
     TreeNode root;
 
-    //insert element in binary search tree
-    //tc: o(n)
-    public void buildTree(int a[]) {
-        if (a == null || a.length == 0) return;
-        for (int val : a)
-            root = buildRecursively(root, val);
-    }
-
-    public TreeNode buildRecursively(TreeNode root, int val) {
-        if (root == null) {
-            root = new TreeNode(val, null, null);
-            return root;
-        }
-
-        if(val <= root.val)
-            root.left = buildRecursively(root.left, val);
-        else
-            root.right = buildRecursively(root.right, val);
-
-        return root;
-    }
-
     //tc: o(n)
     public TreeNode insert(TreeNode root, int val) {
 
@@ -123,7 +105,8 @@ public class BSTBasicOperations {
         return root;
     }
 
-    public static void main(String a[]) {
+
+    public static void main(String a[]) throws Exception{
         BSTBasicOperations bst = new BSTBasicOperations();
         //bst.buildTree(new int[]{15, 10, 20, 25, 8, 12});
         //bst.insert(bst.root, 9);
