@@ -26,6 +26,75 @@ import java.util.*;
 
 public class TwoSum {
 
+    int countPairsWithDiffK(int numbers[], int k)
+    {
+        int count = 0;
+        Set<Integer> set = new TreeSet<>();
+        for (int val : numbers) set.add(val);
+        for (int val : numbers) {
+            int diff = val - k;
+            if (set.contains(diff)) {
+                count++;
+            }
+        }
+
+        /*Arrays.sort(numbers);
+        int n = numbers.length;
+        int l = 0;
+        int r = 0;
+        while(r < n)
+        {
+            if(numbers[r] - numbers[l] == k)
+            {
+                count++;
+                l++;
+                r++;
+            }
+            else if(numbers[r] - numbers[l] > k)
+                l++;
+            else
+                r++;
+        }*/
+        return count;
+    }
+
+    public int countPairs(int numbers[], int k) {
+        int count = 0;
+        Set<Integer> set = new TreeSet<>();
+        for (int val : numbers) set.add(val);
+
+        List<int[]> result = new ArrayList<>();
+        List<int[]> tempList = new ArrayList<>();
+
+        for (int i = 0; i < numbers.length; i++) {
+            int val = numbers[i] - k;
+            if (set.contains(val)) {
+                int[] temp = new int[2];
+                temp[0] = val;
+                temp[1] = numbers[i];
+
+                if (result.size() == 0) {
+                    result.add(temp);
+                    continue;
+                }
+
+                for (int[] arr : result) {
+                    if ((arr[0] == temp[0] && arr[1] == temp[1])
+                            || (arr[0] == temp[1] && arr[1] == temp[0])) {
+                        temp = null;
+                    }
+                }
+                if (temp != null) tempList.add(temp);
+                result.addAll(tempList);
+                tempList = new ArrayList<>();
+            }
+            else {
+                set.add(numbers[i]);
+            }
+        }
+        return result.size();
+    }
+
     public List<Integer> twoSum(int a[], int b) {
 
         if (a == null || a.length == 0) return null;
@@ -84,9 +153,13 @@ public class TwoSum {
     public void fourSum(int[] a, int sum) {
 
     }
+
+
+
     public static void main(String a[]) {
         TwoSum sum = new TwoSum();
         //sum.twoSum(new int[]{10, 12, 10, 15, -1, 7, 6, 5, 4, 2, 1, 1, 1}, 9);
-        sum.threeSum(new int[]{12, 3, 4, 1, 6, 9}, 24);
+        //sum.threeSum(new int[]{12, 3, 4, 1, 6, 9}, 24);
+        System.out.print(sum.countPairsWithDiffK(new int[]{2,4,6,8,10,12}, 2));
     }
 }

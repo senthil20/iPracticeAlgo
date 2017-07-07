@@ -108,6 +108,8 @@ public class MarchMarathon {
     }
 
     public int[] solution3(int[] A) {
+        int n = 10;
+        int m = ~n + 1;
         if (A == null || A.length == 0) return new int[]{};
         List<Integer> list = new ArrayList<>();
 
@@ -161,10 +163,10 @@ public class MarchMarathon {
 
     public static void main(String a[]) {
         MarchMarathon mm = new MarchMarathon();
-        mm.toBaseNeg2(-9);
+        //mm.toBaseNeg2(-9);
         //mm.solution2(1, 0);
 
-        //mm.solution3(new int[]{1,0,0,1,1});
+        mm.solution3(new int[]{1,0,0,1,1});
         //mm.solution("))");
         //System.out.println(mm.equationTemplate(new int[]{2, 4, 3, 6}));
         //System.out.println(mm.equationTemplate(new int[]{2, 3, 30, 5}));

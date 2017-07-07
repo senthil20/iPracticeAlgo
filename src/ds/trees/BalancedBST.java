@@ -1,5 +1,7 @@
 package ds.trees;
 
+import java.util.Arrays;
+
 /**
 Tree
         5
@@ -61,6 +63,8 @@ public class BalancedBST {
 
     public static void main(String a[]) {
         BalancedBST bst = new BalancedBST();
+
+
         //int[] ar = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 11, 12};
         //TreeNode root = new BSTBasicOperations().buildTreeSortedArray(new TreeNode(), ar, 0, ar.length - 1);
         TreeNode root = new TreeNode(5,
@@ -74,7 +78,7 @@ public class BalancedBST {
                                             new TreeNode(11,
                                                     new TreeNode(8, null, null),
                                                     new TreeNode(12, null, null))));
-        System.out.println(bst.isHeightBalancedBST(root));
+        //System.out.println(bst.isHeightBalancedBST(root));
         //System.out.println(bst.kthsmallest(root, 9));
     }
 
