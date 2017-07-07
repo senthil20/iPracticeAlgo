@@ -1,7 +1,16 @@
 package ds.arrays;
 
 /**
- * Created by senthil on 24/8/16.
+ You are given an n x n square 2D matrix that represents the pixels of an image.
+ Rotate it by 90 degrees in the clockwise direction.
+
+ Example:
+ Input Matrix:
+ 1 0
+ 0 1
+ Output:
+ 0 1
+ 1 0
  */
 public class RotateMatrix {
 
@@ -28,6 +37,45 @@ public class RotateMatrix {
             }
         }
     }
+
+    //my firecode solution
+    public static int[][] rotate1(int[][] matrix) {
+        //transpose
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = i + 1; j < matrix[0].length; j++) {
+                int temp = matrix[i][j];
+                matrix[i][j] = matrix[j][i];
+                matrix[j][i] = temp;
+            }
+        }
+        //swap columns
+        int end = matrix[0].length - 1;
+        for (int i = 0; i < matrix[0].length / 2; i++) {
+            for (int j = 0; j < matrix.length; j++) {
+                int temp = matrix[j][i];
+                matrix[j][i] = matrix[j][end];
+                matrix[j][end] = temp;
+            }
+            end--;
+        }
+        return matrix;
+    }
+
+    //firecode solution
+    public static int[][] rotate(int[][] matrix) {
+        int n = matrix.length;
+        for (int i = 0; i < n / 2; i++) {
+            for (int j = 0; j < Math.ceil(((double) n) / 2.); j++) {
+                int temp = matrix[i][j];
+                matrix[i][j] = matrix[n-1-j][i];
+                matrix[n-1-j][i] = matrix[n-1-i][n-1-j];
+                matrix[n-1-i][n-1-j] = matrix[j][n-1-i];
+                matrix[j][n-1-i] = temp;
+            }
+        }
+        return matrix;
+    }
+
 
     public static void rotateOneElement(int a[][]) {
         if(a == null || a.length == 0) return;

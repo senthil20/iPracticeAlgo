@@ -37,6 +37,22 @@ public class PowerFn {
         }
     }
 
+    public static double pow(double x, int n) {
+        boolean isNeg = false;
+        double result = 1;
+        if (n < 0) {
+            isNeg = true;
+            n = -n;
+        }
+        while (n > 0) {
+            if (n % 2 != 0) {
+                result = result * x;
+            }
+            x = x * x;
+            n = n / 2;
+        }
+        return isNeg ? 1 / result : result;
+    }
     public static void main(String a[]) {
         PowerFn fn = new PowerFn();
         System.out.println(fn.power(4,5));

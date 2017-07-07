@@ -60,7 +60,7 @@ public class ZigZagTraversalBT {
     }
 
     public static void main(String a[]){
-        IsBTreeBST bst = new IsBTreeBST();
+        ZigZagTraversalBT zig = new ZigZagTraversalBT();
         TreeNode root = new TreeNode(5,
                 new TreeNode(4,
                         new TreeNode(2,
@@ -72,7 +72,7 @@ public class ZigZagTraversalBT {
                         new TreeNode(11,
                                 new TreeNode(8, null, null),
                                 new TreeNode(12, null, null))));
-        bst.zigzagLevelOrder(root);
+        zig.zigzagLevelOrder(root);
 
     }
 

@@ -20,7 +20,7 @@ public class ShuffleArray_LeetCode {
 
     /** Resets the array to its original configuration and return it. */
     public int[] reset() {
-        //nums = java.util.Arrays.copyOf(reset, reset.length);
+        //nums = java.util.ArraysBasics.copyOf(reset, reset.length);
         return reset;
     }
 

@@ -1,8 +1,5 @@
 package ds.arrays;
 
-/**
- * Created by senthil on 12/8/16.
- */
 public class MergeSort {
 
     public void mergeSort(int a[]) {
@@ -17,7 +14,6 @@ public class MergeSort {
             l[i] = a[i];
         for(int j = mid; j < n; j++)
             r[j-mid] = a[j];
-
         mergeSort(l);
         mergeSort(r);
         merge(a, l, r);
@@ -49,7 +45,7 @@ public class MergeSort {
 
     public static void main(String ar[]) {
         MergeSort ms = new MergeSort();
-        int a[] = new int[]{2,4,1,3,8,0};
+        int a[] = new int[]{20, 5, 7, 9, 10, 2, 1, 18, 0};
         ms.mergeSort(a);
         System.out.println(a);
     }

@@ -1,42 +1,24 @@
 package ds.arrays;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Collections;
+import java.util.Comparator;
+
+/**
+ * Created by sydgsk9 on 4/5/2017.
+ */
+
+/*class Pair {
+    int left;
+    int right;
+    Pair(int i, int j) {
+        this.left = i;
+        this.right = j;
+    }
+}*/
 
 public class Flip {
 
-    /**
-     You are given a binary string(i.e. with characters 0 and 1) S consisting of characters S1, S2, …, SN.
-     In a single operation, you can choose two indices L and R such that 1 ≤ L ≤ R ≤ N and flip the characters SL, SL+1, …, SR.
-     By flipping, we mean change character 0 to 1 and vice-versa.
-
-     Your aim is to perform ATMOST one operation such that in final string number of 1s is maximised.
-     If you don’t want to perform the operation, return an empty array. Else, return an array consisting of two elements
-     denoting L and R. If there are multiple solutions, return the lexicographically smallest pair of L and R.
-
-     Notes:
-     - Pair (a, b) is lexicographically smaller than pair (c, d) if a < c or, if a == c and b < d.
-
-     For example,
-     S = 010
-
-     Pair of [L, R] | Final string
-     _______________|_____________
-     [1 1]          | 110
-     [1 2]          | 100
-     [1 3]          | 101
-     [2 2]          | 000
-     [2 3]          | 001
-
-     We see that two pairs [1, 1] and [1, 3] give same number of 1s in final string. So, we return [1, 1].
-     Another example,
-
-     If S = 111
-
-     No operation can give us more than three 1s in final string. So, we return empty array [].
-     See Expected Output
-     Notes
-     */
     public ArrayList<Integer> flip(String A) {
         if (A == null || A.length() == 0) return new ArrayList<>();
         int max = 0;
@@ -50,93 +32,114 @@ public class Flip {
                 zeroCount++;
                 if (max < zeroCount) {
                     max = zeroCount;
-                    endIndex = i + 1;
+                    endIndex = i;
                     result.clear();
                     result.add(startIndex + 1);
-                    result.add(endIndex);
+                    result.add(endIndex + 1);
                 }
             }
             else {
-                if (zeroCount == 0)
-                    startIndex = i + 1;
+                if (zeroCount == 0) {
+                    startIndex++;
+                }
                 else zeroCount--;
             }
         }
         return result;
     }
 
-    /**
-     *
-     Find zeroes to be flipped so that number of consecutive 1’s is maximized
-     Given a binary array and an integer m, find the position of zeroes flipping which creates
-     maximum number of consecutive 1s in array.
+    public ArrayList flip1(String A) {
+        int zero_minus_one = 0;
+        int max_zero_minus_one = 0;
+        int start_index = 0;
+        int end_index = 0;
 
-     Examples:
-
-     Input:   arr[] = {1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1}
-     m = 2
-     Output:  5 7
-     We are allowed to flip maximum 2 zeroes. If we flip
-     arr[5] and arr[7], we get 8 consecutive 1's which is
-     maximum possible under given constraints
-
-     Input:   arr[] = {1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1}
-     m = 1
-     Output:  7
-     We are allowed to flip maximum 1 zero. If we flip
-     arr[7], we get 5 consecutive 1's which is maximum
-     possible under given constraints.
-
-     Input:   arr[] = {0, 0, 0, 1}
-     m = 4
-     Output:  0 1 2
-     Since m is more than number of zeroes, we can flip
-     all zeroes.
-     */
-
-    public List<Integer> flipMaximumOnes(int[] A, int m) {
-        if (A == null || A.length == 0 || m == 0) return new ArrayList<>();
-        List<Integer> result = new ArrayList<>();
-        int zeroCount = 0;
-        int max = 0;
-        int startIndex = 0;
-        int endIndex = 0;
-
-        for (int i = 0; i < A.length; i++) {
-            if (A[i] == 0) {
-                if (m != zeroCount) {
-                    zeroCount++;
-                    if (startIndex == 0) startIndex = i;
-                    endIndex = i;
-                    continue;
+        ArrayList result_list = new ArrayList();
+        for (int i = 0; i < A.length(); i++) {
+            int digit_at_i = A.charAt(i) - '0';
+            if (digit_at_i == 0) {
+                zero_minus_one++;
+                if (max_zero_minus_one < zero_minus_one) {
+                    // there is a new max, adjust end to here
+                    // and record the window. The check above
+                    // is less_than, and not less_than_equal
+                    // this guarantees lexical ordering
+                    max_zero_minus_one = zero_minus_one;
+                    end_index = i;
+                    result_list.clear();
+                    result_list.add(0, start_index + 1);
+                    result_list.add(1, end_index + 1);
                 }
-                else {
-                    if (max < (endIndex - startIndex)) {
-                        max = endIndex - startIndex;
-                        zeroCount = 1;
-                        result.clear();
-                        result.add(startIndex);
-                        result.add(endIndex);
-                        startIndex = i;
-                    }
+            } else { // digit == 1
+                if (zero_minus_one == 0) {
+                    // equal number of 0s and 1s
+                    // so start from next digit
+                    // to see if we can find max there
+                    start_index = i + 1;
+                } else {
+                    zero_minus_one--;
                 }
             }
         }
-        if (A.length - 1 - startIndex > max) {
-            result.clear();
-            result.add(startIndex);
-            result.add(endIndex - 1);
+        return result_list;
+    }
+    /*public ArrayList<Integer> flip(String A) {
+        ArrayList<Pair> list = new ArrayList<>();
+        int total = numberOfOnes(A);
+        if (A.length() == total) return new ArrayList<>();
+        int sum = total;
+        int max = 0;
+        Pair temp = null;
+        for (int i = 0; i < A.length(); i++) {
+            for (int j = i + 1; j < A.length() - 1; j++) {
+                int s = i;
+                int e = j;
+                while (s <= e) {
+                    if (A.charAt(s) == '1') {
+                        sum--;
+                    }
+                    else {
+                        sum++;
+                    }
+                    s++;
+                }
+                if (sum > max) {
+                    list = new ArrayList<>();
+                    list.add(new Pair(i, j));
+                    max = sum;
+                }
+                else if (sum == max) {
+                    list.add(new Pair(i, j));
+                }
+                sum = total;
+            }
         }
+        Collections.sort(list, new Comparator<Pair>() {
+            @Override
+            public int compare(Pair o1, Pair o2) {
+                return o1.left - o2.left;
+            }
+        });
+        ArrayList<Integer> result = new ArrayList<>();
+        result.add(list.get(0).left);
+        result.add(list.get(0).right);
         return result;
     }
 
+    public int numberOfOnes(String A) {
+        int count = 0;
+        for (int i = 0; i < A.length(); i++) {
+            if (A.charAt(i) == '1') count++;
+        }
+        return count;
+    }*/
+
     public static void main(String a[]) {
         Flip flip = new Flip();
-        //flip.flip("0100011");
-        //flip.flip("1011001");
         //flip.flip("010");
-        //flip.flip("1110100001");
-        //flip.flip("0101");
-        flip.flipMaximumOnes(new int[]{1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1}, 3);
+        //flip.flip("0100011");
+        //flip.flip("00");
+        //flip.flip("1101");
+        flip.flip1("0111000100010");
     }
 }

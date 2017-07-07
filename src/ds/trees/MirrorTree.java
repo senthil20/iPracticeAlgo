@@ -33,6 +33,19 @@ public class MirrorTree {
         root.left = root.right;
         root.right = temp;
     }
+    public TreeNode mirror(TreeNode root) {
+        if (root.left == null || root.right == null) return root;
+        mirror(root.left);
+        mirror(root.right);
+        return swap1(root);
+    }
+
+    public TreeNode swap1(TreeNode node) {
+        TreeNode temp = node.left;
+        node.left = node.right;
+        node.right = temp;
+        return node;
+    }
 
     public static void main(String a[]) {
         MirrorTree mt = new MirrorTree();
@@ -41,7 +54,8 @@ public class MirrorTree {
                                         new TreeNode(1, null, null),
                                         new TreeNode(3, null, null)),
                                 new TreeNode(5, null, null));
-        mt.mirrorTree(root);
+        //mt.mirrorTree(root);
+        mt.mirror(root);
         System.out.println(root);
     }
  }

@@ -5,7 +5,21 @@ import java.util.Collections;
 import java.util.Comparator;
 
 /**
- * Created by senthil on 12/8/16.
+ Given a set of non-overlapping intervals, insert a new interval into the intervals (merge if necessary).
+
+ You may assume that the intervals were initially sorted according to their start times.
+
+ Example 1:
+
+ Given intervals [1,3],[6,9] insert and merge [2,5] would result in [1,5],[6,9].
+
+ Example 2:
+
+ Given [1,2],[3,5],[6,7],[8,10],[12,16], insert and merge [4,9] would result in [1,2],[3,10],[12,16].
+
+ This is because the new interval [4,9] overlaps with [3,5],[6,7],[8,10].
+
+ Make sure the returned intervals are also sorted.
  */
 
 class Interval {
@@ -21,9 +35,9 @@ public class MergeIntervals {
 
     public ArrayList<Interval> mergeInterval(ArrayList<Interval> list) {
 
-        ArrayList<Interval> retList = new ArrayList<>();
+        ArrayList<Interval> result = new ArrayList<>();
 
-        if(list == null || list.size() == 0) return retList;
+        if(list == null || list.size() == 0) return result;
 
         Collections.sort(list, new Comparator<Interval>() {
             @Override
@@ -38,16 +52,15 @@ public class MergeIntervals {
             Interval curr = list.get(i);
 
             if(curr.s > prev.e) {
-                retList.add(prev);
+                result.add(prev);
                 prev = curr;
             }
             else {
                 prev = new Interval(prev.s, Math.max(prev.e, curr.e));
             }
         }
-        retList.add(prev);
-
-        return retList;
+        result.add(prev);
+        return result;
     }
 
     public static void main(String ar[]) {

@@ -98,7 +98,7 @@ public class LCATree {
                         new TreeNode(14,
                                 new TreeNode(5, null, null),
                                 new TreeNode(4, null, null))));
-        /*TreeNode bstroot = new TreeNode(5,
+        TreeNode bstroot = new TreeNode(5,
                 new TreeNode(4,
                         new TreeNode(2,
                                 new TreeNode(1, null, null),
@@ -108,8 +108,8 @@ public class LCATree {
                         new TreeNode(6, null, null),
                         new TreeNode(11,
                                 new TreeNode(8, null, null),
-                                new TreeNode(12, null, null))));*/
-        //System.out.println(lca.lcaBST(bstroot, 12, 8));
-        //TreeNode temp = lca.lcaBT(btroot, 8, 114);
+                                new TreeNode(12, null, null))));
+        System.out.println(lca.lcaBST(bstroot, 6, 12));
+        //int result = lca.lcaBT(btroot, 9, 4);
     }
 }

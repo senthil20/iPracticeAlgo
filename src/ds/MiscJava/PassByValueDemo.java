@@ -95,6 +95,7 @@ public class PassByValueDemo {
         ArrayList<String> list1 = new ArrayList<String>();
         ArrayList<String> list2 = list1;
 
+
         list1.add("IB");
         list1.add("LC");
         list2.add("GFG");

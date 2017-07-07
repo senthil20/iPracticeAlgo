@@ -1,23 +1,23 @@
 package ds.trees;
 
-/**
- * Created by senthil on 22/9/16.
+/** Tree
+        6
+      /   \
+     4    10
+    / \   / \
+   2  5  9  12
+  / \   /  /  \
+ 1  3  7  11   13
+
  */
 public class DeleteNodeBST {
-
     TreeNode root;
-
     //tc: o(n)
     public TreeNode deleteNode(TreeNode root, int key) {
-
         if (root == null) return null;
-
         int cmp = Integer.compare(key, root.val);
-
         if (cmp < 0) root.left = deleteNode(root.left, key);
-
         else if (cmp > 0) root.right =  deleteNode(root.right, key);
-
         else {
             if (root.left == null)
                 return root.right;
@@ -47,7 +47,21 @@ public class DeleteNodeBST {
     public static void main(String a[]) {
         DeleteNodeBST d = new DeleteNodeBST();
         int[] ar = new int[]{1, 3, 5, 7, 9, 14, 18, 21};
-        TreeNode root = new BSTBasicOperations().buildTreeSortedArray(new TreeNode(), ar, 0, ar.length - 1);
-        d.root = d.deleteNode(root, 15);
+        //TreeNode root = new BSTBasicOperations().buildTreeSortedArray(new TreeNode(), ar, 0, ar.length - 1);
+        TreeNode root = new TreeNode(6,
+                new TreeNode(4,
+                        new TreeNode(2,
+                                new TreeNode(1, null, null),
+                                new TreeNode(3, null, null)),
+                        new TreeNode(5, null, null)),
+                new TreeNode(10,
+                        new TreeNode(9,
+                                new TreeNode(7, null, null),
+                                null),
+                        new TreeNode(12,
+                                new TreeNode(11, null, null),
+                                new TreeNode(13, null, null))));
+        root = d.deleteNode(root, 10);
+        System.out.println(root);
     }
 }

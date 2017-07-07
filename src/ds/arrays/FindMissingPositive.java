@@ -1,56 +1,74 @@
 package ds.arrays;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class FindMissingPositive {
 
-    public static void missingInteger(int[] a) {
+    int missingNumberUsingXOR(int[] arr) {
+        if (arr == null || arr.length == 0) return 0;
+        int x1 = arr[0];
+        int x2 = 0;
 
-        if(a == null || a.length == 0) return;
-        java.util.Arrays.sort(a);
-
-        int s = 0;
-        int e = a.length;
-        int negCount = 0;
-
-        while(s < e) {
-            if(a[s] > 0 && (s-negCount+1) != a[s]) {
-                System.out.println("Missing number is " + (s - negCount + 1));
-                break;
-            }
-            if(a[s] <= 0) {
-                negCount++;
-            }
-            s++;
+        for (int i = 1; i < arr.length; i++) {
+            x1 ^= arr[i];
         }
-        System.out.println(negCount + " and "  + (s+1));
+        for (int i = 1; i <= arr.length; i++) {
+            x2 ^= i;
+        }
+        int result = x1 ^ x2;
+        return result;
     }
 
-    public static void missingInteger1(int[] A) {
-        int n = A.length;
+    /**
+     Given an unsorted integer array, find the first missing positive integer.
+     Example:
+     Given [1,2,0] return 3,
+     [3,4,-1,1] return 2,
+     [-8, -7, -6] returns 1
+     Your algorithm should run in O(n) time and use constant space.
+     */
+    public int firstMissingPositive(ArrayList<Integer> a) {
+        if (a == null || a.size() == 0) return 1;
+        Collections.sort(a);
+        int index = -1;
+        for (int val : a) {
+            if (val > 0) {
+                if (index == -1) {
+                    index = 1;
+                }
+                if (val != index++) return index - 1;
+            }
+        }
+        return index == -1 ? 1 : index;
+    }
 
+    public static int firstMissingPositive1(int[] A) {
+        int n = A.length;
         for (int i = 0; i < n; i++) {
-            while (A[i] != i) {
+            while (A[i] != i + 1) {
                 if (A[i] <= 0 || A[i] >= n)
                     break;
 
-                if(A[i]==A[A[i]])
+                if(A[i]==A[A[i] - 1])
                     break;
 
                 int temp = A[i];
-                A[i] = A[temp];
-                A[temp] = temp;
+                A[i] = A[temp - 1];
+                A[temp - 1] = temp;
             }
         }
-        System.out.println("Missing numbers are ");
         for (int i = 0; i < n; i++){
-            if (A[i] != i){
-                System.out.print(i + " ");
+            if (A[i] != i + 1){
+                //System.out.print((i+1) + " ");
+                return i + 1;
             }
         }
-       // System.out.println(n);
+       // System.out.println(n + 1);
+        return  n + 1;
     }
 
     public int findFirstMissing(int array[], int start, int end) {
-
         if (start > end)
             return end + 1;
 
@@ -67,10 +85,11 @@ public class FindMissingPositive {
 
     public static void main(String a[]) {
         FindMissingPositive fm = new FindMissingPositive();
-        fm.findFirstMissing(new int[]{0,1,2,3,4,5,6,7,9,10}, 0, 9);
-        //fm.missingInteger1(new int[]{10, 7, 4, 3, 2, 1, 6, 8, 5});
-        //fm.missingInteger1(new int[]{0, -2, 2, 3, 5});
-        //fm.missingInteger1(new int[]{2,3,4,5,8,-1,-10,15});
+        //fm.missingNumberUsingXOR(new int[]{0, 3, 5, 8, 4, 6, 1, 9, 7});
+        //fm.findFirstMissing(new int[]{0,1,2,3,4,5,6,7,9,10}, 0, 9);
+        //fm.firstMissingPositive1(new int[]{-1, 7, 4, 3, 2, 1, 7, 8, 5});
+        //fm.firstMissingPositive1(new int[]{0, -2, 2, 3, 5});
+        //fm.firstMissingPositive1(new int[]{2,3,4,5,8,-1,-10,15});
         /*fm.missingInteger(new int[]{417, 929, 845, 462, 675, 175, 73, 1, 2, 867,
                 14, 201, 777, 407, 80, 882, 785, 563, 209, 261, 776, 362, 730, 74, 649,
                 465, 353, 801, 503, 154, 998, 286, 520, 692, 68, 805, 835, 210, 819, 341,
@@ -84,7 +103,9 @@ public class FindMissingPositive {
         fm.missingInteger(new int[]{
                 948, 20, 84, 710, 471, 606, 995, 581, -4, 428, 149, 832, 740, 943, 450, 974, 829, 721, 821, 476, 763, 4, 523, 937, 814, 624, 935, 87, 127, 816, 239, 33, 561, 999, 904, 282, 844, 923, 750, 551, 432, 9, 373, 387, 114, 376, 265, 801, 228, 454, 474, 764, 268, 680, 472, 431, 133, 785, 752, 643, 441, 151, 969, 395, 437, 94, 259, 973, 535, 272, 456, 546, 79, 677, 0, 109, 522, 295, 466, 956, 723, 157, 772, 865, 997, 771, 922, 980, 567, 939, 651, 478, 852, 926, 913, 494, 882, 207, 915, 645, 754, 385, 874, 554, 706, 722, 10, 374, 96, 647, 280, 418, 737, 538, 867, 850, 600, 23, 730, 742, 224, 511, 361, 251, 809, 907, 271, 319, 866, 848, 594, 566, 113, 211, 334, 644, 826, 430, 929, 603, 165, 147, 788, 529, 539, 633, 275, 602, 544, 540, 853, 123, -1, 443, 942, 386, 68, 465, 782, 250, 458, 174, 70, 919, 462, 347, 26, 589, 880, 648, 237, 294, 641, 707, 516, 507, 802, 989, 779, 519, 62, 619, 584, 358, 362, 277, 43, 198, 467, 625, 611, 212, 468, 767, 778, 173, 791, 331, 11, 461, 572, 97, 902, 558, 413, 28, 179, 370, 842, 568, 500, 311, 550, 464, 345, 411, 274, 181, 396, 339, 39, 760, 575, 327, 889, 579, 840, 734, 254, 934, 532, 29, 622, 780, 73, 479, 322, 2, 599, 227, 685, 65, 510, 716, 289, 912,
                 574, 262, 916, 924, 304, 57, 353, 40, 341, 521, 131, 307, 526, 398, 225, 63, 776
-        });
-        fm.missingInteger1(new int[]{1});*/
+        });*/
+        //System.out.print(fm.firstMissingPositive1(new int[]{3, 4, -1, 1}));
+        //System.out.print(fm.firstMissingPositive1(new int[]{-3, -4, 1, -1}));
+        System.out.print(fm.firstMissingPositive1(new int[]{9}));
     }
 }
