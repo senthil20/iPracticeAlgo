@@ -7,7 +7,8 @@ import java.util.ArrayList;
  The sub-array should be continuous. That is, a sub-array created by choosing the second and fourth element and
  skipping the third element is invalid.
 
- Maximum sub-array is defined in terms of the sum of the elements in the sub-array. Sub-array A is greater than sub-array B if sum(A) > sum(B).
+ Maximum sub-array is defined in terms of the sum of the elements in the sub-array.
+ Sub-array A is greater than sub-array B if sum(A) > sum(B).
 
  Example:
 
