@@ -26,6 +26,27 @@ import java.util.*;
 
 public class TwoSum {
 
+    public List<List<Integer>> twoSum1(int[] A, int key) {
+
+        Set<Integer> set = new TreeSet<>();
+        List<List<Integer>> result = new ArrayList<>();
+        List<Integer> list = new ArrayList<>();
+
+        for (int val : A) {
+            int temp = key - val;
+            if (set.contains(temp)) {
+                list = new ArrayList<>();
+                list.add(temp);
+                list.add(val);
+                result.add(list);
+            }
+            else {
+                set.add(val);
+            }
+        }
+        return result;
+    }
+
     int countPairsWithDiffK(int numbers[], int k)
     {
         int count = 0;
@@ -37,7 +58,6 @@ public class TwoSum {
                 count++;
             }
         }
-
         /*Arrays.sort(numbers);
         int n = numbers.length;
         int l = 0;
@@ -67,7 +87,7 @@ public class TwoSum {
         List<int[]> tempList = new ArrayList<>();
 
         for (int i = 0; i < numbers.length; i++) {
-            int val = numbers[i] - k;
+            int val = k - numbers[i];
             if (set.contains(val)) {
                 int[] temp = new int[2];
                 temp[0] = val;
@@ -158,8 +178,11 @@ public class TwoSum {
 
     public static void main(String a[]) {
         TwoSum sum = new TwoSum();
-        //sum.twoSum(new int[]{10, 12, 10, 15, -1, 7, 6, 5, 4, 2, 1, 1, 1}, 9);
+        //List<Integer> list = sum.twoSum(new int[]{10, 12, 10, 15, -1, 7, 6, 5, 4, 2, 1, 1, 1}, 9);
+        //List<List<Integer>> list = sum.twoSum1(new int[]{1, 1, 1, 1}, 2);
+        int count = sum.countPairs(new int[]{1, 1, 1, 1}, 2);
+        System.out.println(count);
         //sum.threeSum(new int[]{12, 3, 4, 1, 6, 9}, 24);
-        System.out.print(sum.countPairsWithDiffK(new int[]{2,4,6,8,10,12}, 2));
+        //System.out.print(sum.countPairsWithDiffK(new int[]{2,4,6,8,10,12}, 2));
     }
 }
