@@ -88,20 +88,28 @@ public class PassByValueDemo {
 
         //set A to null.what happens? will list becomes null/empty :-) Nope 'A' job is done and it finds it's way.
         //It can't do anything with the list. But if you do A.setX("") it will reflect over list.
-        A = null;
+        A = null; //or new instance as below
+        /*A = new Test();
+        A.setId(2000);
+        A.setName("Quora");*/
         System.out.println(list);
 
         //see this example too
         ArrayList<String> list1 = new ArrayList<String>();
+        list1.add("Hi");
         ArrayList<String> list2 = list1;
+        ArrayList<String> list3 = new ArrayList<String>();
 
+        list1 = list3;
 
         list1.add("IB");
         list1.add("LC");
         list2.add("GFG");
+        list3.add("NEW");
 
         System.out.println(list1);
         System.out.println(list2);
+        System.out.println(list3);
     }
 
     public void changeVal(Test A1) {

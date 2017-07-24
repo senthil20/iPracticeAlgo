@@ -23,73 +23,35 @@ import java.util.List;
  */
 public class SumRootToLeafNumbers {
 
-    /**
-     * tc: o(n)
-     * Approach 1: similar to path sum 2 problem
-     */
-    public int sumRootToLeaf(TreeNode root) {
-
-        if (root == null) return 0;
-
-        List<List<Integer>> result = new ArrayList<>();
-        List<Integer> list = new ArrayList<>();
-
-        depthWiseTraversal(result, list, root);
-
-        long total = 0;
-
-        for(List l : result) {
-            String s = "";
-            for (Object obj : l) {
-                s = s.concat(String.valueOf((Integer)obj));
-            }
-            total += Long.valueOf(s);
-        }
-        return (int)total;
+    //solution:1
+    public int sumNumbers(TreeNode a) {
+        if (a == null) return 0;
+        int[] result = new int[1];
+        sumNumbersRecursion(a, 0, result);
+        return result[0];
     }
 
-    public void depthWiseTraversal(List<List<Integer>> result, List<Integer> list, TreeNode root) {
-
-        list.add(root.val);
-
-        if (root.left == null && root.right == null) {
-            List<Integer> temp = new ArrayList<>(list);
-            result.add(temp);
+    public void sumNumbersRecursion(TreeNode a, int sum, int[] result) {
+        if (a == null) return;
+        sum = ((sum * 10) + a.val) % 1003;
+        if (a.left == null && a.right == null) {
+            result[0] = (result[0] + sum) % 1003;
+            return;
         }
-
-        if (root.left != null) {
-            depthWiseTraversal(result, list, root.left);
-            list.remove(list.size() - 1);
-        }
-
-        if (root.right != null) {
-            depthWiseTraversal(result, list, root.right);
-            list.remove(list.size() - 1);
-        }
+        sumNumbersRecursion(a.left, sum, result);
+        sumNumbersRecursion(a.right, sum, result);
+    }
+    //solution:2
+    public int sumNumbers1(TreeNode a) {
+        if (a == null) return 0;
+        return sumNumbersRecursion1(a, 0) % 1003;
     }
 
-    /**
-     * tc:o(n)
-     * Recursive, just append int using int * 10 and finally add it to sum
-     */
-    public int sumRootToLeafNumbers(TreeNode root) {
-
-        if (root == null) return 0;
-        return sumRootRecursive(root, 0 , 0);
-    }
-
-    public int sumRootRecursive(TreeNode root, int sum, int val) {
-
-        val = val * 10 + root.val;
-
-        if (root.left == null && root.right == null) {
-            sum += val;
-        }
-
-        if (root.left != null) sum =  sumRootRecursive(root.left, sum, val);
-        if (root.right != null) sum = sumRootRecursive(root.right, sum, val);
-
-        return sum;
+    public int sumNumbersRecursion1(TreeNode a, int sum) {
+        if (a == null) return 0;
+        sum = ((sum * 10) + a.val) % 1003;
+        if (a.left == null && a.right == null) return sum % 1003;
+        return sumNumbersRecursion1(a.left, sum) + sumNumbersRecursion1(a.right, sum);
     }
 
     public static void main(String a[]) {
@@ -106,6 +68,6 @@ public class SumRootToLeafNumbers {
                         null,
                         null));
 
-        System.out.println(sn.sumRootToLeafNumbers(root));
+        System.out.println(sn.sumNumbers(root));
     }
 }

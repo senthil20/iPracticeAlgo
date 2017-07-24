@@ -1,13 +1,7 @@
 package ds.trees;
 
-import sun.reflect.generics.tree.Tree;
-
 import java.util.ArrayList;
 import java.util.List;
-
-/**
- * Created by senthil on 25/9/16.
- */
 
 public class PathSum {
 
@@ -22,19 +16,33 @@ public class PathSum {
     return true, as there exist a root-to-leaf path 5->4->11->2 which sum is 22.
     **/
 
-    //simply check whether it's has the sum or not
-    public boolean pathSum1(TreeNode root, int sum) {
-        if (root == null) return false;
+    //solution:1
+    public int hasPathSum(TreeNode a, int b) {
+        if (a == null) return 0;
+        return hasPathSumRecursion(a, b, 0);
+    }
 
+    public int hasPathSumRecursion(TreeNode a, int b, int sum) {
+        if (a == null) return 0;
+        sum += a.val;
+        if (sum == b && a.left == null && a.right == null) return 1;
+        int left = hasPathSumRecursion(a.left, b, sum);
+        int right = 0;
+        if (left != 1) {
+            right = hasPathSumRecursion(a.right, b, sum);
+        }
+        return left == 1 ? left : right;
+    }
+
+    //solution:2
+    public boolean hasPathSum1(TreeNode root, int sum) {
+        if (root == null) return false;
         if (sum - root.val == 0 && root.left == null && root.right == null) {
             return true;
         }
-
-        boolean left = pathSum1(root.left, sum - root.val);
-
-        boolean right = pathSum1(root.right, sum - root.val);
-
-        return (left || right); // or simply return pathSum1(root.left, sum - root.val) || pathSum1(root.right, sum - root.val);
+        boolean left = hasPathSum1(root.left, sum - root.val);
+        boolean right = hasPathSum1(root.right, sum - root.val);
+        return (left || right);
     }
 
     /**
@@ -52,68 +60,59 @@ public class PathSum {
         [5,8,4,5]
      ]
      **/
-    //Collecting the paths too if it's sum equals key
-    public List<List<Integer>> pathSum2(TreeNode root, int sum) {
 
+    //solution:1
+    public ArrayList<ArrayList<Integer>> pathSum(TreeNode root, int sum) {
+        ArrayList<ArrayList<Integer>> result = new ArrayList<>();
+        ArrayList<Integer> path = new ArrayList<>();
+        if (root == null) return result;
+        pathSumRecursion(root, result, path, sum, 0);
+        return result;
+    }
+
+    public void pathSumRecursion(TreeNode root, ArrayList<ArrayList<Integer>> result, ArrayList<Integer> path, int sum, int total) {
+
+        if (root == null) return;
+        path.add(root.val);
+        total += root.val;
+        if (total == sum && root.left == null && root.right == null) {
+            ArrayList<Integer> temp = new ArrayList<>(path);
+            result.add(temp);
+            return;
+        }
+        if (root.left != null) {
+            pathSumRecursion(root.left, result, path, sum, total);
+            path.remove(path.size() - 1);
+        }
+        if (root.right != null) {
+            pathSumRecursion(root.right, result, path, sum, total);
+            path.remove(path.size() - 1);
+        }
+    }
+
+    //solution:2
+    public List<List<Integer>> pathSum2(TreeNode root, int sum) {
         List<List<Integer>> result = new ArrayList<>();
         List<Integer> list = new ArrayList<>();
-
         pathSumRecursive2(result, list, root, sum);
-
         return result;
     }
 
     public void pathSumRecursive2(List<List<Integer>> result, List<Integer> list, TreeNode root, int sum) {
-
         if(root != null) list.add(root.val);
-
         if (sum - root.val == 0 && root.left == null && root.right == null) {
             List<Integer> temp = new ArrayList<>();
             temp.addAll(list);
             result.add(temp);
         }
-
         if (root.left!= null) {
             pathSumRecursive2(result, list, root.left, sum - root.val);
             list.remove(list.size() - 1);
         }
-
         if (root.right != null) {
             pathSumRecursive2(result, list, root.right, sum - root.val);
             list.remove(list.size() - 1);
         }
-    }
-
-    //similar to above. nothing more. Substracting root value before starting recursion
-    public List<List<Integer>> pathSum21(TreeNode root, int sum) {
-
-        List<List<Integer>> result = new ArrayList<>();
-        List<Integer> list = new ArrayList<>();
-
-        return pathSumRecursive21(result, list, root, sum-root.val);
-    }
-
-    public List<List<Integer>> pathSumRecursive21(List<List<Integer>> result, List<Integer> list, TreeNode root, int sum) {
-
-        if (root == null) return result;
-
-        list.add(root.val);
-
-        if (root.left != null) {
-            pathSumRecursive21(result, list, root.left, sum - root.left.val);
-            list.remove(list.size() - 1);
-        }
-
-        if (sum == 0) {
-            System.out.println("True");
-            result.add(list);
-        }
-
-        if (root.right != null) {
-            pathSumRecursive21(result, list, root.right, sum - root.right.val);
-            list.remove(list.size() - 1);
-        }
-        return result;
     }
 
     public static void main(String a[]) {
@@ -137,8 +136,9 @@ public class PathSum {
                                                 new TreeNode(1, null, null),
                                                 null)),
                                 new TreeNode(8, null, null));*/
-        //System.out.println(ps.pathSum1(root, 22));
+        ps.pathSum(root, 22);
+        //System.out.println(ps.hasPathSum(root, 25));
         //ps.pathSum2(root, 22);
-        ps.pathSum21(root, 13);
+        //ps.pathSum21(root, 13);
     }
 }
