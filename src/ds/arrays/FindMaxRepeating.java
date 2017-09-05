@@ -45,6 +45,6 @@ public class FindMaxRepeating {
 
     public static void main(String a[]) {
         FindMaxRepeating fm = new FindMaxRepeating();
-        fm.findMaxRepeating(new int[]{1, 2, 1, 2, 3, 2});
+        fm.findMaxRepeating(new int[]{9, 1, 2, 1, 2, 3, 2, 9, 9, 9});
     }
 }
