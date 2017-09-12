@@ -7,8 +7,8 @@ import java.util.Queue;
         5
       /   \
      4     7
-    / \   / \
-   2  4  6  11
+    / \     \
+   2  4     11
   / \      /  \
  1  3     8  12
 
@@ -16,58 +16,45 @@ import java.util.Queue;
  */
 public class MinDepthOfBinaryTree {
 
-    //Brute force not advisable, think if there is one node in left and thousands in right.
-    public int minDepth(TreeNode root) {
-
-        if (root == null) return -1;
-
-        int leftDepth = minDepth(root.left);
-        int rightDepth = minDepth(root.right);
-
-        if (root.left == null) {
-            return 1 + rightDepth;
-        } else if (root.right == null) {
-            return 1 + leftDepth;
+    //solution:1
+    public int minDepth(TreeNode a) {
+        if (a == null) {
+            return 0;
         }
-
-        return 1 + Math.min(leftDepth, rightDepth);
+        if (a.left == null && a.right == null) {
+            return 1;
+        }
+        int left = (a.left != null) ? minDepth(a.left) : Integer.MAX_VALUE;
+        int right = (a.right != null) ? minDepth(a.right) : Integer.MAX_VALUE;
+        return 1 + Math.min(left, right);
     }
 
-    //We can solve this using level order
-    public int minDepthOfBinaryTree1(TreeNode root) {
-
-        if (root == null) return 0;
-
-        Queue<TreeNode> current = new LinkedList<>();
-        Queue<Integer> counts = new LinkedList<>();
-
-        current.add(root);
-        counts.add(0);
-
-        while (!current.isEmpty()) {
-
-            TreeNode node = current.poll();
-            int count = counts.poll();
-
-            if (node.left != null) {
-                current.add(node.left);
-                counts.add(count+1);
+    //solution:2, using level order
+    public int minDepthOfBinaryTree(TreeNode a) {
+        if (a == null) return 0;
+        Queue<TreeNode> q = new LinkedList<>();
+        Queue<TreeNode> next = new LinkedList<>();
+        q.add(a);
+        int level = 1;
+        while (!q.isEmpty()) {
+            TreeNode n = q.poll();
+            if (n.left == null && n.right == null) return level;
+            if (n.left != null) {
+                next.add(n.left);
             }
-
-            if (node.right != null) {
-                current.add(node.right);
-                counts.add(count+1);
+            if (n.right != null) {
+                next.add(n.right);
             }
-
-            if (node.left == null && node.right == null) {
-                return count;
+            if (q.isEmpty()) {
+                q = next;
+                next = new LinkedList<>();
+                level++;
             }
         }
-        return 0;
+        return level;
     }
 
     public static void main(String a[]) {
-
         MinDepthOfBinaryTree md = new MinDepthOfBinaryTree();
 
         TreeNode root = new TreeNode(5,
@@ -77,11 +64,10 @@ public class MinDepthOfBinaryTree {
                                 new TreeNode(3, null, null)),
                         new TreeNode(4, null, null)),
                 new TreeNode(7,
-                        new TreeNode(6, null, null),
+                        null,
                         new TreeNode(11,
                                 new TreeNode(8, null, null),
                                 new TreeNode(12, null, null))));
-
         /*TreeNode root = new TreeNode(5,
                 new TreeNode(4,
                         null,

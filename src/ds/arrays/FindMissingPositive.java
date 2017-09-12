@@ -8,12 +8,12 @@ public class FindMissingPositive {
     int missingNumberUsingXOR(int[] arr) {
         if (arr == null || arr.length == 0) return 0;
         int x1 = arr[0];
-        int x2 = 0;
+        int x2 = 1;
 
         for (int i = 1; i < arr.length; i++) {
             x1 ^= arr[i];
         }
-        for (int i = 1; i <= arr.length; i++) {
+        for (int i = 2; i <= arr.length + 1; i++) {
             x2 ^= i;
         }
         int result = x1 ^ x2;
@@ -23,8 +23,8 @@ public class FindMissingPositive {
     /**
      Given an unsorted integer array, find the first missing positive integer.
      Example:
-     Given [1,2,0] return 3,
-     [3,4,-1,1] return 2,
+     Given [1,2,0] return 3
+     [3,4,-1,1] return 2
      [-8, -7, -6] returns 1
      Your algorithm should run in O(n) time and use constant space.
      */

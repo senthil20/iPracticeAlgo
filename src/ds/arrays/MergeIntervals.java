@@ -23,12 +23,12 @@ import java.util.Comparator;
  */
 
 class Interval {
-    int s;
-    int e;
+    int start;
+    int end;
 
     Interval(int s, int e) {
-        this.s = s;
-        this.e = e;
+        this.start = s;
+        this.end = e;
     }
 }
 public class MergeIntervals {
@@ -36,30 +36,42 @@ public class MergeIntervals {
     public ArrayList<Interval> mergeInterval(ArrayList<Interval> list) {
 
         ArrayList<Interval> result = new ArrayList<>();
-
         if(list == null || list.size() == 0) return result;
-
         Collections.sort(list, new Comparator<Interval>() {
             @Override
             public int compare(Interval i1, Interval i2) {
-                 return Integer.compare(i1.s, i2.s);
+                 return Integer.compare(i1.start, i2.start);
             }
         });
-
         Interval prev = list.get(0);
-
         for(int i=1; i < list.size(); i++) {
             Interval curr = list.get(i);
-
-            if(curr.s > prev.e) {
+            if(curr.start > prev.end) {
                 result.add(prev);
                 prev = curr;
             }
             else {
-                prev = new Interval(prev.s, Math.max(prev.e, curr.e));
+                prev = new Interval(prev.start, Math.max(prev.end, curr.end));
             }
         }
         result.add(prev);
+        return result;
+    }
+
+    public static ArrayList<Interval> insertRange(ArrayList<Interval> intervalsList, Interval insert) {
+        ArrayList<Interval> result = new ArrayList<Interval>();
+
+        for (Interval interval : intervalsList) {
+            if (interval.end < insert.start)
+                result.add(interval);
+            else if (interval.start > insert.end) {
+                result.add(insert);
+                insert = interval;
+            } else if (interval.end >= insert.start || interval.start <= insert.end) {
+                insert = new Interval(Math.min(interval.start,insert.start), Math.max(interval.end, insert.end));
+            }
+        }
+        result.add(insert);
         return result;
     }
 

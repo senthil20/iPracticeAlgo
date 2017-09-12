@@ -1,5 +1,6 @@
 package ds.arrays;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static java.lang.Integer.max;
@@ -9,6 +10,17 @@ import static java.lang.StrictMath.min;
  * Created by senthil on 20/8/16.
  */
 public class MaxGap {
+
+    //
+    public int maxArr(ArrayList<Integer> A) {
+        if (A == null || A.size() < 2) return 0;
+        int max = Math.abs(A.get(0) - A.get(1)) + Math.abs(0 - 1);
+        for (int i = 2; i < A.size(); i++) {
+            max = Math.max(max, Math.abs(A.get(i - 2) - A.get(i)) + Math.abs((i - 2) - i));
+            max = Math.max(max, Math.abs(A.get(i - 1) - A.get(i)) + Math.abs((i - 1) - i));
+        }
+        return max;
+    }
 
     public int maxIndexDiff(int arr[], int n)
     {
@@ -88,7 +100,7 @@ public class MaxGap {
 
     public static void main(String a[]) {
         MaxGap gp = new MaxGap();
-        System.out.println(gp.maxIndexDiff(new int[]{100,100,100,100,100}, 5));
+        System.out.println(gp.maxIndexDiff(new int[]{1, 3, -1}, 3));
          /*List<Integer> list = new ArrayList<>();
         list.add(100);
         list.add(100);
