@@ -39,7 +39,7 @@ public class MergeKListPQ {
 
 
     public static void main(String a[]) {
-        SLL ll = new SLL();
+        LinkedList ll = new LinkedList();
         MergeKListPQ ml = new MergeKListPQ();
         ListNode l1 = ll.buildLinkedList(new int[]{1, 2, 13, 20}, new ListNode());
         ListNode l2 = ll.buildLinkedList(new int[]{3, 4, 35, 41}, new ListNode());

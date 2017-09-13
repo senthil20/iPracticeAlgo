@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
  Note: Valid combination means that parentheses pairs are not left open. ")()(" is not a valid combination.
  */
-public class CombParenthesis {
+class CombParenthesis {
 
     public static ArrayList<String> combParenthesis(int pairs) {
         ArrayList<String> res = new ArrayList<String>();

@@ -12,7 +12,7 @@ class ListNode {
     }
 }
 
-public class SLL {
+public class LinkedList {
     ListNode l1Head;
     ListNode l2Head;
 
@@ -192,7 +192,7 @@ public class SLL {
     }
 
     public static void main(String s[]) {
-        SLL sl = new SLL();
+        LinkedList sl = new LinkedList();
         int a[] = new int[]{12,13,14,18,2,4,9,20};
         //int a1[] = new int[]{1,2,3,4,5,6,7,8,8,6,5,4,3,2,1};
         int a1[] = new int[]{1,2,3,4,5};
