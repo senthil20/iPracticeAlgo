@@ -1,8 +1,7 @@
-package ds.linkedlists;
+package revise.linkedlists;
 
 import java.util.HashSet;
 import java.util.Set;
-import java.util.TreeSet;
 
 public class RemoveDuplicates {
     //o(n) space
