@@ -35,9 +35,9 @@ public class SerializeDeserializeBinaryTree {
     public static TreeNode buildTreeRecursively(String[] str, int[] index) {
         if (index[0] > str.length - 1 || str[index[0]].equalsIgnoreCase("#")) return null;
         TreeNode node = new TreeNode(Integer.parseInt(str[index[0]]));
-        index[0] += 1;
+        index[0]++;
         node.left = buildTreeRecursively(str, index);
-        index[0] += 1;
+        index[0]++;
         node.right = buildTreeRecursively(str, index);
         return node;
     }

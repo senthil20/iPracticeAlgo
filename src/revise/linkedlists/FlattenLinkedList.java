@@ -1,4 +1,5 @@
 package revise.linkedlists;
+
 /**
  *             1 --> -1 --> -1 --> 10 --> 11
  *                  *        *
@@ -11,16 +12,6 @@ package revise.linkedlists;
  *                             *
  *                            6 --> 7 --> 8
  */
-class FlattenListNode {
-    int val;
-    FlattenListNode next;
-    FlattenListNode child;
-    FlattenListNode(int data, FlattenListNode next, FlattenListNode child) {
-        this.val = data;
-        this.next = next;
-        this.child = child;
-    }
-}
 public class FlattenLinkedList {
     public static FlattenListNode flattenList(FlattenListNode root) {
         if (root == null) return root;

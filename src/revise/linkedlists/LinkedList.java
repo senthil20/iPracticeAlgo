@@ -35,9 +35,8 @@ public class LinkedList {
     }
 
     public static void main(String s[]) {
-        LinkedList sl = new LinkedList();
         int a[] = new int[]{12, 13, 14, 18, 2, 4, 9, 20};
-        ListNode head = sl.buildLinkedList(a, new ListNode());
+        ListNode head = new LinkedList().buildLinkedList(a, new ListNode());
 
     }
 }

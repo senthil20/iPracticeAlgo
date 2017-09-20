@@ -17,7 +17,7 @@ public class SerializeBinaryTree {
       1  3     8  12
     */
 
-    /*public String serializeTree(TreeNode root){
+    public String serializeTree1(TreeNode root){
         if (root == null) return "";
         Queue<TreeNode> queue = new LinkedList<>();
         StringBuffer sb = new StringBuffer();
@@ -36,7 +36,7 @@ public class SerializeBinaryTree {
         return sb.toString();
     }
 
-    public TreeNode restoreTree(String str){
+    public TreeNode restoreTree1(String str){
         String[] data = str.split(",");
         Queue<TreeNode> queue = new LinkedList<>();
         TreeNode root = new TreeNode(Integer.valueOf(data[0]));
@@ -65,7 +65,7 @@ public class SerializeBinaryTree {
             i++;
         }
         return root;
-    }*/
+    }
 
 
     /*public String serialize(TreeNode root) {
@@ -183,8 +183,9 @@ public class SerializeBinaryTree {
                         new TreeNode(11,
                                 new TreeNode(8, null, null),
                                 new TreeNode(12, null, null))));
-        TreeNode node = sb.restoreTree(sb.serializeTree(root));
+        //TreeNode node = sb.restoreTree(sb.serializeTree(root));
         //TreeNode node = sb.deserialize(sb.serialize(root));
+        TreeNode node = sb.restoreTree1(sb.serializeTree1(root));
         System.out.println(node);
 
     }
