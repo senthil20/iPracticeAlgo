@@ -53,7 +53,7 @@ public class ListPalindrome {
 
     public static void main(String a[]) {
         int A[] = new int[]{1,2,3,4,3,2,1};
-        ListNode head = new SLL().buildLinkedList(A, new ListNode());
+        ListNode head = new LinkedList().buildLinkedList(A, new ListNode());
         System.out.println(new ListPalindrome().lPalin(head));
     }
 

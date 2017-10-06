@@ -70,9 +70,8 @@ public class AddTwoLLNumbers {
     }
 
     public static void main(String a[]) {
-        SLL ll = new SLL();
-        ListNode l1 = ll.buildLinkedList(new int[]{5, 4, 9, 7}, new ListNode());
-        ListNode l2 = ll.buildLinkedList(new int[]{9, 7, 9, 2}, new ListNode());
+        ListNode l1 = new LinkedList().buildLinkedList(new int[]{5, 4, 9, 7}, new ListNode());
+        ListNode l2 = new LinkedList().buildLinkedList(new int[]{9, 7, 9, 2}, new ListNode());
         ListNode result= AddTwoLLNumbers.sumTwoLinkedLists(l1, l2);
         System.out.println(result);
     }

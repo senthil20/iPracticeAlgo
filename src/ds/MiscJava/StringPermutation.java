@@ -22,10 +22,11 @@ public class StringPermutation {
         StringPermutation sp = new StringPermutation();
         //sp.perm("", "abc");
         //sp.caps("0ab");
-        int i = 0;
+        /*int i = 0;
         for ( ;i <= 5; i++) {
             System.out.println("TEst " + i);
         }
-        System.out.println(i);
+        System.out.println(i);*/
+        sp.perm("", "abcdefghi");
     }
 }
