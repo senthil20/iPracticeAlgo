@@ -115,6 +115,18 @@ public class PathSum {
         }
     }
 
+    public int pathSum5(TreeNode root, int sum) {
+        if (root == null) return 0;
+        sum -= root.val;
+        if (root.left != null) {
+            return pathSum5(root.left, sum);
+        }
+        if (root.right != null) {
+            return pathSum5(root.right, sum);
+        }
+        return (pathSum5(root.left, sum) + pathSum5(root.right, sum));
+    }
+
     public static void main(String a[]) {
 
         PathSum ps = new PathSum();
@@ -136,7 +148,8 @@ public class PathSum {
                                                 new TreeNode(1, null, null),
                                                 null)),
                                 new TreeNode(8, null, null));*/
-        ps.pathSum(root, 22);
+        int paths = ps.pathSum5(root, 15);
+        System.out.println(paths);
         //System.out.println(ps.hasPathSum(root, 25));
         //ps.pathSum2(root, 22);
         //ps.pathSum21(root, 13);
