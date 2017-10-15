@@ -1,7 +1,5 @@
 package ds.linkedlists;
 
-import java.util.List;
-
 class ListNode {
     int val;
     ListNode next;
@@ -13,8 +11,6 @@ class ListNode {
 }
 
 public class LinkedList {
-    ListNode l1Head;
-    ListNode l2Head;
 
     public ListNode buildLinkedList(int a[], ListNode l) {
         if(a.length == 0) return null;
@@ -197,14 +193,14 @@ public class LinkedList {
         //int a1[] = new int[]{1,2,3,4,5,6,7,8,8,6,5,4,3,2,1};
         int a1[] = new int[]{1,2,3,4,5};
 
-        sl.l1Head = sl.buildLinkedList(a1, sl.l1Head);
-        //sl.l2Head = sl.buildLinkedList(a1, sl.l2Head);
+        ListNode head1 = sl.buildLinkedList(a1, new ListNode());
+        //ListNode head2 = sl.buildLinkedList(a1, new ListNode());
 
-        //sl.sortList(sl.l1Head);
-        //sl.deleteAtMiddle(sl.l1Head, 3);
-        //ListNode result = sl.deleteAtHead(sl.l1Head);
-        //System.out.println(sl.findNthNodeFromEnd1(sl.l1Head, 3));
-        //ListNode head = sl.insertAtPosition(sl.l1Head, 10, 1);
-        System.out.println(sl.reverseListRecursively(sl.l1Head));
+        //sl.sortList(head1);
+        //sl.deleteAtMiddle(head1, 3);
+        //ListNode result = sl.deleteAtHead(head1);
+        //System.out.println(sl.findNthNodeFromEnd1(head1, 3));
+        //ListNode head = sl.insertAtPosition(head1, 10, 1);
+        System.out.println(sl.reverseListRecursively(head1));
     }
 }

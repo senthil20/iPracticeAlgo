@@ -87,9 +87,13 @@ public class ListPalindrome {
 
     public static void main(String a[]) {
         //int A[] = new int[]{1, 1000000000, -1000000000, -1000000000, 1000000000, 1};
+        /*
         int A[] = new int[]{1, 2, 3, 3, 2};
         ListNode head = new LinkedList().buildLinkedList(A, new ListNode());
         System.out.println(new ListPalindrome().isListPalindrome(head));
+        */
+        int A[] = new int[]{1,2,3,4,3,2,1};
+        ListNode head = new LinkedList().buildLinkedList(A, new ListNode());
+        System.out.println(new ListPalindrome().lPalin(head));
     }
-
 }

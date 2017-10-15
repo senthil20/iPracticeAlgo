@@ -61,7 +61,7 @@ public class DeleteNodeBST {
                         new TreeNode(12,
                                 new TreeNode(11, null, null),
                                 new TreeNode(13, null, null))));
-        root = d.deleteNode(root, 10);
+        root = d.deleteNode(root, 6);
         System.out.println(root);
     }
 }

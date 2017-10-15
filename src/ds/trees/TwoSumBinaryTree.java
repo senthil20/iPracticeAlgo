@@ -1,8 +1,6 @@
 package ds.trees;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 /** Input tree, key
  *           5
@@ -81,6 +79,51 @@ public class TwoSumBinaryTree {
         return list;
     }
 
+    public static boolean twoSum(TreeNode root, int target) {
+        if (root == null) return false;
+        return findTargetRecursion(root, new HashSet<>(), target);
+    }
+
+    public static boolean findTargetRecursion(TreeNode root, Set<Integer> set, int k) {
+        /*if (root == null) return false;
+        boolean isTargetAvail = false;
+        if (set.contains(k - Math.abs(root.val))) {
+            return true;
+        }
+        else {
+            set.add(root.val);
+        }
+        if (!isTargetAvail) {
+            isTargetAvail = findTargetRecursion(root.left, set, k);
+        }
+        if (!isTargetAvail) {
+            isTargetAvail = findTargetRecursion(root.right, set, k);
+        }
+        return isTargetAvail;*/
+        if (root == null) return false;
+        if (set.contains(k - root.val)) {
+            return true;
+        }
+        set.add(root.val);
+        boolean left = findTargetRecursion(root.left, set, k);
+        boolean right = findTargetRecursion(root.right, set, k);
+        return left || right;
+    }
+
+    public static boolean twoSumRecursion1(TreeNode root, Set<Integer> set, int target) {
+        if (root == null) return false;
+        boolean isSum = twoSumRecursion1(root.left, set, target);
+        if (set.contains(target - root.val)) {
+            return true;
+        }
+        else {
+            set.add(root.val);
+        }
+        isSum = twoSumRecursion1(root.right, set, target);
+        return isSum;
+    }
+
+
     public static void main(String a[]) {
         TwoSumBinaryTree twosum = new TwoSumBinaryTree();
         TreeNode root = new TreeNode(5,
@@ -94,6 +137,11 @@ public class TwoSumBinaryTree {
                         new TreeNode(11,
                                 new TreeNode(8, null, null),
                                 new TreeNode(12, null, null))));
-        twosum.inorder(root, root, 0);
+        /*TreeNode root = new TreeNode(2,
+                new TreeNode(1, null, null),
+                new TreeNode(3, null, null));*/
+        //twosum.inorder(root, root, 0);
+        boolean isTwoSum = twoSum(root, 23);
+        System.out.println(isTwoSum);
     }
 }

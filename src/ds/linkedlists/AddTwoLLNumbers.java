@@ -68,10 +68,13 @@ public class AddTwoLLNumbers {
 
     public static void main(String a[]) {
         /*ListNode l1 = new LinkedList().buildLinkedList(new int[]{5, 4, 9, 7}, new ListNode());
-        ListNode l2 = new LinkedList().buildLinkedList(new int[]{9, 7, 9, 2}, new ListNode());/*/
+        ListNode l2 = new LinkedList().buildLinkedList(new int[]{9, 7, 9, 2}, new ListNode());/
         ListNode l1 = new LinkedList().buildLinkedList(new int[]{5, 3, 7}, new ListNode());
         ListNode l2 = new LinkedList().buildLinkedList(new int[]{5, 6, 4}, new ListNode());
-        ListNode result= addTwoNumbers(l1, l2);
+        ListNode result= addTwoNumbers(l1, l2);*/
+        ListNode l1 = new LinkedList().buildLinkedList(new int[]{5, 4, 9, 7}, new ListNode());
+        ListNode l2 = new LinkedList().buildLinkedList(new int[]{9, 7, 9, 2}, new ListNode());
+        ListNode result= AddTwoLLNumbers.sumTwoLinkedLists(l1, l2);
         System.out.println(result);
     }
 }

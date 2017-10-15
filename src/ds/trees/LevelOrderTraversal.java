@@ -103,6 +103,38 @@ public class LevelOrderTraversal {
         levelOrder(node.right, result, level + 1);
     }
 
+    public static List<Double> averageOfLevels(TreeNode root) {
+        if (root == null) return null;
+        List<Double> result = new ArrayList<>();
+        long sum = 0;
+        int elemCount = 0;
+        Queue<TreeNode> curr = new LinkedList<>();
+        Queue<TreeNode> next = new LinkedList<>();
+        curr.offer(root);
+
+        while (!curr.isEmpty()) {
+            TreeNode temp = curr.poll();
+            sum += temp.val;
+            elemCount++;
+            if (temp.left != null) {
+                next.offer(temp.left);
+            }
+            if (temp.right != null) {
+                next.offer(temp.right);
+            }
+
+            if (curr.isEmpty()) {
+                curr = next;
+                next = new LinkedList<>();
+                double avg = (double)sum / elemCount;
+                result.add(avg);
+                sum = 0;
+                elemCount = 0;
+            }
+        }
+        return result;
+    }
+
     public static void main(String a[]) {
 
         LevelOrderTraversal lt = new LevelOrderTraversal();
@@ -121,6 +153,8 @@ public class LevelOrderTraversal {
 
         //List<List<Integer>> list = lt.levelOrderTraversal(root);
         //List<List<Integer>> list = lt.levelOrderTraversal1(root);
-        lt.levelOrder(root);
+        //lt.levelOrder(root);
+        List<Double> result = averageOfLevels(root);
+        System.out.println(result);
     }
 }
