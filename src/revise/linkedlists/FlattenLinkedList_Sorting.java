@@ -21,42 +21,6 @@ import java.util.PriorityQueue;
 public class FlattenLinkedList_Sorting {
 
     /**
-     * Merge from last node with prev node and return that merged head node.
-     * @param root
-     * @return
-     */
-    public static FlattenListNode flattenListSortingMerge(FlattenListNode root) {
-
-        if (root == null || root.next == null) return root;
-        root.next = flattenListSortingMerge(root.next);
-        root = merge(root, root.next);
-        return root;
-    }
-
-    public static FlattenListNode merge(FlattenListNode curr, FlattenListNode next) {
-        FlattenListNode prev = new FlattenListNode(-1, null, null);
-        FlattenListNode result = prev;
-        while (curr != null && next != null) {
-            if (curr.val < next.val) {
-                prev.child = curr;
-                curr = curr.child;
-            }
-            else {
-                prev.child = next;
-                next = next.child;
-            }
-            prev = prev.child;
-        }
-        if (curr != null) {
-            prev.child = curr;
-        }
-        if (next != null) {
-            prev.child = next;
-        }
-        return result.child;
-    }
-
-    /**
      * Add each next node into list and use PQ.
      * @param root
      * @return
@@ -92,6 +56,44 @@ public class FlattenLinkedList_Sorting {
         }
         return result.next;
     }
+
+
+    /**
+     * Merge from last node with prev node and return that merged head node.
+     * @param root
+     * @return
+     */
+    public static FlattenListNode flattenListSortingMerge(FlattenListNode root) {
+
+        if (root == null || root.next == null) return root;
+        root.next = flattenListSortingMerge(root.next);
+        root = merge(root, root.next);
+        return root;
+    }
+
+    public static FlattenListNode merge(FlattenListNode curr, FlattenListNode next) {
+        FlattenListNode prev = new FlattenListNode(-1, null, null);
+        FlattenListNode result = prev;
+        while (curr != null && next != null) {
+            if (curr.val < next.val) {
+                prev.child = curr;
+                curr = curr.child;
+            }
+            else {
+                prev.child = next;
+                next = next.child;
+            }
+            prev = prev.child;
+        }
+        if (curr != null) {
+            prev.child = curr;
+        }
+        if (next != null) {
+            prev.child = next;
+        }
+        return result.child;
+    }
+
 
 
     /**

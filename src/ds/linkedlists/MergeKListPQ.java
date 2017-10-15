@@ -37,6 +37,29 @@ public class MergeKListPQ {
         return head.next;
     }
 
+    public ListNode mergeKLists(ListNode[] lists) {
+        if (lists == null || lists.length == 0) return null;
+        PriorityQueue<ListNode> pq = new PriorityQueue<>(new Comparator<ListNode>() {
+            public int compare(ListNode l1, ListNode l2) {
+                return Integer.compare(l1.val, l2.val);
+            }
+        });
+        for (ListNode node : lists) {
+            pq.add(node);
+        }
+        ListNode prev = new ListNode(-1);
+        ListNode result = prev;
+        while (!pq.isEmpty()) {
+            ListNode temp = pq.poll();
+            prev.next = temp;
+            prev = prev.next;
+            if (temp.next != null) {
+                pq.add(temp.next);
+            }
+        }
+        return result.next;
+    }
+
 
     public static void main(String a[]) {
         LinkedList ll = new LinkedList();
@@ -45,12 +68,13 @@ public class MergeKListPQ {
         ListNode l2 = ll.buildLinkedList(new int[]{3, 4, 35, 41}, new ListNode());
         ListNode l3 = ll.buildLinkedList(new int[]{5, 9, 11, 25}, new ListNode());
         ListNode l4 = ll.buildLinkedList(new int[]{1, 21, 39, 40}, new ListNode());
-        List<ListNode> list = new ArrayList<>();
+        /*List<ListNode> list = new ArrayList<>();
         list.add(l1);
         list.add(l2);
         list.add(l3);
         list.add(l4);
-        ListNode result = ml.mergeKListsUsingPQ(list);
+        ListNode result = ml.mergeKListsUsingPQ(list);*/
+        ListNode result = ml.mergeKLists(new ListNode[]{l1, l2, l3, l4});
         System.out.println(result);
     }
 
