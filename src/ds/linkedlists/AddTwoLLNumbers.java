@@ -36,40 +36,42 @@ public class AddTwoLLNumbers {
         return head.next;
     }
 
-    //My initial solution!
-    public static ListNode sumTwoLinkedLists1(ListNode input1, ListNode input2) {
-        if (input1 == null && input2 == null) return null;
-        ListNode prev = new ListNode(-1);
-        ListNode head = prev;
+    public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        if (l1 == null) return l2;
+        if (l2 == null) return l1;
         int carry = 0;
-        int sum = 0;
-        while (input1 != null && input2 != null) {
-            sum = input1.val + input2.val + carry;
+        ListNode head = new ListNode(-1);
+        ListNode result = head;
+        while (l1 != null || l2 != null) {
+            int sum = 0;
+            if (l1 != null) {
+                sum += l1.val;
+            }
+            if (l2 != null) {
+                sum += l2.val;
+            }
+            sum += carry;
+
             carry = sum / 10;
-            prev.next = new ListNode(sum % 10);
-            prev = prev.next;
-            input1 = input1.next;
-            input2 = input2.next;
+            result.next = new ListNode(sum % 10);;
+            result = result.next;
+
+            if (l1 != null) l1 = l1.next;
+            if (l2 != null) l2 = l2.next;
         }
-        while (input1 != null) {
-            sum = carry + input1.val;
-            carry = sum / 10;
-            prev.next = new ListNode(sum % 10);
-            prev = prev.next;
-            input1 = input1.next;
+        if (carry != 0) {
+            ListNode t = new ListNode(carry);
+            result.next = t;
         }
-        while (input2 != null) {
-            sum = carry + input2.val;
-            carry = sum / 10;
-            prev.next = new ListNode(sum % 10);
-            prev = prev.next;
-            input2 = input2.next;
-        }
-        if (carry != 0) prev.next = new ListNode(carry);
         return head.next;
     }
 
     public static void main(String a[]) {
+        /*ListNode l1 = new LinkedList().buildLinkedList(new int[]{5, 4, 9, 7}, new ListNode());
+        ListNode l2 = new LinkedList().buildLinkedList(new int[]{9, 7, 9, 2}, new ListNode());/
+        ListNode l1 = new LinkedList().buildLinkedList(new int[]{5, 3, 7}, new ListNode());
+        ListNode l2 = new LinkedList().buildLinkedList(new int[]{5, 6, 4}, new ListNode());
+        ListNode result= addTwoNumbers(l1, l2);*/
         ListNode l1 = new LinkedList().buildLinkedList(new int[]{5, 4, 9, 7}, new ListNode());
         ListNode l2 = new LinkedList().buildLinkedList(new int[]{9, 7, 9, 2}, new ListNode());
         ListNode result= AddTwoLLNumbers.sumTwoLinkedLists(l1, l2);

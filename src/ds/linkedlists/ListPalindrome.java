@@ -51,10 +51,49 @@ public class ListPalindrome {
         return count;
     }
 
+    static boolean isListPalindrome(ListNode l) {
+        if (l == null) return true;
+        ListNode sp = l;
+        ListNode fp = l;
+
+        while (fp.next != null && fp.next.next != null) {
+            sp = sp.next;
+            fp = fp.next.next;
+        }
+        ListNode second = sp.next;
+        sp.next = null;
+        ListNode first = l;
+        ListNode secondRev = reverse1(second);
+
+        while (first != null && secondRev != null) {
+            if (Integer.compare(first.val, secondRev.val) != 0) return false;
+            first = first.next;
+            secondRev = secondRev.next;
+        }
+        return true;
+    }
+
+    static ListNode reverse1(ListNode node) {
+        ListNode prev = null;
+        ListNode next = null;
+        while (node != null) {
+            next = node.next;
+            node.next = prev;
+            prev = node;
+            node = next;
+        }
+        return prev;
+    }
+
     public static void main(String a[]) {
+        //int A[] = new int[]{1, 1000000000, -1000000000, -1000000000, 1000000000, 1};
+        /*
+        int A[] = new int[]{1, 2, 3, 3, 2};
+        ListNode head = new LinkedList().buildLinkedList(A, new ListNode());
+        System.out.println(new ListPalindrome().isListPalindrome(head));
+        */
         int A[] = new int[]{1,2,3,4,3,2,1};
         ListNode head = new LinkedList().buildLinkedList(A, new ListNode());
         System.out.println(new ListPalindrome().lPalin(head));
     }
-
 }
