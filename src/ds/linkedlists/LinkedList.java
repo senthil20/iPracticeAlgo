@@ -1,5 +1,8 @@
 package ds.linkedlists;
 
+import java.util.ArrayList;
+import java.util.List;
+
 class ListNode {
     int val;
     ListNode next;
@@ -34,7 +37,9 @@ public class LinkedList {
         return counter;
     }
 
+
     private ListNode merge(ListNode l, ListNode r) {
+       List list = new ArrayList();
         ListNode p = new ListNode(-1);
         ListNode tail = p;
         while(l != null && r != null) {

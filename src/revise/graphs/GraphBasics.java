@@ -3,20 +3,6 @@ package revise.graphs;
 import java.util.ArrayList;
 import java.util.List;
 
-class Node {
-    int value;
-    List<Integer> adjList = new ArrayList<>();
-    Node(int val) {
-        this.value = val;
-    }
-    Node (int val, int[] edges) {
-        this.value = val;
-        for (int value : edges) {
-            this.adjList.add(value);
-        }
-    }
-}
-
 public class GraphBasics {
       // 0  1  2  3  4  5
     /*0 {0, 1, 0, 0, 0, 0}*/
