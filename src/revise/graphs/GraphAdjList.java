@@ -3,6 +3,7 @@ package revise.graphs;
 import java.util.*;
 
 class Node1 {
+
     public static int edgeCount = 0;
     public final String label;
     Node1 previous;
@@ -22,7 +23,6 @@ class Node1 {
     public void removeEdge(Node1 dest) {
         this.neighbours.remove(dest);
         //dest.neighbours.remove(this); //undirected
-        edgeCount--;
     }
 }
 
@@ -38,27 +38,28 @@ class Edge {
     }
 
     Edge(double weight, Node1 src, Node1 dest) {
+
         this.weight = weight;
         this.src = src;
         this.dest = dest;
     }
 
-    @Override
     //Used to get the right Edge object using src and dest vertex.
     //Haven't included weight here. Is it fine? Thought we can get the right edge using src and dest vertex. Also we have unique vertex.
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-
         Edge edge = (Edge) o;
-
-        if (!src.equals(edge.src)) return false;
+        if (Double.compare(edge.weight, weight) != 0) return false;
         return dest.equals(edge.dest);
     }
 
     @Override
     public int hashCode() {
-        int result = src.hashCode();
+        int result;
+        long temp;
+        temp = Double.doubleToLongBits(weight);
+        result = (int) (temp ^ (temp >>> 32));
         result = 31 * result + dest.hashCode();
         return result;
     }
@@ -69,36 +70,37 @@ public class GraphAdjList {
     public int vertexCount = 0;
     private final static Map<String, Node1> graph = new HashMap<>();
 
+
     GraphAdjList(int vertex) {
         this.vertexCount = vertex;
     }
+
 
     public static Node1 addVertex(String vertexName) throws Exception {
         Node1 Node1 = null;
         if (!graph.containsKey(vertexName)) {
             Node1 = new Node1(vertexName);
             graph.put(vertexName, Node1);
-        }
-        else {
+
+        } else {
             throw new Exception("Vertex exists already!");
         }
+
         return Node1;
     }
 
-    public static void addEdge(double weight, String srcVertex, String destVertex) throws Exception {
+    public void addEdge(double weight, String srcVertex, String destVertex) throws Exception {
         if (graph.containsKey(srcVertex)) {
             Node1 src = graph.get(srcVertex);
             Node1 dest = null;
             if (graph.containsKey(destVertex)) {
                 dest = graph.get(destVertex);
-            }
-            else {
+            } else {
                 dest = addVertex(destVertex);
             }
             src.addEdge(weight, dest);
             //dest.addEdge(weight, src); //undirected
-        }
-        else {
+        } else {
             throw new Exception("Source vertex not available!");
         }
     }
@@ -149,6 +151,7 @@ public class GraphAdjList {
      */
     public static void main(String[] args) throws Exception {
         GraphAdjList graphAdjList = new GraphAdjList(6);
+
         addVertex("CA");
         addVertex("NY");
         addVertex("CO");
@@ -173,5 +176,15 @@ public class GraphAdjList {
 
         Edge edge = GraphAdjList.getEdge("NJ", "NY");
         System.out.println(edge);
+
+
+        graphAdjList.graph.get("CA").addEdge(40, graphAdjList.graph.get("NY"));
+        graphAdjList.graph.get("CA").addEdge(60, graphAdjList.graph.get("NJ"));
+        graphAdjList.graph.get("NY").addEdge(50, graphAdjList.graph.get("CO"));
+        graphAdjList.graph.get("CO").addEdge(60, graphAdjList.graph.get("PA"));
+        graphAdjList.graph.get("PA").addEdge(40, graphAdjList.graph.get("CM"));
+
+        System.out.println(graphAdjList.graph);
+
     }
 }
