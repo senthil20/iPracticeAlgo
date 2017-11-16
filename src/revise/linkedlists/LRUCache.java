@@ -105,7 +105,25 @@ public class LRUCache {
         tail.prev = null;
     }
 
+    static void bubbleSort(int arr[])
+    {
+        int n = arr.length;
+        for (int i = 0; i < n-1; i++)
+            for (int j = 0; j < n-i-1; j++)
+                if (arr[j] > arr[j+1])
+                {
+                    // swap temp and arr[i]
+                    int temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+    }
+
     public static void main(String a[]) {
+
+        int A[] = new int[]{10, 5, 6, 9, 2, 1};
+        bubbleSort(A);
+        System.out.println(A);
         LRUCache lru = new LRUCache(3);
         Integer result = (Integer)lru.get(1);
         lru.put(1, "A");

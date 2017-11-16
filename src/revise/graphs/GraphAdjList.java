@@ -2,25 +2,26 @@ package revise.graphs;
 
 import java.util.*;
 
-class Node1 {
+class Node {
 
     public static int edgeCount = 0;
     public final String label;
-    Node1 previous;
+    Node previous;
     List<Edge> neighbours;
+    double minWeight = Double.MAX_VALUE;
 
-    Node1(String label) {
+    Node(String label) {
         this.label = label;
         this.neighbours = new LinkedList<>();
     }
 
-    public void addEdge(double weight, Node1 dest) {
+    public void addEdge(double weight, Node dest) {
         this.neighbours.add(new Edge(weight, this, dest));
         //dest.neighbours.add(new Edge(weight, dest, this)); //undirected
         edgeCount++;
     }
 
-    public void removeEdge(Node1 dest) {
+    public void removeEdge(Node dest) {
         this.neighbours.remove(dest);
         //dest.neighbours.remove(this); //undirected
     }
@@ -28,16 +29,16 @@ class Node1 {
 
 class Edge {
     double weight;
-    Node1 src;
-    Node1 dest;
+    Node src;
+    Node dest;
 
-    Edge(Node1 src, Node1 dest) {
+    Edge(Node src, Node dest) {
         this.weight = 0.0;
         this.src = src;
         this.dest = dest;
     }
 
-    Edge(double weight, Node1 src, Node1 dest) {
+    Edge(double weight, Node src, Node dest) {
 
         this.weight = weight;
         this.src = src;
@@ -68,31 +69,27 @@ class Edge {
 public class GraphAdjList {
 
     public int vertexCount = 0;
-    private final static Map<String, Node1> graph = new HashMap<>();
-
+    public final Map<String, Node> graph = new HashMap<>();
 
     GraphAdjList(int vertex) {
         this.vertexCount = vertex;
     }
 
-
-    public static Node1 addVertex(String vertexName) throws Exception {
-        Node1 Node1 = null;
+    public Node addVertex(String vertexName) throws Exception {
+        Node node = null;
         if (!graph.containsKey(vertexName)) {
-            Node1 = new Node1(vertexName);
-            graph.put(vertexName, Node1);
-
+            node = new Node(vertexName);
+            graph.put(vertexName, node);
         } else {
             throw new Exception("Vertex exists already!");
         }
-
-        return Node1;
+        return node;
     }
 
     public void addEdge(double weight, String srcVertex, String destVertex) throws Exception {
         if (graph.containsKey(srcVertex)) {
-            Node1 src = graph.get(srcVertex);
-            Node1 dest = null;
+            Node src = graph.get(srcVertex);
+            Node dest = null;
             if (graph.containsKey(destVertex)) {
                 dest = graph.get(destVertex);
             } else {
@@ -105,41 +102,44 @@ public class GraphAdjList {
         }
     }
 
-    public static boolean hasEdge(String src, String dest) {
-        Node1 srcNode1 = graph.get(src);
-        Node1 destNode1 = graph.get(dest);
-        return srcNode1.neighbours.contains(new Edge(srcNode1, destNode1));
+    public boolean hasEdge(String src, String dest) {
+        Node srcNode = graph.get(src);
+        Node destNode = graph.get(dest);
+        return srcNode.neighbours.contains(new Edge(srcNode, destNode));
     }
 
-    public static Edge getEdge(String src, String dest) {
-        Node1 srcNode1 = graph.get(src);
-        Node1 destNode1 = graph.get(dest);
-        int index = srcNode1.neighbours.indexOf(new Edge(srcNode1, destNode1));
+    public Edge getEdge(String src, String dest) {
+        Node srcNode = graph.get(src);
+        Node destNode = graph.get(dest);
+        int index = srcNode.neighbours.indexOf(new Edge(srcNode, destNode));
         if (index != -1) {
-            return srcNode1.neighbours.get(index);
+            return srcNode.neighbours.get(index);
         }
         return null;
     }
 
-    public static int getNumberOfEdges() {
+    public int getNumberOfEdges() {
         int count = 0;
         if (!graph.isEmpty()) {
-            List<Node1> Node1s = new ArrayList<>(graph.values());
-            for (Node1 n : Node1s) {
+            List<Node> Nodes = new ArrayList<>(graph.values());
+            for (Node n : Nodes) {
                 count += n.neighbours.size();
             }
         }
         return count;
     }
 
-    public Map<String, Node1> cloneGraph(Map<String, Node1> graph) {
-        for (Map.Entry<String, Node1> entry : graph.entrySet()) {
+    public Map<String, Node> cloneGraph(Map<String, Node> graph) {
+        for (Map.Entry<String, Node> entry : graph.entrySet()) {
 
 
         }
         return null;
     }
 
+    public void calculateMinDistance(Node src) {
+
+    }
 
     /*     40      50
         CA --  NY --- CO
@@ -152,29 +152,29 @@ public class GraphAdjList {
     public static void main(String[] args) throws Exception {
         GraphAdjList graphAdjList = new GraphAdjList(6);
 
-        addVertex("CA");
-        addVertex("NY");
-        addVertex("CO");
-        addVertex("NJ");
-        addVertex("PA");
-        addVertex("CM");
+        graphAdjList.addVertex("CA");
+        graphAdjList.addVertex("NY");
+        graphAdjList.addVertex("CO");
+        graphAdjList.addVertex("NJ");
+        graphAdjList.addVertex("PA");
+        graphAdjList.addVertex("CM");
 
-        GraphAdjList.graph.get("CA").addEdge(40, GraphAdjList.graph.get("NY"));
-        GraphAdjList.graph.get("CA").addEdge(60, GraphAdjList.graph.get("NJ"));
-        GraphAdjList.graph.get("NJ").addEdge(60, GraphAdjList.graph.get("NY"));
-        GraphAdjList.graph.get("NY").addEdge(50, GraphAdjList.graph.get("CO"));
-        GraphAdjList.graph.get("CO").addEdge(60, GraphAdjList.graph.get("PA"));
-        GraphAdjList.graph.get("PA").addEdge(40, GraphAdjList.graph.get("CM"));
+        graphAdjList.graph.get("CA").addEdge(40, graphAdjList.graph.get("NY"));
+        graphAdjList.graph.get("CA").addEdge(60, graphAdjList.graph.get("NJ"));
+        graphAdjList.graph.get("NJ").addEdge(60, graphAdjList.graph.get("NY"));
+        graphAdjList.graph.get("NY").addEdge(50, graphAdjList.graph.get("CO"));
+        graphAdjList.graph.get("CO").addEdge(60, graphAdjList.graph.get("PA"));
+        graphAdjList.graph.get("PA").addEdge(40, graphAdjList.graph.get("CM"));
 
-        //System.out.println(GraphAdjList.graph);
+        //System.out.println(graphAdjList.graph);
 
-        //boolean isEdgeAvailable = GraphAdjList.hasEdge("CA", "NJ");
+        //boolean isEdgeAvailable = graphAdjList.hasEdge("CA", "NJ");
         //System.out.println(isEdgeAvailable);
 
-        //int edgeCount = GraphAdjList.getNumberOfEdges();
+        //int edgeCount = graphAdjList.getNumberOfEdges();
         //System.out.println(edgeCount);
 
-        Edge edge = GraphAdjList.getEdge("NJ", "NY");
+        Edge edge = graphAdjList.getEdge("NJ", "NY");
         System.out.println(edge);
 
 
