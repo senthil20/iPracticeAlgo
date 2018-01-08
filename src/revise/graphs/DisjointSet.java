@@ -134,9 +134,11 @@ public class DisjointSet {
 
     public static void main(String a[]) {
         initializeSet(new String[]{"CA", "NJ", "PA", "CO", "NY", "VI"});//states
-        unionFind(new String[]{});
-        unionFind(new String[]{});
-        unionFind(new String[]{});
-        unionFind(new String[]{});
+        unionFind(new String[]{"CA", "NY"});
+        unionFind(new String[]{"NY", "NJ"});
+        unionFind(new String[]{"NJ", "CA"});
+        unionFind(new String[]{"NY", "CO"});
+        unionFind(new String[]{"CO", "PA"});
+        unionFind(new String[]{"PA", "CM"});
     }
 }

@@ -97,7 +97,7 @@ public class FourSum {
 
                 for (List<Integer> pair1 : list) {
                     for (List<Integer> pair2 : list1) {
-                        if (pair1 == pair2) continue;;
+                        if (pair1 == pair2) continue;
 
                         if (pair1.contains(pair2.get(0)) || pair1.contains(pair2.get(1)))
                             continue;

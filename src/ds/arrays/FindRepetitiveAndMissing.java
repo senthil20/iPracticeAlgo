@@ -78,7 +78,7 @@ public class FindRepetitiveAndMissing {
 
     public static void main(String a[]) {
         FindRepetitiveAndMissing fm = new FindRepetitiveAndMissing();
-        fm.findRepetitiveAndMissing(new int[]{1,2,3,5,5});
+        findRepetitiveAndMissing(new int[]{1,2,3,5,5});
         //System.out.println(fm.findMissingUsingBinarySearch(new int[]{0, 1, 2, 3, 4, 5, 6, 7, 9}));
         ArrayList<Integer> list = new ArrayList<>();
         list.add(1);

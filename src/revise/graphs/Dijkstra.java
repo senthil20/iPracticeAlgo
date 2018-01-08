@@ -29,7 +29,7 @@ public class Dijkstra {
             }
         }
         List<String> path = new ArrayList<>();
-        Node n = graphAdjList.graph.get(endVertex);;
+        Node n = graphAdjList.graph.get(endVertex);
         for (; n != null && !n.equals(srcNode); n = n.previous) {
             path.add(n.label);
         }

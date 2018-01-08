@@ -99,14 +99,14 @@ public class PhoneKeyPressProblem {
         int len = digits.length();
 
 
-        for (Character ch : ((String)mapping.get(digits.charAt(0))).toCharArray()) {
+        for (Character ch : mapping.get(digits.charAt(0)).toCharArray()) {
             queue.add(new PhoneNode(String.valueOf(ch), 1));
         }
         while (!queue.isEmpty()) {
             PhoneNode node = queue.poll();
             if (node.count == len) result.add(node.word);
             else {
-                for (Character ch : ((String)mapping.get(digits.charAt(node.count))).toCharArray()) {
+                for (Character ch : mapping.get(digits.charAt(node.count)).toCharArray()) {
                     queue.add(new PhoneNode(node.word + ch, node.count + 1));
                 }
             }

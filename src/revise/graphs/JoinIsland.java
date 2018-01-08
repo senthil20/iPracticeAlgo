@@ -22,14 +22,14 @@ public class JoinIsland {
 
         visited[r][c] = true;
 
-        dfs(A, visited, r, c-1);
-        dfs(A, visited, r-1, c-1);
-        dfs(A, visited, r-1, c);
-        dfs(A, visited, r-1, c+1);
-        dfs(A, visited, r, c+1);
-        dfs(A, visited, r+1, c+1);
-        dfs(A, visited, r+1, c);
-        dfs(A, visited, r+1, c-1);
+        dfs(A, visited, r, c - 1);
+        dfs(A, visited, r - 1, c - 1);
+        dfs(A, visited, r - 1, c);
+        dfs(A, visited, r - 1, c + 1);
+        dfs(A, visited, r, c + 1);
+        dfs(A, visited, r + 1, c + 1);
+        dfs(A, visited, r + 1, c);
+        dfs(A, visited, r + 1, c - 1);
     }
 
     public static void main(String a[]) {

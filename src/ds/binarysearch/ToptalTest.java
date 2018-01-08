@@ -24,7 +24,7 @@ public class ToptalTest {
                 Object[] temp = (Object[])obj;
                 if (temp.length == 1) {
                     for (Object val : temp)
-                        list.add((int)val);
+                        list.add(val);
                 }
                 else {
                     for (Object o : temp) {

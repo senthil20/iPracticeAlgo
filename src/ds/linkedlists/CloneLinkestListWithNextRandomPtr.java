@@ -32,7 +32,7 @@ public class CloneLinkestListWithNextRandomPtr {
         }
         ListNode1 result = null;
         ListNode1 temp = null;
-        ListNode1 key = (ListNode1) map.keySet().iterator().next();
+        ListNode1 key = map.keySet().iterator().next();
         while (key != null && map.containsKey(key)) {
             List<Integer> val = map.get(key);
             if (result == null) {

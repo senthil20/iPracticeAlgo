@@ -1,12 +1,5 @@
 package ds.trees;
 
-import sun.reflect.generics.tree.Tree;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
-
 public class LCATree {
     boolean v1 = false;
     boolean v2 = false;
@@ -54,36 +47,59 @@ public class LCATree {
      */
 
     public int lcaBT(TreeNode a, int val1, int val2) {
-
         int result = lcaRecursive(a, val1, val2);
         if(v1 && v2) return result;
         return -1;
     }
-
     public int lcaRecursive(TreeNode a, int val1, int val2) {
-
         if (a == null) return -1;
-
         if (a.val == val1) {
             v1 = true;
             return a.val;
         }
-
-        if(a.val == val2) {
+        if (a.val == val2) {
             v2 = true;
             return a.val;
         }
-
         int left = lcaRecursive(a.left, val1, val2);
         int right = lcaRecursive(a.right, val1, val2);
-
         if (left != -1 && right != -1) return a.val;
-
         return left == -1 ? right : left;
     }
 
-    public static void main(String a[]) {
+    /**
+     Tree
+            1
+          /   \
+         2     6
+        /     / \
+      11     3  14
+     / \    /  /  \
+    8  12  9  5    4
 
+     LCA of 3, 4 is 6
+     LCA of 11, 3 is 1
+     LCA of 9, 14 is 6
+     LCA of 12, 4 is 1
+     */
+    public int lcaBinaryTree(TreeNode A, int B, int C) {
+        if (A == null) return -1;
+        if (A.val == B || A.val == C)
+            return A.val;
+
+        int l = lcaBinaryTree(A.left, B, C);
+        int r = lcaBinaryTree(A.right, B, C);
+
+        if (l != -1 && r != -1){
+            return A.val;
+        } else if (l == -1 && r == -1){
+            return -1;
+        }else{
+            return l == -1 ? r : l;
+        }
+    }
+
+    public static void main(String a[]) {
         LCATree lca = new LCATree();
         TreeNode btroot = new TreeNode(1,
                 new TreeNode(2,
@@ -109,7 +125,9 @@ public class LCATree {
                         new TreeNode(11,
                                 new TreeNode(8, null, null),
                                 new TreeNode(12, null, null))));
-        System.out.println(lca.lcaBST(bstroot, 6, 12));
-        //int result = lca.lcaBT(btroot, 9, 4);
+        //System.out.println(lca.lcaBST(bstroot, 6, 12));
+        //int result = lca.lcaBT(btroot, 2, 11);
+        int result = lca.lcaBinaryTree(btroot, 2,13);
+        System.out.println(result);
     }
 }

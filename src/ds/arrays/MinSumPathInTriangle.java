@@ -77,6 +77,6 @@ public class MinSumPathInTriangle {
         input.add(list2);
         input.add(list3);
 
-        System.out.println(mpath.minTriangleDepth1(input));
+        System.out.println(minTriangleDepth1(input));
     }
 }

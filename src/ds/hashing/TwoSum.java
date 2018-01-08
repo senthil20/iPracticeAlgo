@@ -26,6 +26,24 @@ import java.util.*;
 
 public class TwoSum {
 
+    public int[] twoSumMap(int[] nums, int target) {
+        int[] indices = new int[2];
+        if (nums == null || nums.length == 0) return indices;
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            int diff = Math.abs(target - nums[i]);
+            if (map.containsKey(diff)) {
+                indices[0] = map.get(diff);
+                indices[1] = i;
+                return indices;
+            }
+            else {
+                map.put(Math.abs(nums[i]), i);
+            }
+        }
+        return indices;
+    }
+
     public List<List<Integer>> twoSum1(int[] A, int key) {
 
         Set<Integer> set = new TreeSet<>();

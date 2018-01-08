@@ -78,7 +78,7 @@ public class SubsetSummation {
 
     public static void main(String a[]) {
         SubsetSummation ss = new SubsetSummation();
-        List<Integer> list = ss.findSubsetSum(new int[]{5, 9, 7, 1, 3, 6}, 10);
+        List<Integer> list = findSubsetSum(new int[]{5, 9, 7, 1, 3, 6}, 10);
         System.out.println(list);
     }
 

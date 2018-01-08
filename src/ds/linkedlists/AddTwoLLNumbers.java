@@ -53,7 +53,7 @@ public class AddTwoLLNumbers {
             sum += carry;
 
             carry = sum / 10;
-            result.next = new ListNode(sum % 10);;
+            result.next = new ListNode(sum % 10);
             result = result.next;
 
             if (l1 != null) l1 = l1.next;

@@ -222,7 +222,7 @@ public class ArraysBasics {
 
         for(int val : a.waveArray(list)){
             System.out.print(val + " ");
-        }*/;
+        }*/
         //a.printRepeating(new int[]{1,2,3,6,2,1,3}, 7);
         a.shuffle(new int[]{5,2,3,4,7,1,10,12}, 0, 8);
         System.out.println(a);

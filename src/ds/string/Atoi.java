@@ -44,6 +44,8 @@ public class Atoi {
     }
 
     public static void main(String a[]) {
+        int val = -1;
+        System.out.println(Math.abs(val));
         Atoi atoi = new Atoi();
         System.out.println(atoi.atoi("-54332872018247709407 4 54"));
     }

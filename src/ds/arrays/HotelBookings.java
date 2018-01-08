@@ -24,7 +24,7 @@ public class HotelBookings {
                 nos--;
             }
         }
-        return (satisfy<=K)?true:false;
+        return satisfy <= K;
     }
 
 
@@ -51,11 +51,7 @@ public class HotelBookings {
             }
 
         }
-        if(maxNeeded > K) {
-            return false;
-        }
-
-        return true;
+        return maxNeeded <= K;
     }
 
 

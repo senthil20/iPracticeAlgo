@@ -23,7 +23,7 @@ public class BinaryTreePaths {
             sb = new StringBuffer();
 
             for (Object val : l1) {
-                sb.append((Integer) val).append("->");
+                sb.append(val).append("->");
             }
 
             String temp = sb.toString();

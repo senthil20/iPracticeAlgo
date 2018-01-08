@@ -13,7 +13,7 @@ public class PossibleDecodingOfDigitalSeq {
         if (array[n - 1] > 0)
             count =  countPossibleDecodings(array, n-1);
         if (array[n - 2] == 1 || (array[n - 2] == 2 && array[n - 1] < 7) )
-            count +=  (long)countPossibleDecodings(array, n - 2);
+            count += countPossibleDecodings(array, n - 2);
         return count;
     }
 

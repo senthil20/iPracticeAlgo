@@ -41,6 +41,6 @@ class CombParenthesis {
 
     public static void main(String a[]) {
         CombParenthesis cp = new CombParenthesis();
-        System.out.println(cp.combParenthesis(3));
+        System.out.println(combParenthesis(3));
     }
 }

@@ -40,12 +40,11 @@ class Trie {
 
     public Boolean searchWord(String word) {
         TrieNode t = search(word);
-        if (t != null && t.isLeaf) return true;
-        return false;
+        return t != null && t.isLeaf;
     }
 
     public Boolean searchPrefix(String word) {
-        return search(word) == null ? false : true;
+        return search(word) != null;
     }
 
     public TrieNode search(String word) {

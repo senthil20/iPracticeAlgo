@@ -12,22 +12,21 @@ import java.util.*;
 public class LongestSubstringWithoutRepeatingChars {
 
     public int longestSubstring(String s) {
-
         if (s == null || s.length() == 0) return -1;
         Set<Character> set = new HashSet<>();
         int max = 0;
 
-        int i = 0;
+        int index = 0;
         int j = 0;
         int e = s.length();
 
-        while (i < e && j < e) {
+        while (j < e) {
             if (!set.contains(s.charAt(j))) {
                 set.add(s.charAt(j++));
-                max = Math.max(max, j - i);
+                max = Math.max(max, j - index);
             }
             else {
-                set.remove(s.charAt(i++));
+                set.remove(s.charAt(index++));
             }
         }
         return max;
@@ -40,10 +39,9 @@ public class LongestSubstringWithoutRepeatingChars {
         LinkedList<Character> list = new LinkedList<>();
         int index = 0;
         int i = 0;
-        int j = 0;
         int e = s.length();
 
-        while (i < e && j < e) {
+        while (i < e) {
             if (!list.contains(s.charAt(i))) {
                 list.add(s.charAt(i++));
                 max = Math.max(max, i - index);
@@ -66,21 +64,42 @@ public class LongestSubstringWithoutRepeatingChars {
             if (map.containsKey(s.charAt(j))) {
                 i = Math.max(i, map.get(s.charAt(j)));
             }
-            /*max = Math.max(max, j - i + 1);
-            map.put(s.charAt(j), j + 1);*/
-            max = Math.max(max, j - i);
-            map.put(s.charAt(j), j);
+            max = Math.max(max, j - i + 1);
+            map.put(s.charAt(j), j + 1);
         }
+        return max;
+    }
 
+    public int lengthOfLongestSubstringKChars(String s, int k) {
+        if (s == null || s.length() == 0) return 0;
+        Map<Character, Integer> map = new HashMap<>();
+        int i = 0;
+        int index = 0;
+        int max = 0;
+        while (i < s.length()) {
+            if (!map.containsKey(s.charAt(i))) {
+                map.put(s.charAt(i++), 1);
+                max = Math.max(max, i - index);
+            }
+            else if (map.containsKey(s.charAt(i))) {
+                if (map.get(s.charAt(i)) >= k) {
+                    map.remove(s.charAt(index++));
+                }
+                else {
+                    map.put(s.charAt(i), map.get(s.charAt(i++)) + 1);
+                }
+            }
+        }
         return max;
     }
 
     public static void main(String a[]) {
         LongestSubstringWithoutRepeatingChars ls = new LongestSubstringWithoutRepeatingChars();
         //System.out.println(ls.longestSubstring("nvaiaj"));
-        System.out.println(ls.lengthOfLongestSubstring("anviaj"));
+        //System.out.println(ls.lengthOfLongestSubstring("abcabcbb"));
+        System.out.println(ls.longestSubstring("abbcd"));
         //System.out.println(ls.lengthOfLongestSubstring("nvaiajnpqsat"));
         //System.out.println(ls.longestSubStringNonRepeatingChars("abcdabdcea"));
-        //System.out.println(ls.longestSubStringNonRepeatingChars("abcdabdcea"));
+        System.out.println(ls.lengthOfLongestSubstringKChars("aabbbccffdf", 2));
     }
 }

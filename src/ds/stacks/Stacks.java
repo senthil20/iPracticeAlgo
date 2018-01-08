@@ -87,8 +87,7 @@ public class Stacks {
     }
 
     public boolean isStackEmpty(Stacks s) {
-        if(s.length == 0) return true;
-        return false;
+        return s.length == 0;
     }
 
     public void dupStack(Stacks s, Stacks s1) throws Exception{
@@ -176,8 +175,7 @@ public class Stacks {
 
     public boolean isOperator(Character ch) {
 
-        if(ch != null && (ch == '*' || ch == '/' || ch == '%' || ch == '+' || ch == '-')) return true;
-        return false;
+        return ch != null && (ch == '*' || ch == '/' || ch == '%' || ch == '+' || ch == '-');
     }
 
     public String removeReduntantbraces(String s) {
@@ -325,9 +323,8 @@ public class Stacks {
 
     public boolean isOperator(String str) {
 
-        if(str != null && (str.equalsIgnoreCase("*") || str.equalsIgnoreCase("/") ||
-                str.equalsIgnoreCase("%") || str.equalsIgnoreCase("+") || str.equalsIgnoreCase("-"))) return true;
-        return false;
+        return str != null && (str.equalsIgnoreCase("*") || str.equalsIgnoreCase("/") ||
+                str.equalsIgnoreCase("%") || str.equalsIgnoreCase("+") || str.equalsIgnoreCase("-"));
     }
 
     public int evalRPN(ArrayList<String> a) {

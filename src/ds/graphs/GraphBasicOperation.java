@@ -20,7 +20,7 @@ public class GraphBasicOperation {
         rootNode.visited = true;
 
         while (!q.isEmpty()){
-            Node n = (Node)q.poll();
+            Node n = q.poll();
             if(n.data != null && n.data.equals(data)) {
                 return true;
             }

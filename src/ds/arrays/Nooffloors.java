@@ -174,8 +174,8 @@ public class Nooffloors extends Properties{
                 List<Double> pair1 = pairs.get(i);
                 List<Double> pair2 = pairs.get(j);
                 List<Double> temp = new ArrayList<>();
-                temp.add((double)(pair1.get(0) + pair2.get(0)) / 2);
-                temp.add((double)(pair1.get(1) + pair2.get(1)) / 2);
+                temp.add((pair1.get(0) + pair2.get(0)) / 2);
+                temp.add((pair1.get(1) + pair2.get(1)) / 2);
 
                 if (pairs.contains(temp)) {
                     total += 1 % (Math.pow(10.0, 9.0) + 1);

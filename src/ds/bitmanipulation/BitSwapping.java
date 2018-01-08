@@ -52,6 +52,6 @@ public class BitSwapping {
 
     public static void main(String a[]) {
         BitSwapping bs = new BitSwapping();
-        System.out.println(bs.swapOddEvenBits(121));
+        System.out.println(swapOddEvenBits(121));
     }
 }

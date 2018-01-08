@@ -34,7 +34,7 @@ public class LevelThatHasMaxSum {
     public static int findMaxSumLevel(TreeNode root) {
         if (root == null) return -1;
         Queue<TreeNode> curr = new LinkedList<>();
-        Queue<TreeNode> next = new LinkedList<>();;
+        Queue<TreeNode> next = new LinkedList<>();
         curr.add(root);
         int levelsum = 0;
         int max = -1;

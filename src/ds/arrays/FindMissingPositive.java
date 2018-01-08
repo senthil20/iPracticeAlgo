@@ -106,6 +106,6 @@ public class FindMissingPositive {
         });*/
         //System.out.print(fm.firstMissingPositive1(new int[]{3, 4, -1, 1}));
         //System.out.print(fm.firstMissingPositive1(new int[]{-3, -4, 1, -1}));
-        System.out.print(fm.firstMissingPositive1(new int[]{9}));
+        System.out.print(firstMissingPositive1(new int[]{9}));
     }
 }
