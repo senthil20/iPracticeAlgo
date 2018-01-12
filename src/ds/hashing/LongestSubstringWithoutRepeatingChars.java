@@ -11,22 +11,22 @@ import java.util.*;
  */
 public class LongestSubstringWithoutRepeatingChars {
 
-    public int longestSubstring(String s) {
-        if (s == null || s.length() == 0) return -1;
+    public int longestSubstring(String str) {
+        if (str == null || str.length() == 0) return -1;
         Set<Character> set = new HashSet<>();
         int max = 0;
 
         int index = 0;
-        int j = 0;
-        int e = s.length();
+        int s = 0;
+        int e = str.length();
 
-        while (j < e) {
-            if (!set.contains(s.charAt(j))) {
-                set.add(s.charAt(j++));
-                max = Math.max(max, j - index);
+        while (s < e) {
+            if (!set.contains(str.charAt(s))) {
+                set.add(str.charAt(s++));
+                max = Math.max(max, s - index);
             }
             else {
-                set.remove(s.charAt(index++));
+                set.remove(str.charAt(index++));
             }
         }
         return max;
@@ -70,6 +70,7 @@ public class LongestSubstringWithoutRepeatingChars {
         return max;
     }
 
+    //Longest substring with 2(K) chars repeat
     public int lengthOfLongestSubstringKChars(String s, int k) {
         if (s == null || s.length() == 0) return 0;
         Map<Character, Integer> map = new HashMap<>();

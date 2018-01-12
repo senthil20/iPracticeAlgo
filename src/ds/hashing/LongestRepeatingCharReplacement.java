@@ -1,8 +1,5 @@
 package ds.hashing;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * Example 1
  * Input: s = "ABAB", k = 2
@@ -17,43 +14,64 @@ import java.util.Map;
  */
 
 public class LongestRepeatingCharReplacement {
-
-    public int longestRepeatingCharReplacement(String s, int k) {
-
-        if (s == null || s.length() == 0) return 0;
-        Map<Character, Integer> map = new HashMap<>();
+    //s = "AABABBA", k = 1
+    public static int characterReplacement(String s, int k) {
         int max = 0;
-        int i = 0;
-        int b = k;
-        int nextIndex = 0;
-        map.put(s.charAt(0), 0);
-
-        for (int j = 1; j < s.length(); j++) {
-            if (map.containsKey(s.charAt(j))) {
-                map.put(s.charAt(j), j);
-            }
-            else {
-                if (k == 0) return j - i;
-                b--;
-                if (b == 0) {
-                    max = Math.max(max, j - nextIndex);
-                    while (j + 1 < s.length()) {
-                        if (s.charAt(j) == s.charAt(j - 1)) {
-                            j++;
-                        }
-                        else {
-                            j = nextIndex + 1;
-                        }
-                    }
-
+        for (int i = 0; i < 26; i++) {
+            char c = (char)('A' + i);
+            int start = 0;
+            int index = 0;
+            int count = 0;
+            while (start <= s.length() - 1) {
+                char ch = s.charAt(start++);
+                if (ch != c) {
+                    count++;
                 }
+                while (count > k) {
+                    if (s.charAt(index) != c) {
+                        count--;
+                    }
+                    index++;
+                }
+                max = Math.max(max, start - index);
             }
         }
         return max;
     }
 
+    //s = "AABABBA", k = 1
+    public static int characterReplacement1(String s, int k) {
+        int maxLen = 0;
+        for(int l = 0 ; l<26;l++){
+            char c = (char)('A' + l); //repeated char we are looking for
+            int i = 0, j = 0, count = 0;
+            while(j<s.length()){
+                char cur = s.charAt(j);
+                if(cur != c) {
+                    count++;
+                }
+                //make the substring valid again
+                while(count > k){
+                    if(s.charAt(i) != c) {
+                        count--;
+                    }
+                    i++;
+                }
+
+                //update maximun len
+                maxLen = Math.max(maxLen,j-i+1);
+                j++;
+            }
+        }
+        return maxLen;
+    }
 
     public static void main(String a[]) {
-
+        System.out.println(characterReplacement("AABABBA", 1));
+        System.out.println(characterReplacement1("ABBB", 2));
+        System.out.println(characterReplacement1("ABAB", 2));
+        System.out.println(characterReplacement1("AAAB", 0));
+        System.out.println(characterReplacement1("AABA", 0));
+        System.out.println(characterReplacement1("ABAA", 0));
     }
 }

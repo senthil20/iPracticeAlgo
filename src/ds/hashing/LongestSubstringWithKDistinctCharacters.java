@@ -25,19 +25,24 @@ import java.util.Map;
 
 public class LongestSubstringWithKDistinctCharacters {
 
-    //abcddeeefg
+    //K=2
+    //abcddeeefg - 5(ddeee)
+    //abcbbbbcccbdddadacb - 10(bcbbbbcccb)
+    //abaaacdef - 5(abaaa)
+    //aabaaacdef - 6(aabaaa)
+    //abbaaccdd - 5(abbaa)
     public static int longestSubstringWithKDistinctCharacters(String s, int K) {
         if (s == null || s.length() == 0 || K < 1) return 0;
-        Map<Character, Integer> map = new HashMap<>();
-        int index = 0;
-        int max = 0;
         int start = 0;
         int end = s.length() - 1;
+        int max = 0;
+        int index = 0;
+        Map<Character, Integer> map = new HashMap<>();
         while (start <= end) {
             if (!map.containsKey(s.charAt(start))) {
                 if (map.size() == K) {
                     char ch = s.charAt(index);
-                    int count = map.get(s.charAt(index));
+                    int count = map.get(ch);
                     while (count > 0 && ch == s.charAt(index)) {
                         map.put(ch, map.get(ch) - 1);
                         index++;
@@ -46,10 +51,11 @@ public class LongestSubstringWithKDistinctCharacters {
                     if (map.get(ch) == 0) {
                         map.remove(ch);
                     }
-                    continue;
                 }
-                map.put(s.charAt(start++), 1);
-                max = Math.max(max, start - index);
+                else {
+                    map.put(s.charAt(start++), 1);
+                    max = Math.max(max, start - index);
+                }
             }
             else {
                 map.put(s.charAt(start), map.get(s.charAt(start++)) + 1);
@@ -63,5 +69,6 @@ public class LongestSubstringWithKDistinctCharacters {
         //System.out.println(longestSubstringWithKDistinctCharacters("abcddeeefg", 2));
         //System.out.println(longestSubstringWithKDistinctCharacters("abcddeeefg", 2));
         System.out.println(longestSubstringWithKDistinctCharacters("abcadcacacaca", 3));
+        //System.out.println(longestSubstringWithKDistinctCharacters("ab", 3));
     }
 }
