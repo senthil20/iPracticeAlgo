@@ -6,8 +6,12 @@ import java.util.Queue;
 import java.util.Stack;
 
 /*
- Eg 1: Given binary tree,
-
+Given a binary tree, determine if it is a valid binary search tree (BST).
+Assume a BST is defined as follows:
+The left subtree of a node contains only nodes with keys less than the node's key.
+The right subtree of a node contains only nodes with keys greater than the node's key.
+Both the left and right subtrees must also be binary search trees.
+Eg 1:
             5
           /   \
          4     7
@@ -15,11 +19,8 @@ import java.util.Stack;
       2      6  11
      / \       /  \
     1  3      8  12
-*/
 
-/*
- Eg 2: Given binary tree,
-
+Eg 2:
             5
           /   \
          4     7
@@ -29,55 +30,42 @@ import java.util.Stack;
     1  10     8  12
 */
 public class IsBTreeBST {
+
+    public boolean isBST(TreeNode root, long min, long max) {
+        if (root == null) return true;
+        if (root.val <= min || root.val >= max) return false;
+        boolean isLeft = isBST(root.left, min, root.val);
+        boolean isRight = isBST(root.right, root.val, max);
+        return  isLeft && isRight;
+    }
+
     int prev = -1;
     boolean flag = true;
     public boolean isBSTInOrder(TreeNode root) {
 
-        if (root == null) {
-            return true;
-        }
+        if (root == null) return true;
         flag = isBSTInOrder(root.left);
 
         if (root != null && root.val < prev) return false;
         prev = root.val;
 
         if(flag) flag = isBSTInOrder(root.right);
-
         return flag;
     }
 
-    public boolean isBST(TreeNode root, int min, int max) {
-
-        if (root == null) return true;
-
-        if (root.val <= min || root.val >= max) return false;
-
-        boolean isLeft = isBST(root.left, min, root.val);
-        boolean isRight = isBST(root.right, root.val, max);
-
-        return  isLeft && isRight;
-    }
-
-
     public int numberOfLeaves(TreeNode root) {
-
         if (root == null) return 0;
         if (root.left == null && root.right == null) return 1;
-
         int left = numberOfLeaves(root.left);
         int right = numberOfLeaves(root.right);
-
         return left + right;
     }
 
     public int sum(TreeNode root) {
-
         if (root == null) return 0;
         if (root.left == null && root.right == null) return root.val;
-
         int left = sum(root.left);
         int right = sum(root.right);
-
         return left + right + root.val;
     }
 
@@ -122,6 +110,7 @@ public class IsBTreeBST {
         }
         return true;
     }
+
     public static void main(String a[]){
         IsBTreeBST bst = new IsBTreeBST();
         TreeNode root = new TreeNode(5,
@@ -149,7 +138,7 @@ public class IsBTreeBST {
                         new TreeNode(18, null, null)),
                 new TreeNode(30, null, null));
         System.out.println(bst.isBSTIterative(root));
-        //System.out.println(bst.isBST(root, Integer.MIN_VALUE, Integer.MAX_VALUE));
+        System.out.println(bst.isBST(root, Long.MIN_VALUE, Long.MAX_VALUE));
         //System.out.println(bst.isBSTInOrder(root));
         //System.out.println(bst.numberOfLeaves(root));
         //System.out.println(bst.sum(root));
