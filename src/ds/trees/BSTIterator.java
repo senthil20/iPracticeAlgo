@@ -13,18 +13,34 @@ import java.util.Stack;
   / \      /  \
  1  3     8  12
  */
+class TreeNodeDouble {
+    double val;
+    TreeNodeDouble left;
+    TreeNodeDouble right;
+    TreeNodeDouble() {
+    }
+    TreeNodeDouble(double val) {
+        this.val = val;
+    }
+    TreeNodeDouble(double val, TreeNodeDouble left, TreeNodeDouble right) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
+    }
+}
+
 public class BSTIterator implements Iterator {
 
-    Stack<TreeNode> st = new Stack<>();
+    Stack<TreeNodeDouble> st = new Stack<>();
 
     BSTIterator() {
     }
 
-    BSTIterator(TreeNode root) {
+    BSTIterator(TreeNodeDouble root) {
         pushLeft(root);
     }
 
-    public void pushLeft(TreeNode node) {
+    public void pushLeft(TreeNodeDouble node) {
         while (node != null) {
             st.push(node);
             node = node.left;
@@ -37,26 +53,42 @@ public class BSTIterator implements Iterator {
 
     @Override
     public Object next() {
-        TreeNode temp = st.pop();
+        TreeNodeDouble temp = st.pop();
         pushLeft(temp.right);
         return temp.val;
     }
 
     public static void main(String a[]) {
 
-        TreeNode root = new TreeNode(5,
-                new TreeNode(4,
-                        new TreeNode(2,
-                                new TreeNode(1, null, null),
-                                new TreeNode(3, null, null)),
+        TreeNodeDouble root = new TreeNodeDouble(5,
+                new TreeNodeDouble(4,
+                        new TreeNodeDouble(2,
+                                new TreeNodeDouble(1, null, null),
+                                new TreeNodeDouble(3, null, null)),
                         null),
-                new TreeNode(7,
-                        new TreeNode(6, null, null),
-                        new TreeNode(11,
-                                new TreeNode(8, null, null),
-                                new TreeNode(12, null, null))));
+                new TreeNodeDouble(7,
+                        new TreeNodeDouble(6, null, null),
+                        new TreeNodeDouble(11,
+                                new TreeNodeDouble(8, null, null),
+                                new TreeNodeDouble(12, null, null))));
 
-        BSTIterator it = new BSTIterator(root);
+        TreeNodeDouble root1 = new TreeNodeDouble(4,
+                new TreeNodeDouble(2,
+                        new TreeNodeDouble(1, null, null),
+                        new TreeNodeDouble(3, null, null)),
+                new TreeNodeDouble(6,
+                        new TreeNodeDouble(5,
+                                new TreeNodeDouble(4.5, null, null),
+                                new TreeNodeDouble(5.5,
+                                        new TreeNodeDouble(5.4, null, null),
+                                        new TreeNodeDouble(5.6, null, null))),
+                        new TreeNodeDouble(7,
+                                null,
+                                new TreeNodeDouble(8,
+                                        new TreeNodeDouble(7.5, null, null),
+                                        null))));
+
+        BSTIterator it = new BSTIterator(root1);
         while (it.hasNext()) {
             System.out.print(it.next() + " ");
         }

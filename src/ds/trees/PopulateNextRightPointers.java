@@ -26,24 +26,67 @@ b)       1 -> null
 
 public class PopulateNextRightPointers {
 
+    public void join1(TreeLinkNode root) {
+        TreeLinkNode dummyHead = new TreeLinkNode(0);
+        TreeLinkNode pre = dummyHead;
+        while (root != null) {
+            if (root.left != null) {
+                pre.next = root.left;
+                pre = pre.next;
+            }
+            if (root.right != null) {
+                pre.next = root.right;
+                pre = pre.next;
+            }
+            root = root.next;
+            if (root == null) {
+                pre = dummyHead;
+                root = dummyHead.next;
+                dummyHead.next = null;
+            }
+        }
+    }
+
+    public void join(TreeLinkNode root) {
+        if (root == null) return;
+        TreeLinkNode leftMost = root;
+        while (leftMost != null) {
+            TreeLinkNode cur = leftMost;
+            leftMost = null;
+            while (cur != null) {
+                if (cur.left != null) {
+                    cur.left.next = cur.right == null ? getNext(cur) : cur.right;
+                    if (leftMost == null) leftMost = cur.left;
+                }
+                if (cur.right != null) {
+                    cur.right.next = getNext(cur);
+                    if (leftMost == null) leftMost = cur.right;
+                }
+                cur = cur.next;
+            }
+        }
+    }
+
+    private TreeLinkNode getNext(TreeLinkNode root) {
+        TreeLinkNode cur = root.next;
+        while (cur != null) {
+            if (cur.left != null) return cur.left;
+            if (cur.right != null) return cur.right;
+            cur = cur.next;
+        }
+        return null;
+    }
+
    //simple way
    public void connect(TreeLinkNode root) {
-
         if (root == null) return;
-
         Queue<TreeLinkNode> current = new LinkedList<>();
         Queue<TreeLinkNode> next = new LinkedList<>();
-
         current.add(root);
-
         while (!current.isEmpty()) {
-
             TreeLinkNode temp = current.poll();
-
             if (temp.left != null) next.add(temp.left);
-
             if (temp.right != null) next.add(temp.right);
-
             if (current.isEmpty()) {
                 temp.next = null;
                 current = next;
@@ -55,52 +98,28 @@ public class PopulateNextRightPointers {
          }
     }
 
-    //using recursion with no extra space
     public void connect1(TreeLinkNode root) {
-
-        if (root == null) return;
-
-        TreeLinkNode parent = root;
-
-        if (parent != null) {
-
-            TreeLinkNode temp = parent;
-
-            while (temp != null) {
-                if (temp.left != null)
-                {
-                    if (temp.right != null)
-                        temp.left.next = temp.right;
-                    else
-                        temp.left.next = getNextConnect(temp);
-                }
-
-                if (temp.right != null)
-                    temp.right.next = getNextConnect(temp);
-
-                temp = temp.next;
-            }
-
-            if (parent.left != null)
-                parent = parent.left;
-            else if (parent.right != null)
-                parent = parent.right;
-            else
-                parent = getNextConnect(parent);
-
-            connect(parent);
+        if(root == null)
+            return;
+        if(root.left != null){
+            root.left.next = root.right;
+            if(root.next != null)
+                root.right.next = root.next.left;
         }
+        connect1(root.left);
+        connect1(root.right);
     }
 
-    public TreeLinkNode getNextConnect(TreeLinkNode node) {
-
-        TreeLinkNode temp = node.next;
-
-        if (temp == null) return temp;
-        if (temp.left != null) return temp.left;
-        if (temp.right != null) return temp.right;
-
-        return getNextConnect(temp);
+    public void connect2(TreeLinkNode root) {
+        while (root != null && root.left != null) {
+            TreeLinkNode next = root.left;
+            while (root != null) {
+                root.left.next = root.right;
+                if (root.next != null) root.right.next = root.next.left;
+                root = root.next;
+            }
+            root = next;
+        }
     }
 
     public static void main(String a[]) {
@@ -129,8 +148,7 @@ public class PopulateNextRightPointers {
                         new TreeLinkNode(7,
                                 new TreeLinkNode(10, null, null),
                                 new TreeLinkNode(11, null, null))));
-        //nextPointer.populateRightPointers(root);
-        nextPointer.connect(root);
+        nextPointer.join1(root);
         System.out.println(root);
     }
 }

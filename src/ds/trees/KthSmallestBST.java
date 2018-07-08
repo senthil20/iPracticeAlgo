@@ -85,6 +85,23 @@ public class KthSmallestBST {
         return result;
     }
 
+    public int kthSmallest(TreeNode root, int k) {
+        if (root == null || k <= 0) return 0;
+        return kthSmallest(root, new int[]{0}, k, 0);
+    }
+
+    public int kthSmallest(TreeNode root, int a[], int k, int val) {
+        if (root == null) return val;
+        val = kthSmallest(root.left, a, k, val);
+        a[0]++;
+        if (k == a[0])
+            return root.val;
+        if (a[0] <= k)
+            val = kthSmallest(root.right, a, k, val);
+
+        return val;
+    }
+
     public static void main(String a[]) {
         KthSmallestBST kth = new KthSmallestBST();
         TreeNode root = new TreeNode(5,
@@ -105,9 +122,20 @@ public class KthSmallestBST {
                         new TreeNode(5, null, null),
                         new TreeNode(10, null, null)));
 
+        root = new TreeNode(3,
+                new TreeNode(1,
+                        null,
+                        new TreeNode(2, null, null)),
+                new TreeNode(4, null, null));
+
+        root = new TreeNode(1,
+                null,
+                new TreeNode(2, null, null));
+        int result = kth.kthSmallest(root, 2);
+        System.out.print(result);
         //System.out.println(kth.kthSmallest(root, 9, -1));
        // System.out.println(kth.findKthLargest1(root, 9));
-        TreeNode result = kth.findKthLargest1(root, 3);
-        System.out.println(result != null ? result.val : result);
+        //TreeNode result = kth.findKthLargest1(root, 3);
+        //System.out.println(result != null ? result.val : result);
     }
 }
