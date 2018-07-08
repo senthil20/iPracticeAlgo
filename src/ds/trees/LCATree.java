@@ -29,7 +29,6 @@ public class LCATree {
         }
         return root.val;
     }
-
     /**
      Tree
              1
@@ -45,7 +44,6 @@ public class LCATree {
      LCA of 9, 14 is 6
      LCA of 12, 4 is 1
      */
-
     public int lcaBT(TreeNode a, int val1, int val2) {
         int result = lcaRecursive(a, val1, val2);
         if(v1 && v2) return result;
@@ -82,21 +80,11 @@ public class LCATree {
      LCA of 9, 14 is 6
      LCA of 12, 4 is 1
      */
-    public int lcaBinaryTree(TreeNode A, int B, int C) {
-        if (A == null) return -1;
-        if (A.val == B || A.val == C)
-            return A.val;
-
-        int l = lcaBinaryTree(A.left, B, C);
-        int r = lcaBinaryTree(A.right, B, C);
-
-        if (l != -1 && r != -1){
-            return A.val;
-        } else if (l == -1 && r == -1){
-            return -1;
-        }else{
-            return l == -1 ? r : l;
-        }
+    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+        if (root == null || root == p || root == q) return root;
+        TreeNode left = lowestCommonAncestor(root.left, p, q);
+        TreeNode right = lowestCommonAncestor(root.right, p, q);
+        return left != null && right != null ? root : left != null ? left : right;
     }
 
     public static void main(String a[]) {
@@ -127,7 +115,7 @@ public class LCATree {
                                 new TreeNode(12, null, null))));
         //System.out.println(lca.lcaBST(bstroot, 6, 12));
         //int result = lca.lcaBT(btroot, 2, 11);
-        int result = lca.lcaBinaryTree(btroot, 2,13);
+        int result = lca.lcaBT(btroot, 3,9);
         System.out.println(result);
     }
 }
