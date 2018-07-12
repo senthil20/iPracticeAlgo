@@ -1,19 +1,27 @@
 package ds.string;
 
 /**
- * Created by senthil on 13/9/16.
- */
-public class Strstr {
+ Implement strStr().
+ Return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
+ Example 1:
+ Input: haystack = "hello", needle = "ll"
+ Output: 2
+ Example 2:
+ Input: haystack = "aaaaa", needle = "bba"
+ Output: -1
+ Clarification:
+ What should we return when needle is an empty string? This is a great question to ask during an interview.
+ For the purpose of this problem, we will return 0 when needle is an empty string.
+ This is consistent to C's strstr() and Java's indexOf().
+*/
 
+public class Strstr {
     // ask whether char case sensitive
     public int strStr(final String haystack, final String needle) {
-
         int s = 0;
         int e = haystack.length();
-
         int s1 = 0;
         int e1 = needle.length();
-
         while (s <= (e-e1)) {
             s1 = 0;
             while (s1 < e1) {
