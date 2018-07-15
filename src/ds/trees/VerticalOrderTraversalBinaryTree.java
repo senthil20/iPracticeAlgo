@@ -23,6 +23,32 @@ import java.util.*;
  */
 public class VerticalOrderTraversalBinaryTree {
 
+    public static List<List<Integer>> verticalOrder(TreeNode root) {
+        List<List<Integer>> result = new ArrayList<>();
+        if (root == null) return result;
+        Map<Integer, List<Integer>> map = new TreeMap<>();
+        verticalOrder(root, map, 0);
+        result = new ArrayList<>(map.values());
+        return result;
+    }
+
+    public static void verticalOrder(TreeNode root, Map<Integer, List<Integer>> map, int pos) {
+        if (root == null) return;
+        if (map.containsKey(pos)) {
+            map.get(pos).add(root.val);
+        }
+        else {
+            List<Integer> list = new ArrayList<>();
+            list.add(root.val);
+            map.put(pos, list);
+        }
+        verticalOrder(root.left, map, pos - 1);
+        verticalOrder(root.right, map, pos + 1);
+    }
+
+
+
+
     class NodeWithPosition {
         TreeNode node;
         int position;
@@ -76,6 +102,11 @@ public class VerticalOrderTraversalBinaryTree {
     }
 
     public static void main(String a[]) {
+
+        List<Integer> list = new ArrayList<>();
+        list.add(8);
+        list.add(2);
+        System.out.print(list);
         TreeNode root = new TreeNode(5,
                 new TreeNode(4,
                         new TreeNode(2,
@@ -87,6 +118,27 @@ public class VerticalOrderTraversalBinaryTree {
                         new TreeNode(11,
                                 new TreeNode(10, null, null),
                                 new TreeNode(12, null, null))));
-        new VerticalOrderTraversalBinaryTree().verticalOrderTraversal(root);
+        root = new TreeNode(6,
+                new TreeNode(3,
+                        new TreeNode(2, null, null),
+                        new TreeNode(5, null, null)),
+                new TreeNode(7,
+                        null,
+                        new TreeNode(9, null, null)));
+
+        root = new TreeNode(3,
+                new TreeNode(9,
+                        new TreeNode(4, null, null),
+                        new TreeNode(0,
+                                null,
+                                new TreeNode(2, null, null))),
+                new TreeNode(8,
+                        new TreeNode(1,
+                                new TreeNode(5, null, null),
+                                null),
+                        new TreeNode(7, null, null)));
+
+        verticalOrder(root);
+        //new VerticalOrderTraversalBinaryTree().verticalOrderTraversal(root);
     }
 }

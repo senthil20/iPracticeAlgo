@@ -151,7 +151,8 @@ public class SlidingWindow {
 
     public static void main(String a[]) {
         System.out.println(slidingWindow(new int[] {1,3,-1,-3,5,3,6,7}, 3));
-        System.out.println(maxSlidingWindowProgramCreek(new int[] {1,3,-1,-3,5,3,6,7}, 3));
+        //System.out.println(maxSlidingWindowProgramCreek(new int[] {1,3,-1,-3,5,3,6,7}, 3));
+        System.out.println(maxSlidingWindowProgramCreek(new int[] {4, 3, 2, 5}, 3));
         //System.out.println(maxSlidingWindow(new int[]{1,3,-1,-3,5,3,6,7},3));
         //System.out.println(maxSlidingWindow(new int[]{7, 2, 4},2));
         //System.out.println(slidingWindowTreeMap(new int[] {1,3,-1,-3,5,3,6,7}, 3));

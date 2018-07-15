@@ -49,7 +49,7 @@ public class BasicSorting {
         return result;
     }
 
-    public void bubbleSort(int[] a) {
+    public static void bubbleSort(int[] a) {
         for(int i=0; i < a.length; i++) {
             for(int j=0; j < a.length-i-1; j++) {
                 if(a[j] > a[j+1]) {
@@ -96,6 +96,9 @@ public class BasicSorting {
     public static void main(String[] args) {
         int NUM_THREADS = Runtime.getRuntime().availableProcessors();
         System.out.println(NUM_THREADS);
+        int a[] = new int[] {3,2,1};
+        bubbleSort(a);
+        System.out.print(a);
         insertSort(new int[]{5,3,1,4,6,0});
         int[] result = bucketSort(new int[]{1, 2, 2, 90, 100, 5, 200, 400, 6, 7, 12, 15, 900}, 900);
         System.out.println(result);
