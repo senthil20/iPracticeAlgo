@@ -25,19 +25,9 @@ Output Tree
                 6
 */
 
-/**
- Tree
-         1
-      /    \
-     2      5
-    / \      \
-   3   4      6
-
- output = true
- */
 public class FlattenTree {
 
-    public void flattenTreeIterative(TreeNode root) {
+    public static void flattenTreeIterative(TreeNode root) {
         if (root == null) return;
         TreeNode p = root;
         Stack<TreeNode> stack = new Stack<>();
@@ -66,35 +56,30 @@ public class FlattenTree {
     */
 
     public static void flatten(TreeNode root) {
-        flattenTree(root);
-    }
-
-    public static TreeNode flattenTree(TreeNode root) {
-        if (root == null) return root;
-        TreeNode temp = root.right;
+        if (root == null) return;
+        TreeNode temp = null;
         if (root.left != null) {
+            temp = root.right;
             root.right = root.left;
             root.left = null;
-            flattenTree(root.right);
-            while (root.right != null) {
-                root = root.right;
-            }
-            root.right = temp;
         }
-        flattenTree(root.right);
-        return root;
+        flatten(root.right);
+        while (root.right != null)
+            root = root.right;
+
+        root.right = temp;
+        flatten(temp);
     }
 
     public static void main(String a[]) {
-        FlattenTree ft = new FlattenTree();
-        /*TreeNode root = new TreeNode(1,
+        TreeNode root = new TreeNode(1,
                 new TreeNode(2,
                         new TreeNode(3, null, null),
                         new TreeNode(4, null, null)),
                 new TreeNode(5,
                         null,
-                        new TreeNode(6, null, null)));*/
-        TreeNode root = new TreeNode(1,
+                        new TreeNode(6, null, null)));
+        root = new TreeNode(1,
                 new TreeNode(2,
                         new TreeNode(3,
                                 new TreeNode(4, null, null),
@@ -116,8 +101,8 @@ public class FlattenTree {
                         new TreeNode(3, null, null),
                         null));*/
 
-        ft.flattenTreeIterative(root);
+        flatten(root);
         System.out.println(root);
-       // TreeNode result = ft.flattenTree(root);
+        //ft.flattenTree(root);
     }
 }
