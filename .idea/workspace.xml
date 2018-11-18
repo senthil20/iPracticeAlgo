@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63e8680d-d549-43c9-8ce3-994e5d60288b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ds/MiscJava/PersonComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ds/arrays/MergeSortCountInversion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ds/binarysearch/IceCreamParlor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ds/graphs/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/revise/threads/Main2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/revise/threads/QueueSchedulerMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/revise/threads/SimpleThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/iPracticeAlgo/ds/trees/FlattenTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/iPracticeAlgo/ds/trees/FlattenTree.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ds/trees/FlattenTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ds/trees/FlattenTree.java" afterDir="false" />
     </list>
     <ignored path="iPracticeAlgo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,15 +48,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ds/graphs/Solution.java">
+      <file leaf-file-name="FlattenTree.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ds/trees/FlattenTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="15" lean-forward="true" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
-              <folding>
-                <element signature="e#154#155#0" expanded="true" />
-                <element signature="e#190#191#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="17">
+              <caret line="74" selection-start-line="74" selection-end-line="74" />
             </state>
           </provider>
         </entry>
@@ -114,7 +111,6 @@
         <option value="$PROJECT_DIR$/src/revise/trees/CountUnivalueSubTrees.java" />
         <option value="$PROJECT_DIR$/src/revise/trees/LongestUnivaluePath.java" />
         <option value="$PROJECT_DIR$/src/ds/trees/FlattenTree1.java" />
-        <option value="$PROJECT_DIR$/src/ds/trees/FlattenTree.java" />
         <option value="$PROJECT_DIR$/src/ds/MiscJava/TestProblem.java" />
         <option value="$PROJECT_DIR$/src/ds/MiscJava/Runner.java" />
         <option value="$PROJECT_DIR$/src/ds/MiscJava/Candies.java" />
@@ -137,6 +133,7 @@
         <option value="$PROJECT_DIR$/src/ds/arrays/MergeSortCountInversion.java" />
         <option value="$PROJECT_DIR$/src/ds/binarysearch/IceCreamParlor.java" />
         <option value="$PROJECT_DIR$/src/ds/graphs/Solution.java" />
+        <option value="$PROJECT_DIR$/src/ds/trees/FlattenTree.java" />
       </list>
     </option>
   </component>
@@ -146,13 +143,15 @@
     <option name="width" value="1386" />
     <option name="height" value="788" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -176,68 +175,17 @@
               <item name="iPracticeAlgo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="ds" type="462c0819:PsiDirectoryNode" />
-              <item name="graphs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iPracticeAlgo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iPracticeAlgo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ds" type="462c0819:PsiDirectoryNode" />
-              <item name="graphs" type="462c0819:PsiDirectoryNode" />
-              <item name="GraphBasicOperation.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
-            <path>
-              <item name="iPracticeAlgo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iPracticeAlgo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ds" type="462c0819:PsiDirectoryNode" />
-              <item name="tries" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iPracticeAlgo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iPracticeAlgo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="revise" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iPracticeAlgo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iPracticeAlgo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="revise" type="462c0819:PsiDirectoryNode" />
-              <item name="dp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iPracticeAlgo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iPracticeAlgo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="revise" type="462c0819:PsiDirectoryNode" />
-              <item name="graphs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iPracticeAlgo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iPracticeAlgo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="revise" type="462c0819:PsiDirectoryNode" />
-              <item name="graphs" type="462c0819:PsiDirectoryNode" />
-              <item name="GraphAdjList.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
-            <path>
-              <item name="iPracticeAlgo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iPracticeAlgo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="revise" type="462c0819:PsiDirectoryNode" />
-              <item name="graphs" type="462c0819:PsiDirectoryNode" />
-              <item name="GraphList.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+              <item name="trees" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="grap&#9;PSI&#9;JAVA://revise.graphs.GraphBasics&#10;merge&#9;PSI&#9;JAVA://ds.arrays.MergeSort#merge&#10;bubbl&#9;PSI&#9;JAVA://ds.arrays.BasicSorting#bubbleSort&#10;next&#9;FILE&#9;file://F:/Intellij_Workspace/iPracticeAlgo/src/ds/arrays/NextPermutation.java&#10;permu&#9;PSI&#9;JAVA://ds.MiscJava.StringPermutation&#10;strstr&#9;PSI&#9;JAVA://ds.string.Strstr&#10;per&#9;PSI&#9;JAVA://ds.arrays.NextPermutation&#10;bubb&#9;PSI&#9;JAVA://ds.arrays.BasicSorting#bubbleSort&#10;powe&#9;PSI&#9;JAVA://ds.bitmanipulation.PowerOf2&#10;trie&#9;PSI&#9;JAVA://ds.tries.Trie&#10;linkedl&#9;PSI&#9;JAVA://ds.linkedlists.LinkedList&#10;lca&#9;PSI&#9;JAVA://ds.trees.LCATree&#10;bsti&#9;FILE&#9;file://F:/Intellij_Workspace/iPracticeAlgo/src/ds/trees/BSTIterator.java&#10;mini&#9;FILE&#9;file://F:/Intellij_Workspace/iPracticeAlgo/src/ds/hashing/MinimumWindowSubstring.java&#10;bstite&#9;PSI&#9;JAVA://ds.trees.BSTIterator&#10;bala&#9;PSI&#9;JAVA://ds.trees.BalancedBST&#10;balanced&#9;PSI&#9;JAVA://ds.trees.BalancedBST#isHeightBalancedBST&#10;serial&#9;FILE&#9;file://F:/Intellij_Workspace/iPracticeAlgo/src/revise/trees/SerializeDeserializeBinaryTree.java&#10;min&#9;PSI&#9;JAVA://ds.trees.MinDepthOfBinaryTree&#10;max&#9;PSI&#9;JAVA://ds.trees.MaxDepthOfTree&#10;zig&#9;PSI&#9;JAVA://ds.trees.ZigZagTraversalBT&#10;level&#9;PSI&#9;JAVA://ds.trees.LevelOrderTraversal&#10;ip&#9;PSI&#9;JAVA://ds.string.RestoreIPV4Address&#10;inor&#9;PSI&#9;JAVA://ds.trees.InOrderTraversalBST&#10;test&#9;FILE&#9;file://F:/Intellij_Workspace/iPracticeAlgo/src/ds/MiscJava/TestJava.java&#10;dia&#9;PSI&#9;JAVA://ds.arrays.AntiDiagonals&#10;sl&#9;FILE&#9;file://F:/Intellij_Workspace/iPracticeAlgo/src/ds/stacks/SlidingWindow.java&#10;long&#9;FILE&#9;file://F:/Intellij_Workspace/iPracticeAlgo/src/ds/hashing/LongestSubstringWithKDistinctCharacters.java&#10;island&#9;PSI&#9;JAVA://revise.graphs.JoinIsland#findNumberOfIslands&#10;islan&#9;PSI&#9;JAVA://revise.graphs.JoinIsland#findNumberOfIslands&#10;gra&#9;PSI&#9;JAVA://revise.graphs.GraphAdjList&#10;Add&#9;FILE&#9;file://F:/Intellij_Workspace/iPracticeAlgo/src/ds/linkedlists/AddTwoLLNumbers.java&#10;List&#9;FILE&#9;file://F:/Intellij_Workspace/iPracticeAlgo/src/ds/linkedlists/ListPalindrome.java&#10;ha&#9;FILE&#9;file://E:/iPracticeAlgo/src/ds/trees/HalfNodes.java&#10;half&#9;PSI&#9;JAVA://ds.trees.HalfNodes&#10;LCA&#9;FILE&#9;file://E:/iPracticeAlgo/src/ds/trees/LCATree.java&#10;two&#9;FILE&#9;file://E:/iPracticeAlgo/src/ds/hashing/TwoSum.java&#10;longe&#9;PSI&#9;JAVA://ds.arrays.LongestSeqUnSortedArray#longestSequence&#10;coun&#9;PSI&#9;JAVA://ds.hashing.TwoSum#countPairs&#10;marc&#9;PSI&#9;JAVA://ds.codefights.marchmarathon.MarchMarathon&#10;MaxLenZe&#9;RUN_CONFIGURATION&#9;MaxLengthZeroSumSubArray&#10;FindMinl&#9;PSI&#9;JAVA://ds.arrays.FindMinLenSubArray&#10;mirro&#9;FILE&#9;file:///media/senthil/New Volume/iPracticeAlgo/src/ds/trees/MirrorTree.java&#10;lar&#9;FILE&#9;file:///media/senthil/New Volume/iPracticeAlgo/src/ds/arrays/FindLargest.java&#10;atoi&#9;FILE&#9;file:///media/senthil/New Volume/iPracticeAlgo/src/ds/string/Atoi.java&#10;mis&#9;PSI&#9;JAVA://ds.arrays.FindDuplicate#missingInteger" />
+    <property name="SearchEverywhereHistoryKey" value="flatte&#9;FILE&#9;file://F:/Intellij_Workspace/iPracticeAlgo/src/ds/trees/FlattenTree1.java&#10;grap&#9;PSI&#9;JAVA://revise.graphs.GraphBasics&#10;merge&#9;PSI&#9;JAVA://ds.arrays.MergeSort#merge&#10;bubbl&#9;PSI&#9;JAVA://ds.arrays.BasicSorting#bubbleSort&#10;next&#9;FILE&#9;file://F:/Intellij_Workspace/iPracticeAlgo/src/ds/arrays/NextPermutation.java&#10;permu&#9;PSI&#9;JAVA://ds.MiscJava.StringPermutation&#10;strstr&#9;PSI&#9;JAVA://ds.string.Strstr&#10;per&#9;PSI&#9;JAVA://ds.arrays.NextPermutation&#10;bubb&#9;PSI&#9;JAVA://ds.arrays.BasicSorting#bubbleSort&#10;powe&#9;PSI&#9;JAVA://ds.bitmanipulation.PowerOf2&#10;trie&#9;PSI&#9;JAVA://ds.tries.Trie&#10;linkedl&#9;PSI&#9;JAVA://ds.linkedlists.LinkedList&#10;lca&#9;PSI&#9;JAVA://ds.trees.LCATree&#10;bsti&#9;FILE&#9;file://F:/Intellij_Workspace/iPracticeAlgo/src/ds/trees/BSTIterator.java&#10;mini&#9;FILE&#9;file://F:/Intellij_Workspace/iPracticeAlgo/src/ds/hashing/MinimumWindowSubstring.java&#10;bstite&#9;PSI&#9;JAVA://ds.trees.BSTIterator&#10;bala&#9;PSI&#9;JAVA://ds.trees.BalancedBST&#10;balanced&#9;PSI&#9;JAVA://ds.trees.BalancedBST#isHeightBalancedBST&#10;serial&#9;FILE&#9;file://F:/Intellij_Workspace/iPracticeAlgo/src/revise/trees/SerializeDeserializeBinaryTree.java&#10;min&#9;PSI&#9;JAVA://ds.trees.MinDepthOfBinaryTree&#10;max&#9;PSI&#9;JAVA://ds.trees.MaxDepthOfTree&#10;zig&#9;PSI&#9;JAVA://ds.trees.ZigZagTraversalBT&#10;level&#9;PSI&#9;JAVA://ds.trees.LevelOrderTraversal&#10;ip&#9;PSI&#9;JAVA://ds.string.RestoreIPV4Address&#10;inor&#9;PSI&#9;JAVA://ds.trees.InOrderTraversalBST&#10;test&#9;FILE&#9;file://F:/Intellij_Workspace/iPracticeAlgo/src/ds/MiscJava/TestJava.java&#10;dia&#9;PSI&#9;JAVA://ds.arrays.AntiDiagonals&#10;sl&#9;FILE&#9;file://F:/Intellij_Workspace/iPracticeAlgo/src/ds/stacks/SlidingWindow.java&#10;long&#9;FILE&#9;file://F:/Intellij_Workspace/iPracticeAlgo/src/ds/hashing/LongestSubstringWithKDistinctCharacters.java&#10;island&#9;PSI&#9;JAVA://revise.graphs.JoinIsland#findNumberOfIslands&#10;islan&#9;PSI&#9;JAVA://revise.graphs.JoinIsland#findNumberOfIslands&#10;gra&#9;PSI&#9;JAVA://revise.graphs.GraphAdjList&#10;Add&#9;FILE&#9;file://F:/Intellij_Workspace/iPracticeAlgo/src/ds/linkedlists/AddTwoLLNumbers.java&#10;List&#9;FILE&#9;file://F:/Intellij_Workspace/iPracticeAlgo/src/ds/linkedlists/ListPalindrome.java&#10;ha&#9;FILE&#9;file://E:/iPracticeAlgo/src/ds/trees/HalfNodes.java&#10;half&#9;PSI&#9;JAVA://ds.trees.HalfNodes&#10;LCA&#9;FILE&#9;file://E:/iPracticeAlgo/src/ds/trees/LCATree.java&#10;two&#9;FILE&#9;file://E:/iPracticeAlgo/src/ds/hashing/TwoSum.java&#10;longe&#9;PSI&#9;JAVA://ds.arrays.LongestSeqUnSortedArray#longestSequence&#10;coun&#9;PSI&#9;JAVA://ds.hashing.TwoSum#countPairs&#10;marc&#9;PSI&#9;JAVA://ds.codefights.marchmarathon.MarchMarathon&#10;MaxLenZe&#9;RUN_CONFIGURATION&#9;MaxLengthZeroSumSubArray&#10;FindMinl&#9;PSI&#9;JAVA://ds.arrays.FindMinLenSubArray&#10;mirro&#9;FILE&#9;file:///media/senthil/New Volume/iPracticeAlgo/src/ds/trees/MirrorTree.java&#10;lar&#9;FILE&#9;file:///media/senthil/New Volume/iPracticeAlgo/src/ds/arrays/FindLargest.java&#10;atoi&#9;FILE&#9;file:///media/senthil/New Volume/iPracticeAlgo/src/ds/string/Atoi.java&#10;mis&#9;PSI&#9;JAVA://ds.arrays.FindDuplicate#missingInteger" />
     <property name="full.screen.before.presentation.mode" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
@@ -267,17 +215,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Solution">
+  <component name="RunManager" selected="Application.FlattenTree">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
-    <configuration name="BasicSorting" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ds.arrays.BasicSorting" />
+    <configuration name="FlattenTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ds.trees.FlattenTree" />
       <module name="iPracticeAlgo" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ds.arrays.*" />
+          <option name="PATTERN" value="ds.trees.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -330,19 +278,19 @@
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
     <list>
-      <item itemvalue="Application.BasicSorting" />
       <item itemvalue="Application.VerticalOrderTraversalBinaryTree" />
       <item itemvalue="Application.PersonComparator" />
       <item itemvalue="Application.MergeSortCountInversion" />
       <item itemvalue="Application.Solution" />
+      <item itemvalue="Application.FlattenTree" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.FlattenTree" />
         <item itemvalue="Application.Solution" />
         <item itemvalue="Application.MergeSortCountInversion" />
         <item itemvalue="Application.PersonComparator" />
         <item itemvalue="Application.VerticalOrderTraversalBinaryTree" />
-        <item itemvalue="Application.BasicSorting" />
       </list>
     </recent_temporary>
   </component>
@@ -429,12 +377,12 @@
       <window_info anchor="bottom" id="Run" order="3" weight="0.3251634" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info anchor="right" id="Designer" order="6" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.4947839" visible="true" weight="0.18229954" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.4947839" visible="true" weight="0.18532526" />
       <window_info id="Learn" order="0" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
       <window_info id="Favorites" order="5" sideWeight="0.5052161" side_tool="true" weight="0.21120363" />
-      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49735048" visible="true" weight="0.3267974" />
+      <window_info active="true" anchor="bottom" id="Debug" order="4" sideWeight="0.49735048" visible="true" weight="0.3267974" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.24962178" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.3287373" />
@@ -448,6 +396,7 @@
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.24962178" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.3287373" />
       <window_info anchor="bottom" id="Run" order="3" weight="0.3251634" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="1" sideWeight="0.4947839" visible="true" weight="0.17776097" />
@@ -455,13 +404,12 @@
       <window_info anchor="right" id="Commander" order="2" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info anchor="right" id="Designer" order="6" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info active="true" anchor="bottom" id="Debug" order="4" sideWeight="0.49735048" visible="true" weight="0.3267974" />
       <window_info id="Learn" order="0" />
       <window_info id="Palette&#9;" order="3" />
-      <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.3287373" />
+      <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5026495" side_tool="true" weight="0.3548896" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="Version Control" order="10" />
@@ -1954,26 +1902,14 @@
           <option name="timeStamp" value="778" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="779" />
+      <option name="time" value="781" />
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="root.left.c" />
-      </configuration>
-    </watches-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/revise/trees/SerializeDeserializeBinaryTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/revise/trees/DiameterOfBinaryTree.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="373">
@@ -1992,13 +1928,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="397">
           <caret line="48" column="54" selection-start-line="43" selection-start-column="8" selection-end-line="48" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ds/trees/FlattenTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -2349,6 +2278,20 @@
             <element signature="e#154#155#0" expanded="true" />
             <element signature="e#190#191#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ds/arrays/MinimumWindowSubstring.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="50" lean-forward="true" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ds/trees/FlattenTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
         </state>
       </provider>
     </entry>
