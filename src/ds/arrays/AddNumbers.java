@@ -13,18 +13,7 @@ public class AddNumbers {
         return sum;
     }
 
-    public static int addNumbersDP(int n) {
-        int[] dp = new int[n + 1];
-        dp[0] = 0;
-        dp[1] = 1;
-        for (int i = 2; i <= n; i++) {
-            dp[i] = i + dp[i - 1];
-        }
-        return dp[n];
-    }
-
     public static void main(String a[]) {
-        System.out.println(AddNumbers.addNumbers(6));
-        System.out.println(AddNumbers.addNumbersDP(6));
+        System.out.println(AddNumbers.addNumbers(13));
     }
 }
